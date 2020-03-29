@@ -60,7 +60,7 @@ public final class StatisticsCell: UITableViewCell {
             make.top.equalToSuperview().offset(2.0)
             make.bottom.equalToSuperview().inset(2.0)
         }
-        
+    
         self.statisticsLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
             make.leading.equalTo(self.sideDecoration.snp.trailing).offset(16.0)
             make.trailing.equalToSuperview()

@@ -3,17 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		80F4482C534558E76245CA1A /* Pods_Covid_19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A73C0C1264A15C061FC84F /* Pods_Covid_19.framework */; };
 		8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E809D2324306ED000DDBCE6 /* AppDelegate.swift */; };
-		8E809D2624306ED000DDBCE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E809D2524306ED000DDBCE6 /* SceneDelegate.swift */; };
-		8E809D2824306ED000DDBCE6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E809D2724306ED000DDBCE6 /* ContentView.swift */; };
 		8E809D2A24306ED100DDBCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2924306ED100DDBCE6 /* Assets.xcassets */; };
 		8E809D2D24306ED100DDBCE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */; };
 		8E809D3024306ED100DDBCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2E24306ED100DDBCE6 /* LaunchScreen.storyboard */; };
+		8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,12 +20,11 @@
 		20AD1261C562EBC701764488 /* Pods-Covid-19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid-19.release.xcconfig"; path = "Target Support Files/Pods-Covid-19/Pods-Covid-19.release.xcconfig"; sourceTree = "<group>"; };
 		8E809D2024306ED000DDBCE6 /* Covid-19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E809D2324306ED000DDBCE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E809D2524306ED000DDBCE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8E809D2724306ED000DDBCE6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8E809D2924306ED100DDBCE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E809D2F24306ED100DDBCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E809D3124306ED100DDBCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAppCoordinator.swift; sourceTree = "<group>"; };
 		90A73C0C1264A15C061FC84F /* Pods_Covid_19.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_19.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -71,13 +69,8 @@
 		8E809D2224306ED000DDBCE6 /* Covid-19 */ = {
 			isa = PBXGroup;
 			children = (
-				8E809D2324306ED000DDBCE6 /* AppDelegate.swift */,
-				8E809D2524306ED000DDBCE6 /* SceneDelegate.swift */,
-				8E809D2724306ED000DDBCE6 /* ContentView.swift */,
-				8E809D2924306ED100DDBCE6 /* Assets.xcassets */,
-				8E809D2E24306ED100DDBCE6 /* LaunchScreen.storyboard */,
-				8E809D3124306ED100DDBCE6 /* Info.plist */,
-				8E809D2B24306ED100DDBCE6 /* Preview Content */,
+				8EDD76A624307E9300A60C9B /* App Controllers */,
+				8EDD76A92430803500A60C9B /* Supporting Files */,
 			);
 			path = "Covid-19";
 			sourceTree = "<group>";
@@ -90,13 +83,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		8EDD76A624307E9300A60C9B /* App Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E809D2324306ED000DDBCE6 /* AppDelegate.swift */,
+				8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */,
+			);
+			path = "App Controllers";
+			sourceTree = "<group>";
+		};
+		8EDD76A92430803500A60C9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E809D2B24306ED100DDBCE6 /* Preview Content */,
+				8E809D2924306ED100DDBCE6 /* Assets.xcassets */,
+				8E809D2E24306ED100DDBCE6 /* LaunchScreen.storyboard */,
+				8E809D3124306ED100DDBCE6 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C915DCA35FB36C71F6ADB071 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				010413E639F87922BEEC9FD1 /* Pods-Covid-19.debug.xcconfig */,
 				20AD1261C562EBC701764488 /* Pods-Covid-19.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -216,8 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */,
-				8E809D2624306ED000DDBCE6 /* SceneDelegate.swift in Sources */,
-				8E809D2824306ED000DDBCE6 /* ContentView.swift in Sources */,
+				8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,10 +366,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Covid-19/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Covid-19/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = K2FYAR324D;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Covid-19/Info.plist";
+				INFOPLIST_FILE = "Covid-19/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,10 +387,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Covid-19/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Covid-19/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = K2FYAR324D;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Covid-19/Info.plist";
+				INFOPLIST_FILE = "Covid-19/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

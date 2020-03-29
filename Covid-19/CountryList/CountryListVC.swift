@@ -45,7 +45,7 @@ public final class CountryListVC: KioViewController {
         super.viewDidLoad()
         self.rootView.tableView.delegate = self
         self.rootView.searchBar.delegate = self
-        self.navigationItem.title = "Countries"
+        self.navigationItem.title = "countries".localized
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonItem.SystemItem.search,
             target: self,

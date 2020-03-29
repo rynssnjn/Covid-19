@@ -15,9 +15,9 @@ public enum DeathsRow: Int {
     public var title: String {
         switch self {
             case .new:
-                return "New"
+                return "new_cases".localized
             case .total:
-                return "Total"
+                return "total".localized
         }
     }
 }

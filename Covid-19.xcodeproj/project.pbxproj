@@ -12,6 +12,8 @@
 		8E809D2A24306ED100DDBCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2924306ED100DDBCE6 /* Assets.xcassets */; };
 		8E809D2D24306ED100DDBCE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */; };
 		8E809D3024306ED100DDBCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2E24306ED100DDBCE6 /* LaunchScreen.storyboard */; };
+		8EAF82D62430F3EB00D34F3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EAF82D82430F3EB00D34F3A /* Localizable.strings */; };
+		8EAF82DB2430F6E200D34F3A /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF82DA2430F6E200D34F3A /* FoundationExtension.swift */; };
 		8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */; };
 		8EDD76AC2430906800A60C9B /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AB2430906800A60C9B /* CountryListView.swift */; };
 		8EDD76AF243095CE00A60C9B /* CountryListVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */; };
@@ -56,6 +58,10 @@
 		8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E809D2F24306ED100DDBCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E809D3124306ED100DDBCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EAF82D32430F35900D34F3A /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8EAF82D72430F3EB00D34F3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8EAF82D92430F40800D34F3A /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8EAF82DA2430F6E200D34F3A /* FoundationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
 		8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAppCoordinator.swift; sourceTree = "<group>"; };
 		8EDD76AB2430906800A60C9B /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVCDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 				8E809D2924306ED100DDBCE6 /* Assets.xcassets */,
 				8E809D2E24306ED100DDBCE6 /* LaunchScreen.storyboard */,
 				8E809D3124306ED100DDBCE6 /* Info.plist */,
+				8EAF82D82430F3EB00D34F3A /* Localizable.strings */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -219,6 +226,7 @@
 				8EFFD16C2430BB8B0026BC8B /* Protocols */,
 				8EFFD1572430A9790026BC8B /* Networking */,
 				8EFFD15D2430AE290026BC8B /* Constants.swift */,
+				8EAF82DA2430F6E200D34F3A /* FoundationExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -381,6 +389,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-US",
 			);
 			mainGroup = 8E809D1724306ED000DDBCE6;
 			productRefGroup = 8E809D2124306ED000DDBCE6 /* Products */;
@@ -397,6 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAF82D62430F3EB00D34F3A /* Localizable.strings in Resources */,
 				8EDD76B624309D2100A60C9B /* .swiftlint.yml in Resources */,
 				8E809D3024306ED100DDBCE6 /* LaunchScreen.storyboard in Resources */,
 				8E809D2D24306ED100DDBCE6 /* Preview Assets.xcassets in Resources */,
@@ -470,6 +480,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EAF82DB2430F6E200D34F3A /* FoundationExtension.swift in Sources */,
 				8EFFD1842430CE370026BC8B /* CategorySection.swift in Sources */,
 				8EFFD16B2430B9900026BC8B /* Deaths.swift in Sources */,
 				8EFFD1502430A32C0026BC8B /* CountryCell.swift in Sources */,
@@ -513,8 +524,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				8E809D2F24306ED100DDBCE6 /* Base */,
+				8EAF82D32430F35900D34F3A /* en-US */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8EAF82D82430F3EB00D34F3A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EAF82D72430F3EB00D34F3A /* en */,
+				8EAF82D92430F40800D34F3A /* en-US */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -524,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -584,6 +606,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

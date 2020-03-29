@@ -38,6 +38,9 @@ extension CountryListDataSource: UITableViewDataSource {
             withIdentifier: CountryCell.identifier
         )  as? CountryCell else { return UITableViewCell() }
 
+        cell.sideDecoration.backgroundColor = indexPath.row % 2 == 0
+            ? AppUI.Color.lightPurple : UIColor.white
+
         cell.configure(with: self.countries[indexPath.item])
         return cell
     }

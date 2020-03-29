@@ -22,9 +22,15 @@ public class AppDelegate: UIResponder {
     // MARK: Instance Methods
     private func setAppearance() {
         UINavigationBar.appearance().barStyle = UIBarStyle.black
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().barTintColor = AppUI.Color.brown
+        UINavigationBar.appearance().tintColor = AppUI.Color.darkNavyBlue
+        UINavigationBar.appearance().barTintColor = AppUI.Color.lightPurple
         UINavigationBar.appearance().isTranslucent = false
+
+        let barTitleAttributes = [
+            NSAttributedString.Key.foregroundColor: AppUI.Color.darkNavyBlue
+        ]
+
+        UINavigationBar.appearance().titleTextAttributes = barTitleAttributes
     }
 }
 

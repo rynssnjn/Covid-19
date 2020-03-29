@@ -15,7 +15,8 @@ public final class CountryListView: KioView {
     // MARK: Subviews
     public let tableView: UITableView = {
         let tableView: UITableView = UITableView()
-        tableView.backgroundColor = UIColor.white
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.backgroundColor = AppUI.Color.darkNavyBlue
 
         return tableView
     }()
@@ -23,7 +24,9 @@ public final class CountryListView: KioView {
     public let searchBar: UISearchBar = {
         let searchBar: UISearchBar = UISearchBar()
         searchBar.placeholder = "search_country".localized
-        searchBar.barTintColor = AppUI.Color.lightGray
+        searchBar.barTintColor = AppUI.Color.darkNavyBlue
+        searchBar.tintColor = UIColor.white
+        searchBar.searchTextField.textColor = UIColor.white
         searchBar.showsCancelButton = true
 
         return searchBar
@@ -32,12 +35,12 @@ public final class CountryListView: KioView {
     // MARK: Initializer
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = AppUI.Color.darkNavyBlue
 
         self.kio.subviews(forAutoLayout: self.searchBar, self.tableView)
 
         self.searchBar.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
-            make.top.equalToSuperview().offset(16.0)
+            make.top.equalToSuperview().offset(0.0)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.height.equalTo(0.0)
@@ -60,7 +63,9 @@ public final class CountryListView: KioView {
         UIView.animate(withDuration: 0.5) {
             self.searchBar.snp.updateConstraints { (make: ConstraintMaker) -> Void in
                 let height: CGFloat = isShown ? 40.0 : 0.0
+                let topOffset: CGFloat = isShown ? 16.0 : 0.0
                 make.height.equalTo(height)
+                make.top.equalToSuperview().offset(topOffset)
             }
         }
 

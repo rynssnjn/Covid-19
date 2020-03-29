@@ -15,23 +15,55 @@ public final class CountryCell: UITableViewCell {
     // MARK: Subviews
     public let countryLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = UIColor.black
-        label.font = UIFont.systemFont(ofSize: 20.0)
+        label.textColor = UIColor.white
+        label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.textAlignment = NSTextAlignment.left
 
         return label
     }()
 
+    public let sideDecoration: UIView = {
+        let view: UIView = UIView()
+        view.backgroundColor = AppUI.Color.violet
+
+        return view
+    }()
+
+    public let bottomDivider: UIView = {
+        let view: UIView = UIView()
+        view.backgroundColor = AppUI.Color.lightGray
+
+        return view
+    }()
+
     // MARK: Initializer
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.backgroundColor = AppUI.Color.darkNavyBlue
 
-        self.kio.subview(forAutoLayout: self.countryLabel)
+        self.kio.subviews(forAutoLayout:
+            self.sideDecoration, self.countryLabel,
+            self.bottomDivider
+        )
 
-        self.countryLabel.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
-            make.leading.equalToSuperview().offset(16.0)
+        self.sideDecoration.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.leading.equalToSuperview()
+            make.width.equalTo(8.0)
+            make.top.equalToSuperview().offset(2.0)
+            make.bottom.equalToSuperview().inset(2.0)
+        }
+
+        self.countryLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
+            make.leading.equalTo(self.sideDecoration.snp.trailing).offset(16.0)
             make.trailing.equalToSuperview()
             make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+
+        self.bottomDivider.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.height.equalTo(1.0)
+            make.leading.equalToSuperview().offset(20.0)
+            make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
     }

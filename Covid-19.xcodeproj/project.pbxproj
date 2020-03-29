@@ -21,6 +21,30 @@
 		8EFFD14D24309E830026BC8B /* CountryListCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD14C24309E830026BC8B /* CountryListCoodinator.swift */; };
 		8EFFD1502430A32C0026BC8B /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD14F2430A32C0026BC8B /* CountryCell.swift */; };
 		8EFFD1522430A4700026BC8B /* CountryListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1512430A46F0026BC8B /* CountryListDataSource.swift */; };
+		8EFFD1552430A7FA0026BC8B /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1542430A7FA0026BC8B /* Countries.swift */; };
+		8EFFD1592430A9870026BC8B /* BaseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1582430A9870026BC8B /* BaseConfiguration.swift */; };
+		8EFFD15C2430AADC0026BC8B /* CountryListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD15B2430AADC0026BC8B /* CountryListRequest.swift */; };
+		8EFFD15E2430AE290026BC8B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD15D2430AE290026BC8B /* Constants.swift */; };
+		8EFFD1602430AE7C0026BC8B /* CountryListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD15F2430AE7C0026BC8B /* CountryListService.swift */; };
+		8EFFD1622430B51A0026BC8B /* CountryStatisticsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1612430B51A0026BC8B /* CountryStatisticsRequest.swift */; };
+		8EFFD1652430B64C0026BC8B /* CountryStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1642430B64C0026BC8B /* CountryStatistics.swift */; };
+		8EFFD1672430B6D80026BC8B /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1662430B6D80026BC8B /* Statistics.swift */; };
+		8EFFD1692430B7960026BC8B /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1682430B7960026BC8B /* Cases.swift */; };
+		8EFFD16B2430B9900026BC8B /* Deaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD16A2430B9900026BC8B /* Deaths.swift */; };
+		8EFFD1722430BD040026BC8B /* AbstractAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1712430BD040026BC8B /* AbstractAPIService.swift */; };
+		8EFFD1772430C5BE0026BC8B /* CountryStatisticsVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1762430C5BE0026BC8B /* CountryStatisticsVCDelegate.swift */; };
+		8EFFD1792430C5DB0026BC8B /* CountryStatisticsCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1782430C5DB0026BC8B /* CountryStatisticsCoordinatorDelegate.swift */; };
+		8EFFD17B2430C64A0026BC8B /* CountryStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD17A2430C64A0026BC8B /* CountryStatisticsView.swift */; };
+		8EFFD17D2430C7D30026BC8B /* CountryStatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD17C2430C7D30026BC8B /* CountryStatisticsVC.swift */; };
+		8EFFD17F2430C9290026BC8B /* CountryStatisticsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD17E2430C9290026BC8B /* CountryStatisticsCoordinator.swift */; };
+		8EFFD1812430CB610026BC8B /* CountryStatisticsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1802430CB610026BC8B /* CountryStatisticsDataSource.swift */; };
+		8EFFD1842430CE370026BC8B /* CategorySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1832430CE370026BC8B /* CategorySection.swift */; };
+		8EFFD1872430CFFE0026BC8B /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1862430CFFE0026BC8B /* StatisticsCell.swift */; };
+		8EFFD18C2430D1BD0026BC8B /* CasesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD18B2430D1BD0026BC8B /* CasesRow.swift */; };
+		8EFFD18E2430D2630026BC8B /* DeathsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD18D2430D2630026BC8B /* DeathsRow.swift */; };
+		8EFFD1902430D43D0026BC8B /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD18F2430D43D0026BC8B /* StatisticsViewModel.swift */; };
+		8EFFD1922430D8700026BC8B /* TableSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1912430D8700026BC8B /* TableSectionView.swift */; };
+		8EFFD1952430DCF20026BC8B /* AppUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1942430DCF20026BC8B /* AppUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +65,30 @@
 		8EFFD14C24309E830026BC8B /* CountryListCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListCoodinator.swift; sourceTree = "<group>"; };
 		8EFFD14F2430A32C0026BC8B /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 		8EFFD1512430A46F0026BC8B /* CountryListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListDataSource.swift; sourceTree = "<group>"; };
+		8EFFD1542430A7FA0026BC8B /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
+		8EFFD1582430A9870026BC8B /* BaseConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConfiguration.swift; sourceTree = "<group>"; };
+		8EFFD15B2430AADC0026BC8B /* CountryListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListRequest.swift; sourceTree = "<group>"; };
+		8EFFD15D2430AE290026BC8B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8EFFD15F2430AE7C0026BC8B /* CountryListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListService.swift; sourceTree = "<group>"; };
+		8EFFD1612430B51A0026BC8B /* CountryStatisticsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsRequest.swift; sourceTree = "<group>"; };
+		8EFFD1642430B64C0026BC8B /* CountryStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatistics.swift; sourceTree = "<group>"; };
+		8EFFD1662430B6D80026BC8B /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		8EFFD1682430B7960026BC8B /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
+		8EFFD16A2430B9900026BC8B /* Deaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deaths.swift; sourceTree = "<group>"; };
+		8EFFD1712430BD040026BC8B /* AbstractAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractAPIService.swift; sourceTree = "<group>"; };
+		8EFFD1762430C5BE0026BC8B /* CountryStatisticsVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsVCDelegate.swift; sourceTree = "<group>"; };
+		8EFFD1782430C5DB0026BC8B /* CountryStatisticsCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		8EFFD17A2430C64A0026BC8B /* CountryStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsView.swift; sourceTree = "<group>"; };
+		8EFFD17C2430C7D30026BC8B /* CountryStatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsVC.swift; sourceTree = "<group>"; };
+		8EFFD17E2430C9290026BC8B /* CountryStatisticsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsCoordinator.swift; sourceTree = "<group>"; };
+		8EFFD1802430CB610026BC8B /* CountryStatisticsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsDataSource.swift; sourceTree = "<group>"; };
+		8EFFD1832430CE370026BC8B /* CategorySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySection.swift; sourceTree = "<group>"; };
+		8EFFD1862430CFFE0026BC8B /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
+		8EFFD18B2430D1BD0026BC8B /* CasesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesRow.swift; sourceTree = "<group>"; };
+		8EFFD18D2430D2630026BC8B /* DeathsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathsRow.swift; sourceTree = "<group>"; };
+		8EFFD18F2430D43D0026BC8B /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		8EFFD1912430D8700026BC8B /* TableSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionView.swift; sourceTree = "<group>"; };
+		8EFFD1942430DCF20026BC8B /* AppUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUI.swift; sourceTree = "<group>"; };
 		90A73C0C1264A15C061FC84F /* Pods_Covid_19.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_19.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,9 +134,11 @@
 		8E809D2224306ED000DDBCE6 /* Covid-19 */ = {
 			isa = PBXGroup;
 			children = (
+				8EFFD1562430A96A0026BC8B /* Utilities */,
 				8EDD76A624307E9300A60C9B /* App Controllers */,
 				8EDD76A92430803500A60C9B /* Supporting Files */,
 				8EDD76AA2430904400A60C9B /* CountryList */,
+				8EFFD1732430C5740026BC8B /* Country Statistics */,
 			);
 			path = "Covid-19";
 			sourceTree = "<group>";
@@ -124,6 +174,9 @@
 		8EDD76AA2430904400A60C9B /* CountryList */ = {
 			isa = PBXGroup;
 			children = (
+				8EFFD1632430B5E70026BC8B /* Services */,
+				8EFFD15A2430AAC70026BC8B /* Networking */,
+				8EFFD1532430A7E70026BC8B /* Models */,
 				8EFFD14E2430A3170026BC8B /* Views */,
 				8EDD76AD243095BA00A60C9B /* Protocols */,
 				8EDD76AB2430906800A60C9B /* CountryListView.swift */,
@@ -149,6 +202,129 @@
 				8EFFD14F2430A32C0026BC8B /* CountryCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8EFFD1532430A7E70026BC8B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1542430A7FA0026BC8B /* Countries.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8EFFD1562430A96A0026BC8B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1932430DCE60026BC8B /* Enums */,
+				8EFFD16C2430BB8B0026BC8B /* Protocols */,
+				8EFFD1572430A9790026BC8B /* Networking */,
+				8EFFD15D2430AE290026BC8B /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8EFFD1572430A9790026BC8B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1582430A9870026BC8B /* BaseConfiguration.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8EFFD15A2430AAC70026BC8B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD15B2430AADC0026BC8B /* CountryListRequest.swift */,
+				8EFFD1612430B51A0026BC8B /* CountryStatisticsRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8EFFD1632430B5E70026BC8B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD15F2430AE7C0026BC8B /* CountryListService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8EFFD16C2430BB8B0026BC8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1712430BD040026BC8B /* AbstractAPIService.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8EFFD1732430C5740026BC8B /* Country Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1882430D07B0026BC8B /* View Model */,
+				8EFFD1852430CFEB0026BC8B /* Views */,
+				8EFFD1822430CE230026BC8B /* Enums */,
+				8EFFD1752430C5A90026BC8B /* Protocols */,
+				8EFFD1742430C5980026BC8B /* Models */,
+				8EFFD17A2430C64A0026BC8B /* CountryStatisticsView.swift */,
+				8EFFD17C2430C7D30026BC8B /* CountryStatisticsVC.swift */,
+				8EFFD17E2430C9290026BC8B /* CountryStatisticsCoordinator.swift */,
+				8EFFD1802430CB610026BC8B /* CountryStatisticsDataSource.swift */,
+			);
+			path = "Country Statistics";
+			sourceTree = "<group>";
+		};
+		8EFFD1742430C5980026BC8B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1642430B64C0026BC8B /* CountryStatistics.swift */,
+				8EFFD1662430B6D80026BC8B /* Statistics.swift */,
+				8EFFD1682430B7960026BC8B /* Cases.swift */,
+				8EFFD16A2430B9900026BC8B /* Deaths.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8EFFD1752430C5A90026BC8B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1762430C5BE0026BC8B /* CountryStatisticsVCDelegate.swift */,
+				8EFFD1782430C5DB0026BC8B /* CountryStatisticsCoordinatorDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8EFFD1822430CE230026BC8B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1832430CE370026BC8B /* CategorySection.swift */,
+				8EFFD18B2430D1BD0026BC8B /* CasesRow.swift */,
+				8EFFD18D2430D2630026BC8B /* DeathsRow.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		8EFFD1852430CFEB0026BC8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1862430CFFE0026BC8B /* StatisticsCell.swift */,
+				8EFFD1912430D8700026BC8B /* TableSectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8EFFD1882430D07B0026BC8B /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD18F2430D43D0026BC8B /* StatisticsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		8EFFD1932430DCE60026BC8B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD1942430DCF20026BC8B /* AppUI.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		C915DCA35FB36C71F6ADB071 /* Pods */ = {
@@ -294,14 +470,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFFD1842430CE370026BC8B /* CategorySection.swift in Sources */,
+				8EFFD16B2430B9900026BC8B /* Deaths.swift in Sources */,
 				8EFFD1502430A32C0026BC8B /* CountryCell.swift in Sources */,
+				8EFFD1652430B64C0026BC8B /* CountryStatistics.swift in Sources */,
+				8EFFD18C2430D1BD0026BC8B /* CasesRow.swift in Sources */,
+				8EFFD1792430C5DB0026BC8B /* CountryStatisticsCoordinatorDelegate.swift in Sources */,
 				8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */,
+				8EFFD1772430C5BE0026BC8B /* CountryStatisticsVCDelegate.swift in Sources */,
+				8EFFD18E2430D2630026BC8B /* DeathsRow.swift in Sources */,
+				8EFFD1922430D8700026BC8B /* TableSectionView.swift in Sources */,
+				8EFFD1812430CB610026BC8B /* CountryStatisticsDataSource.swift in Sources */,
 				8EFFD14D24309E830026BC8B /* CountryListCoodinator.swift in Sources */,
 				8EDD76B32430961000A60C9B /* CountryListVC.swift in Sources */,
+				8EFFD1872430CFFE0026BC8B /* StatisticsCell.swift in Sources */,
+				8EFFD1722430BD040026BC8B /* AbstractAPIService.swift in Sources */,
+				8EFFD15C2430AADC0026BC8B /* CountryListRequest.swift in Sources */,
+				8EFFD1952430DCF20026BC8B /* AppUI.swift in Sources */,
 				8EFFD1522430A4700026BC8B /* CountryListDataSource.swift in Sources */,
+				8EFFD1602430AE7C0026BC8B /* CountryListService.swift in Sources */,
 				8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */,
+				8EFFD17D2430C7D30026BC8B /* CountryStatisticsVC.swift in Sources */,
+				8EFFD15E2430AE290026BC8B /* Constants.swift in Sources */,
 				8EDD76B1243095EC00A60C9B /* CountryListCoordinatorDelegate.swift in Sources */,
+				8EFFD1622430B51A0026BC8B /* CountryStatisticsRequest.swift in Sources */,
+				8EFFD17B2430C64A0026BC8B /* CountryStatisticsView.swift in Sources */,
 				8EDD76AF243095CE00A60C9B /* CountryListVCDelegate.swift in Sources */,
+				8EFFD1672430B6D80026BC8B /* Statistics.swift in Sources */,
+				8EFFD17F2430C9290026BC8B /* CountryStatisticsCoordinator.swift in Sources */,
+				8EFFD1592430A9870026BC8B /* BaseConfiguration.swift in Sources */,
+				8EFFD1902430D43D0026BC8B /* StatisticsViewModel.swift in Sources */,
+				8EFFD1692430B7960026BC8B /* Cases.swift in Sources */,
+				8EFFD1552430A7FA0026BC8B /* Countries.swift in Sources */,
 				8EDD76AC2430906800A60C9B /* CountryListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,6 +644,7 @@
 				DEVELOPMENT_TEAM = K2FYAR324D;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Covid-19/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +666,7 @@
 				DEVELOPMENT_TEAM = K2FYAR324D;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Covid-19/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

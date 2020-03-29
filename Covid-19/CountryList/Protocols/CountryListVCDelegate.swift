@@ -8,4 +8,6 @@
 
 import Foundation
 
-public protocol CountryListVCDelegate: class {}
+public protocol CountryListVCDelegate: class {
+    func getCountryStatistics(country: String, onComplete: @escaping () -> Void)
+}

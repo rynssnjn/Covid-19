@@ -13,16 +13,6 @@ import Kio
 public final class CountryListView: KioView {
 
     // MARK: Subviews
-    public let headerLabel: UILabel = {
-        let label: UILabel = UILabel()
-        label.text = "Countries"
-        label.textColor = UIColor.black
-        label.textAlignment = NSTextAlignment.left
-        label.font = UIFont.systemFont(ofSize: 30.0)
-
-        return label
-    }()
-
     public let tableView: UITableView = {
         let tableView: UITableView = UITableView()
         tableView.backgroundColor = UIColor.white
@@ -30,22 +20,31 @@ public final class CountryListView: KioView {
         return tableView
     }()
 
+    public let searchBar: UISearchBar = {
+        let searchBar: UISearchBar = UISearchBar()
+        searchBar.placeholder = "Search Country"
+        searchBar.barTintColor = AppUI.Color.lightGray
+        searchBar.showsCancelButton = true
+
+        return searchBar
+    }()
+
     // MARK: Initializer
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
 
-        self.kio.subviews(forAutoLayout: self.headerLabel, self.tableView)
+        self.kio.subviews(forAutoLayout: self.searchBar, self.tableView)
 
-        self.headerLabel.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+        self.searchBar.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.top.equalToSuperview().offset(16.0)
-            make.leading.equalToSuperview().offset(16.0)
+            make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(40.0)
+            make.height.equalTo(0.0)
         }
 
         self.tableView.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-            make.top.equalTo(self.headerLabel.snp.bottom)
+            make.top.equalTo(self.searchBar.snp.bottom)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
@@ -54,5 +53,17 @@ public final class CountryListView: KioView {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    // MARK: Instance Methods
+    public func showSearchBar(_ isShown: Bool) {
+        UIView.animate(withDuration: 0.5) {
+            self.searchBar.snp.updateConstraints { (make: ConstraintMaker) -> Void in
+                let height: CGFloat = isShown ? 40.0 : 0.0
+                make.height.equalTo(height)
+            }
+        }
+
+        self.setNeedsLayout()
     }
 }

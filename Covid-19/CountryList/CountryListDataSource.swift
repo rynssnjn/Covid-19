@@ -12,8 +12,9 @@ import Kio
 public final class CountryListDataSource: KioObject {
 
     // MARK: Initializer
-    public init(tableView: UITableView) {
+    public init(tableView: UITableView, countries: [String]) {
         self.tableView = tableView
+        self.countries = countries
         super.init()
 
         self.tableView.dataSource = self
@@ -22,12 +23,14 @@ public final class CountryListDataSource: KioObject {
     }
 
     // MARK: Stored Properties
-    private let tableView: UITableView
+    public let tableView: UITableView
+    private let countries: [String]
+
 }
 
 extension CountryListDataSource: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return self.countries.count
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -35,8 +38,7 @@ extension CountryListDataSource: UITableViewDataSource {
             withIdentifier: CountryCell.identifier
         )  as? CountryCell else { return UITableViewCell() }
 
-        cell.configure(with: "PINAS")
-
+        cell.configure(with: self.countries[indexPath.item])
         return cell
     }
 }

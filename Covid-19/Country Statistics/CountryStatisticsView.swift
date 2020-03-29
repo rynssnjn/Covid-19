@@ -16,6 +16,8 @@ public final class CountryStatisticsView: KioView {
     public let tableView: UITableView = {
         let tableView: UITableView = UITableView()
         tableView.backgroundColor = UIColor.white
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.backgroundColor = AppUI.Color.darkNavyBlue
 
         return tableView
     }()
@@ -23,7 +25,7 @@ public final class CountryStatisticsView: KioView {
     // MARK: Initializer
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.white
+        self.backgroundColor = AppUI.Color.darkNavyBlue
 
         self.kio.subview(forAutoLayout: self.tableView)
 

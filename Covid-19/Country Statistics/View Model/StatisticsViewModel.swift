@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct StatisticsViewModel {
 
@@ -61,5 +62,35 @@ public struct StatisticsViewModel {
                         return deaths.total.kio.stringValue
                 }
         }
+    }
+
+    public var sideDecorationColor: UIColor {
+        let color: UIColor
+        switch self.row is CasesRow {
+            case true:
+                guard let row = self.row as? CasesRow else { return UIColor.white }
+                switch row {
+                    case .new:
+                        color = AppUI.Color.violet
+                    case .active:
+                        color = AppUI.Color.pinkishRed
+                    case .critical:
+                        color = AppUI.Color.neonGreen
+                    case .recovered:
+                        color = AppUI.Color.neonBlue
+                    case .total:
+                        color = AppUI.Color.yellowishOrange
+                }
+            case false:
+                guard let row = self.row as? DeathsRow else { return UIColor.white }
+                switch row {
+                    case .new:
+                        color = AppUI.Color.darkishBlue
+                    case .total:
+                        color = AppUI.Color.darkPink
+                }
+        }
+
+        return color
     }
 }

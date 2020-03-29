@@ -15,7 +15,7 @@ public final class StatisticsCell: UITableViewCell {
     // MARK: Subviews
     public let statisticsLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         label.font = UIFont.systemFont(ofSize: 20.0)
         label.textAlignment = NSTextAlignment.left
 
@@ -24,21 +24,45 @@ public final class StatisticsCell: UITableViewCell {
 
     public let statisticsValueLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = UIColor.black
+        label.textColor = UIColor.white
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.textAlignment = NSTextAlignment.right
 
         return label
     }()
 
+    public let sideDecoration: UIView = {
+        let view: UIView = UIView()
+
+        return view
+    }()
+
+    public let bottomDivider: UIView = {
+        let view: UIView = UIView()
+        view.backgroundColor = AppUI.Color.lightGray
+
+        return view
+    }()
+
     // MARK: Initializer
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        self.kio.subviews(forAutoLayout: self.statisticsLabel, self.statisticsValueLabel)
+        self.backgroundColor = AppUI.Color.darkNavyBlue
+        self.kio.subviews(forAutoLayout:
+            self.sideDecoration, self.statisticsLabel,
+            self.statisticsValueLabel, self.bottomDivider
+        )
 
-        self.statisticsLabel.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
-            make.leading.equalToSuperview().offset(16.0)
+        self.sideDecoration.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.leading.equalToSuperview()
+            make.width.equalTo(8.0)
+            make.top.equalToSuperview().offset(2.0)
+            make.bottom.equalToSuperview().inset(2.0)
+        }
+        
+        self.statisticsLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
+            make.leading.equalTo(self.sideDecoration.snp.trailing).offset(16.0)
             make.trailing.equalToSuperview()
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
@@ -48,6 +72,13 @@ public final class StatisticsCell: UITableViewCell {
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview().inset(16.0)
             make.top.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+
+        self.bottomDivider.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.height.equalTo(1.0)
+            make.leading.equalToSuperview().offset(16.0)
+            make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
         }
     }
@@ -62,6 +93,7 @@ extension StatisticsCell {
     public static var identifier: String = "StatisticsCell"
 
     public func configure(with viewModel: StatisticsViewModel) {
+        self.sideDecoration.backgroundColor = viewModel.sideDecorationColor
         self.statisticsLabel.text = viewModel.title
         self.statisticsValueLabel.text = viewModel.value.replacingOccurrences(of: "+", with: "")
     }

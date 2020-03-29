@@ -25,7 +25,7 @@ public final class TableSectionView: KioView {
     // MARK: Initalizer
     public init(title: String) {
         super.init(frame: CGRect.zero)
-        self.backgroundColor = AppUI.Color.lightBlue
+        self.backgroundColor = AppUI.Color.lightPurple
         self.sectionLabel.text = title
         self.kio.subview(forAutoLayout: self.sectionLabel)
 

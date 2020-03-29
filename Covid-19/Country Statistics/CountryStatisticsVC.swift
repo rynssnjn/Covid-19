@@ -45,13 +45,45 @@ public final class CountryStatisticsVC: KioViewController {
         super.viewDidLoad()
 
         self.rootView.tableView.delegate = self
+
+        self.setupNavigationBar()
+
+    }
+
+    // MARK: Instance Methods
+    private func setupNavigationBar() {
         self.navigationItem.title = self.statistics.country
+
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: #imageLiteral(resourceName: "close_icon").withRenderingMode(UIImage.RenderingMode.alwaysTemplate),
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(CountryStatisticsVC.closeButtonItemTapped)
+        )
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: #imageLiteral(resourceName: "calendar_icon").withRenderingMode(UIImage.RenderingMode.alwaysTemplate),
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(CountryStatisticsVC.calendarButtonItemTapped)
+        )
     }
 }
 
 // MARK: Views
 private extension CountryStatisticsVC {
     unowned var rootView: CountryStatisticsView { return self.view as! CountryStatisticsView } //swiftlint:disable:this force_cast line_length
+}
+
+// MARK: Target Action Functions
+private extension CountryStatisticsVC {
+    @objc func closeButtonItemTapped() {
+        self.delegate.close()
+    }
+
+    @objc func calendarButtonItemTapped() {
+        self.delegate.goToHistory()
+    }
 }
 
 // MARK: UITableViewDelegate Methods

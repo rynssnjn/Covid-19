@@ -15,7 +15,7 @@ public final class CountryStatisticsCoordinator: AbstractCoordinator {
     private unowned let delegate: CountryStatisticsCoordinatorDelegate
 
     // MARK: Initializer
-    public init(delegate: CountryStatisticsCoordinatorDelegate, statistics: Statistics, navigationController: UINavigationController) {
+    public init(delegate: CountryStatisticsCoordinatorDelegate, statistics: Statistics, navigationController: UINavigationController) { //swiftlint:disable:this line_length
         self.delegate = delegate
         self.statistics = statistics
         self.navigationController = navigationController
@@ -29,6 +29,7 @@ public final class CountryStatisticsCoordinator: AbstractCoordinator {
 
     // MARK: Instance Methods
     public override func start() {
+        super.start()
         let vc: CountryStatisticsVC = CountryStatisticsVC(
             delegate: self,
             statistics: self.statistics
@@ -39,4 +40,14 @@ public final class CountryStatisticsCoordinator: AbstractCoordinator {
 }
 
 // MARK: CountryStatisticsVCDelegate Methods
-extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {}
+extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
+
+    public func close() {
+        self.navigationController.popViewController(animated: true)
+    }
+
+    public func goToHistory() {
+        print("TODO")
+    }
+}
+

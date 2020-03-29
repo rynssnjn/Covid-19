@@ -78,10 +78,7 @@ extension CountryListVC: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.kio.showActivityIndicator()
-        self.delegate.getCountryStatistics(country: self.countries.countries[indexPath.item]) {
-            self.kio.hideActivityIndicator()
-        }
+        self.delegate.getCountryStatistics(country: self.countries.countries[indexPath.item])
     }
 }
 

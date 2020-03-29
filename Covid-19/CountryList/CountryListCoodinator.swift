@@ -17,6 +17,7 @@ public final class CountryListCoordinator: AbstractCoordinator {
         self.navigationController = navigationController
 
         super.init()
+        self.navigationController.delegate = self
     }
 
     // MARK: Stored Properties
@@ -57,7 +58,8 @@ public final class CountryListCoordinator: AbstractCoordinator {
 
 // MARK: CountryListVCDelegate Methods
 extension CountryListCoordinator: CountryListVCDelegate {
-    public func getCountryStatistics(country: String, onComplete: @escaping () -> Void) {
+    public func getCountryStatistics(country: String) {
+        self.navigationController.kio.showActivityIndicator()
         self.service.getStatistics(country: country)
             .onSuccess { [weak self] (countryStatistics: CountryStatistics) -> Void in
                 if let statistics: Statistics = countryStatistics.statistics.first {
@@ -82,11 +84,36 @@ extension CountryListCoordinator: CountryListVCDelegate {
 
                 s.navigationController.present(alert, animated: true)
             }
-            .onComplete { (_) -> Void in
-                onComplete()
+            .onComplete { [weak self] (_) -> Void in
+                guard let s = self else { return }
+                s.navigationController.kio.hideActivityIndicator()
             }
     }
 }
 
 // MARK: CountryStatisticsCoordinatorDelegate Methods
 extension CountryListCoordinator: CountryStatisticsCoordinatorDelegate {}
+
+// MARK: UINavigationControllerDelegate Methods
+extension CountryListCoordinator: UINavigationControllerDelegate {
+    public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) { //swiftlint:disable:this line_length
+
+        guard
+            let fromViewController = navigationController.transitionCoordinator?.viewController(
+                forKey: UITransitionContextViewControllerKey.from
+            ),
+            !navigationController.viewControllers.contains(fromViewController),
+            fromViewController is CountryStatisticsVC
+        else {
+            return
+        }
+
+        guard
+            let coordinator = self.childCoordinators.first(where: { $0 is CountryStatisticsCoordinator})
+        else {
+            return
+        }
+
+        self.remove(childCoordinator: coordinator)
+    }
+}

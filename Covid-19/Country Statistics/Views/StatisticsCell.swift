@@ -49,6 +49,7 @@ public final class StatisticsCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         self.backgroundColor = AppUI.Color.darkNavyBlue
+        self.isUserInteractionEnabled = false
         self.kio.subviews(forAutoLayout:
             self.sideDecoration, self.statisticsLabel,
             self.statisticsValueLabel, self.bottomDivider
@@ -60,7 +61,7 @@ public final class StatisticsCell: UITableViewCell {
             make.top.equalToSuperview().offset(2.0)
             make.bottom.equalToSuperview().inset(2.0)
         }
-        
+
         self.statisticsLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
             make.leading.equalTo(self.sideDecoration.snp.trailing).offset(16.0)
             make.trailing.equalToSuperview()
@@ -96,5 +97,6 @@ extension StatisticsCell {
         self.sideDecoration.backgroundColor = viewModel.sideDecorationColor
         self.statisticsLabel.text = viewModel.title
         self.statisticsValueLabel.text = viewModel.value.replacingOccurrences(of: "+", with: "")
+        self.statisticsValueLabel.textColor = viewModel.valueColor
     }
 }

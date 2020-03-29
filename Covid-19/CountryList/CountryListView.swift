@@ -22,7 +22,7 @@ public final class CountryListView: KioView {
 
     public let searchBar: UISearchBar = {
         let searchBar: UISearchBar = UISearchBar()
-        searchBar.placeholder = "Search Country"
+        searchBar.placeholder = "search_country".localized
         searchBar.barTintColor = AppUI.Color.lightGray
         searchBar.showsCancelButton = true
 

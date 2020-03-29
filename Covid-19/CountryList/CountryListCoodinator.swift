@@ -42,7 +42,7 @@ public final class CountryListCoordinator: AbstractCoordinator {
                 guard let s = self else { return }
                 let alert: UIAlertController = UIAlertController(
                     title: nil,
-                    message: "An error has occured",
+                    message: "general_error".localized,
                     preferredStyle: UIAlertController.Style.alert
                 )
 

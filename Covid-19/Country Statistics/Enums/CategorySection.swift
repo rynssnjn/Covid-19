@@ -15,9 +15,9 @@ public enum CategorySection: Int {
     public var title: String {
         switch self {
             case .cases:
-                return "CASES"
+                return "cases".localized
             case .deaths:
-                return "DEATHS"
+                return "deaths".localized
         }
     }
 

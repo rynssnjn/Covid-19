@@ -1,0 +1,12 @@
+
+"country" = "Country";
+"countries" = "Countries";
+"search_country" = "Search Country";
+"general_error" = "An error has occured.";
+"cases" = "CASES";
+"deaths" = "DEATHS";
+"new_cases" = "New Cases";
+"active" = "Active";
+"critical" = "Critical";
+"recovered" = "Recovered";
+"total" = "Total";

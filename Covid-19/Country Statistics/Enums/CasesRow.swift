@@ -18,15 +18,15 @@ public enum CasesRow: Int {
     public var title: String {
         switch self {
             case .new:
-                return "New Cases"
+                return "new_cases".localized
             case .active:
-                return "Active"
+                return "active".localized
             case .critical:
-                return "Critical"
+                return "critical".localized
             case .recovered:
-                return "Recovered"
+                return "recovered".localized
             case .total:
-                return "Total"
+                return "total".localized
         }
     }
 }

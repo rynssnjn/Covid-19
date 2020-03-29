@@ -13,6 +13,14 @@
 		8E809D2D24306ED100DDBCE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */; };
 		8E809D3024306ED100DDBCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2E24306ED100DDBCE6 /* LaunchScreen.storyboard */; };
 		8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */; };
+		8EDD76AC2430906800A60C9B /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AB2430906800A60C9B /* CountryListView.swift */; };
+		8EDD76AF243095CE00A60C9B /* CountryListVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */; };
+		8EDD76B1243095EC00A60C9B /* CountryListCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76B0243095EC00A60C9B /* CountryListCoordinatorDelegate.swift */; };
+		8EDD76B32430961000A60C9B /* CountryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76B22430961000A60C9B /* CountryListVC.swift */; };
+		8EDD76B624309D2100A60C9B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8EDD76B524309D2100A60C9B /* .swiftlint.yml */; };
+		8EFFD14D24309E830026BC8B /* CountryListCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD14C24309E830026BC8B /* CountryListCoodinator.swift */; };
+		8EFFD1502430A32C0026BC8B /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD14F2430A32C0026BC8B /* CountryCell.swift */; };
+		8EFFD1522430A4700026BC8B /* CountryListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFFD1512430A46F0026BC8B /* CountryListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +33,14 @@
 		8E809D2F24306ED100DDBCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E809D3124306ED100DDBCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAppCoordinator.swift; sourceTree = "<group>"; };
+		8EDD76AB2430906800A60C9B /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVCDelegate.swift; sourceTree = "<group>"; };
+		8EDD76B0243095EC00A60C9B /* CountryListCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		8EDD76B22430961000A60C9B /* CountryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVC.swift; sourceTree = "<group>"; };
+		8EDD76B524309D2100A60C9B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		8EFFD14C24309E830026BC8B /* CountryListCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListCoodinator.swift; sourceTree = "<group>"; };
+		8EFFD14F2430A32C0026BC8B /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		8EFFD1512430A46F0026BC8B /* CountryListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListDataSource.swift; sourceTree = "<group>"; };
 		90A73C0C1264A15C061FC84F /* Pods_Covid_19.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Covid_19.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -51,6 +67,7 @@
 		8E809D1724306ED000DDBCE6 = {
 			isa = PBXGroup;
 			children = (
+				8EDD76B524309D2100A60C9B /* .swiftlint.yml */,
 				8E809D2224306ED000DDBCE6 /* Covid-19 */,
 				8E809D2124306ED000DDBCE6 /* Products */,
 				C915DCA35FB36C71F6ADB071 /* Pods */,
@@ -71,6 +88,7 @@
 			children = (
 				8EDD76A624307E9300A60C9B /* App Controllers */,
 				8EDD76A92430803500A60C9B /* Supporting Files */,
+				8EDD76AA2430904400A60C9B /* CountryList */,
 			);
 			path = "Covid-19";
 			sourceTree = "<group>";
@@ -103,6 +121,36 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8EDD76AA2430904400A60C9B /* CountryList */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD14E2430A3170026BC8B /* Views */,
+				8EDD76AD243095BA00A60C9B /* Protocols */,
+				8EDD76AB2430906800A60C9B /* CountryListView.swift */,
+				8EDD76B22430961000A60C9B /* CountryListVC.swift */,
+				8EFFD14C24309E830026BC8B /* CountryListCoodinator.swift */,
+				8EFFD1512430A46F0026BC8B /* CountryListDataSource.swift */,
+			);
+			path = CountryList;
+			sourceTree = "<group>";
+		};
+		8EDD76AD243095BA00A60C9B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */,
+				8EDD76B0243095EC00A60C9B /* CountryListCoordinatorDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8EFFD14E2430A3170026BC8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8EFFD14F2430A32C0026BC8B /* CountryCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C915DCA35FB36C71F6ADB071 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +172,7 @@
 				8E809D1D24306ED000DDBCE6 /* Frameworks */,
 				8E809D1E24306ED000DDBCE6 /* Resources */,
 				DEC36473A73509CFB1E1A3D0 /* [CP] Embed Pods Frameworks */,
+				8EDD76B424309BE600A60C9B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -172,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EDD76B624309D2100A60C9B /* .swiftlint.yml in Resources */,
 				8E809D3024306ED100DDBCE6 /* LaunchScreen.storyboard in Resources */,
 				8E809D2D24306ED100DDBCE6 /* Preview Assets.xcassets in Resources */,
 				8E809D2A24306ED100DDBCE6 /* Assets.xcassets in Resources */,
@@ -203,6 +253,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8EDD76B424309BE600A60C9B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint lint --quiet $@ | sed 's/error: /warning: /g'\n";
+		};
 		DEC36473A73509CFB1E1A3D0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,8 +294,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFFD1502430A32C0026BC8B /* CountryCell.swift in Sources */,
 				8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */,
+				8EFFD14D24309E830026BC8B /* CountryListCoodinator.swift in Sources */,
+				8EDD76B32430961000A60C9B /* CountryListVC.swift in Sources */,
+				8EFFD1522430A4700026BC8B /* CountryListDataSource.swift in Sources */,
 				8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */,
+				8EDD76B1243095EC00A60C9B /* CountryListCoordinatorDelegate.swift in Sources */,
+				8EDD76AF243095CE00A60C9B /* CountryListVCDelegate.swift in Sources */,
+				8EDD76AC2430906800A60C9B /* CountryListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

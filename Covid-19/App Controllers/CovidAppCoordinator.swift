@@ -11,7 +11,6 @@ import Kio
 
 public final class CovidAppCoordinator: AppCoordinator<UINavigationController> {
 
-
     // MARK: Initializer
     public override init(window: UIWindow, rootViewController: UINavigationController) {
         super.init(window: window, rootViewController: rootViewController)
@@ -27,5 +26,11 @@ public final class CovidAppCoordinator: AppCoordinator<UINavigationController> {
     // MARK: Instance Methods
     public override func start() {
         super.start()
+        let coordinator: CountryListCoordinator = CountryListCoordinator(
+            navigationController: self.rootViewController
+        )
+
+        coordinator.start()
+        self.add(childCoordinator: coordinator)
     }
 }

@@ -23,7 +23,6 @@ public final class CountryListCoordinator: AbstractCoordinator {
     // MARK: Stored Properties
     private unowned let navigationController: UINavigationController
     private let service: CountryListService = CountryListService()
-    private weak var vc: CountryListVC?
 
     // MARK: Instance Methods
     public override func start() {
@@ -35,8 +34,7 @@ public final class CountryListCoordinator: AbstractCoordinator {
                 let vc: CountryListVC = CountryListVC(
                     delegate: s,
                     countries: countries
-                ) //swiftlint:disable:this identifier_name
-                s.vc = vc
+                ) // swiftlint:disable:this identifier_name
                 s.navigationController.viewControllers = [vc]
             }
             .onFailure { [weak self] (_: NetworkingError) -> Void in

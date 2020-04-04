@@ -19,6 +19,9 @@ public final class CountryStatisticsCoordinator: AbstractCoordinator {
         self.delegate = delegate
         self.statistics = statistics
         self.navigationController = navigationController
+
+        super.init()
+        self.navigationController.delegate = self
     }
 
     // MARK: Stored Properties
@@ -47,7 +50,41 @@ extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
     }
 
     public func goToHistory() {
-        print("TODO")
+        let coordinator: HistoryCoordinator = HistoryCoordinator(
+            delegate: self,
+            navigationController: self.navigationController
+        )
+
+        coordinator.start()
+        self.add(childCoordinator: coordinator)
     }
 }
 
+// MARK: HistoryCoordinatorDelegate Methods
+extension CountryStatisticsCoordinator: HistoryCoordinatorDelegate {
+
+}
+
+// MARK: UINavigationControllerDelegate Methods
+extension CountryStatisticsCoordinator: UINavigationControllerDelegate {
+    public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) { //swiftlint:disable:this line_length
+
+        guard
+            let fromViewController = navigationController.transitionCoordinator?.viewController(
+                forKey: UITransitionContextViewControllerKey.from
+            ),
+            !navigationController.viewControllers.contains(fromViewController),
+            fromViewController is HistoryVC
+        else {
+            return
+        }
+
+        guard
+            let coordinator = self.childCoordinators.first(where: { $0 is HistoryCoordinator })
+        else {
+            return
+        }
+
+        self.remove(childCoordinator: coordinator)
+    }
+}

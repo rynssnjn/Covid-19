@@ -72,7 +72,7 @@ public final class CountryStatisticsVC: KioViewController {
 
 // MARK: Views
 private extension CountryStatisticsVC {
-    unowned var rootView: CountryStatisticsView { return self.view as! CountryStatisticsView } //swiftlint:disable:this force_cast line_length
+    unowned var rootView: CountryStatisticsView { return self.view as! CountryStatisticsView } // swiftlint:disable:this force_cast line_length
 }
 
 // MARK: Target Action Functions

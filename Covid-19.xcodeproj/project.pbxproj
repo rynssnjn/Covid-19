@@ -14,6 +14,11 @@
 		8E809D3024306ED100DDBCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2E24306ED100DDBCE6 /* LaunchScreen.storyboard */; };
 		8EAF82D62430F3EB00D34F3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EAF82D82430F3EB00D34F3A /* Localizable.strings */; };
 		8EAF82DB2430F6E200D34F3A /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF82DA2430F6E200D34F3A /* FoundationExtension.swift */; };
+		8EDB9C9324388B2700FD5771 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9224388B2700FD5771 /* HistoryView.swift */; };
+		8EDB9C9624388C0B00FD5771 /* HistoryVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9524388C0B00FD5771 /* HistoryVCDelegate.swift */; };
+		8EDB9C9824388C2500FD5771 /* HistoryCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9724388C2500FD5771 /* HistoryCoordinatorDelegate.swift */; };
+		8EDB9C9A24388C3D00FD5771 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9924388C3D00FD5771 /* HistoryVC.swift */; };
+		8EDB9C9C24388CE800FD5771 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9B24388CE800FD5771 /* HistoryCoordinator.swift */; };
 		8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */; };
 		8EDD76AC2430906800A60C9B /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AB2430906800A60C9B /* CountryListView.swift */; };
 		8EDD76AF243095CE00A60C9B /* CountryListVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */; };
@@ -62,6 +67,11 @@
 		8EAF82D72430F3EB00D34F3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8EAF82D92430F40800D34F3A /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		8EAF82DA2430F6E200D34F3A /* FoundationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationExtension.swift; sourceTree = "<group>"; };
+		8EDB9C9224388B2700FD5771 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		8EDB9C9524388C0B00FD5771 /* HistoryVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVCDelegate.swift; sourceTree = "<group>"; };
+		8EDB9C9724388C2500FD5771 /* HistoryCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		8EDB9C9924388C3D00FD5771 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		8EDB9C9B24388CE800FD5771 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
 		8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAppCoordinator.swift; sourceTree = "<group>"; };
 		8EDD76AB2430906800A60C9B /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVCDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +150,7 @@
 		8E809D2224306ED000DDBCE6 /* Covid-19 */ = {
 			isa = PBXGroup;
 			children = (
+				8EDB9C9124388B1800FD5771 /* History */,
 				8EFFD1562430A96A0026BC8B /* Utilities */,
 				8EDD76A624307E9300A60C9B /* App Controllers */,
 				8EDD76A92430803500A60C9B /* Supporting Files */,
@@ -155,6 +166,26 @@
 				8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8EDB9C9124388B1800FD5771 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				8EDB9C9424388BFD00FD5771 /* Protocols */,
+				8EDB9C9224388B2700FD5771 /* HistoryView.swift */,
+				8EDB9C9924388C3D00FD5771 /* HistoryVC.swift */,
+				8EDB9C9B24388CE800FD5771 /* HistoryCoordinator.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		8EDB9C9424388BFD00FD5771 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8EDB9C9524388C0B00FD5771 /* HistoryVCDelegate.swift */,
+				8EDB9C9724388C2500FD5771 /* HistoryCoordinatorDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8EDD76A624307E9300A60C9B /* App Controllers */ = {
@@ -481,12 +512,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EAF82DB2430F6E200D34F3A /* FoundationExtension.swift in Sources */,
+				8EDB9C9824388C2500FD5771 /* HistoryCoordinatorDelegate.swift in Sources */,
 				8EFFD1842430CE370026BC8B /* CategorySection.swift in Sources */,
 				8EFFD16B2430B9900026BC8B /* Deaths.swift in Sources */,
 				8EFFD1502430A32C0026BC8B /* CountryCell.swift in Sources */,
+				8EDB9C9624388C0B00FD5771 /* HistoryVCDelegate.swift in Sources */,
 				8EFFD1652430B64C0026BC8B /* CountryStatistics.swift in Sources */,
 				8EFFD18C2430D1BD0026BC8B /* CasesRow.swift in Sources */,
 				8EFFD1792430C5DB0026BC8B /* CountryStatisticsCoordinatorDelegate.swift in Sources */,
+				8EDB9C9324388B2700FD5771 /* HistoryView.swift in Sources */,
 				8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */,
 				8EFFD1772430C5BE0026BC8B /* CountryStatisticsVCDelegate.swift in Sources */,
 				8EFFD18E2430D2630026BC8B /* DeathsRow.swift in Sources */,
@@ -494,6 +528,8 @@
 				8EFFD1812430CB610026BC8B /* CountryStatisticsDataSource.swift in Sources */,
 				8EFFD14D24309E830026BC8B /* CountryListCoodinator.swift in Sources */,
 				8EDD76B32430961000A60C9B /* CountryListVC.swift in Sources */,
+				8EDB9C9C24388CE800FD5771 /* HistoryCoordinator.swift in Sources */,
+				8EDB9C9A24388C3D00FD5771 /* HistoryVC.swift in Sources */,
 				8EFFD1872430CFFE0026BC8B /* StatisticsCell.swift in Sources */,
 				8EFFD1722430BD040026BC8B /* AbstractAPIService.swift in Sources */,
 				8EFFD15C2430AADC0026BC8B /* CountryListRequest.swift in Sources */,

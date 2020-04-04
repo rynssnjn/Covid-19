@@ -85,6 +85,7 @@ extension CountryListVC: UISearchBarDelegate {
         DispatchQueue.main.async {
             self.rootView.showSearchBar(false)
         }
+        self.view.endEditing(true)
     }
 
     public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {}

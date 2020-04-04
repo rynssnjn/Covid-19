@@ -76,6 +76,14 @@ extension HistoryCoordinator: HistoryVCDelegate {
             popupVC.present(in: presentingVC)
         }
     }
+
+    public func showPopupAdvanceDate() {
+        AlertHandler(
+            title: "error".localized,
+            message: "future_date_error".localized,
+            viewController: self.navigationController
+        ).showErrorAlert()
+    }
 }
 
 // MARK: DayUpdateVCDelegate Properties

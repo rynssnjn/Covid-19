@@ -21,3 +21,6 @@
 "saturday" = "Saturday";
 "sunday" = "Sunday";
 "day_update" = "Day to Day Update";
+"close" = "Close";
+"error" = "Error!";
+"future_date_error" = "No reports are available for future dates.";

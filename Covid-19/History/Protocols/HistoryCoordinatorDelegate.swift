@@ -8,4 +8,8 @@
 
 import Foundation
 
-public protocol HistoryCoordinatorDelegate: class {}
+public protocol HistoryCoordinatorDelegate: class {
+
+    var country: String { get }
+
+}

@@ -34,8 +34,6 @@ public final class CountryListVC: KioViewController {
     private var dataSource: CountryListDataSource!
     private let countries: Countries
 
-    // MARK: Computed Properties
-
     // MARK: LifeCycle Methods
     public override func loadView() {
         self.view = CountryListView()
@@ -56,7 +54,7 @@ public final class CountryListVC: KioViewController {
 
 // MARK: Views
 extension CountryListVC {
-    unowned var rootView: CountryListView { return self.view as! CountryListView } //swiftlint:disable:this force_cast line_length
+    unowned var rootView: CountryListView { return self.view as! CountryListView } // swiftlint:disable:this force_cast line_length
 }
 
 // MARK: Helper Methods
@@ -89,7 +87,5 @@ extension CountryListVC: UISearchBarDelegate {
         }
     }
 
-    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        // TODO: Add search functionality
-    }
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {}
 }

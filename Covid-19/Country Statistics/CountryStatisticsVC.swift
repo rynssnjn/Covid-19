@@ -34,8 +34,6 @@ public final class CountryStatisticsVC: KioViewController {
     private var dataSource: CountryStatisticsDataSource!
     private let statistics: Statistics
 
-    // MARK: Computed Properties
-
     // MARK: LifeCycle Methods
     public override func loadView() {
         self.view = CountryStatisticsView()

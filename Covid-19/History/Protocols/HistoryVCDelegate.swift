@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 public protocol HistoryVCDelegate: class {
 
+    var country: String { get }
+
     func close()
+
+    func showDayUpdatePopup(in view: UIView, statistics: [Statistics], date: Date)
 
 }

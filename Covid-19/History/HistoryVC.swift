@@ -46,6 +46,8 @@ public final class HistoryVC: KioViewController {
             target: self,
             action: #selector(HistoryVC.closeButtonItemTapped)
         )
+
+        self.navigationItem.title = self.delegate.country
     }
 }
 
@@ -67,22 +69,15 @@ extension HistoryVC: FSCalendarDataSource {}
 // MARK: FSCalendarDelegate Methods
 extension HistoryVC: FSCalendarDelegate {
     public func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        var dateComponents: DateComponents = DateComponents()
-        dateComponents.day = 1
-
-        guard
-            let selectedDate: Date = Calendar.current.date(byAdding: dateComponents, to: date)
-        else {
-            return
-        }
 
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
 
         let statistics: [Statistics] = self.statistics.filter {
-            $0.day == formatter.string(from: selectedDate)
+            $0.day == formatter.string(from: date)
         }
 
-        print(statistics)
+        guard let cell = calendar.cell(for: date, at: monthPosition) else { return }
+        self.delegate.showDayUpdatePopup(in: cell, statistics: statistics, date: date)
     }
 }

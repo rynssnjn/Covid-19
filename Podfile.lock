@@ -7,6 +7,7 @@ PODS:
   - FSCalendar (2.8.1)
   - Kio (2.2.2)
   - SnapKit (5.0.1)
+  - STPopup (1.8.7)
 
 DEPENDENCIES:
   - Astral
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - FSCalendar
   - Kio
   - SnapKit
+  - STPopup
 
 SPEC REPOS:
   trunk:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - FSCalendar
     - Kio
     - SnapKit
+    - STPopup
 
 SPEC CHECKSUMS:
   Astral: ed5d3072daf5cf630c8a4784c4274a252840f52b
@@ -31,7 +34,8 @@ SPEC CHECKSUMS:
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   Kio: 320b6cb88a8c9175bb72880e8a85bea66027a0a8
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  STPopup: a9045557bc48a0df51fbb7bf0544447c5fe84d34
 
-PODFILE CHECKSUM: 6f81a43635d885814753a8721fd5bfce34661d98
+PODFILE CHECKSUM: 5a3b47bf03d9eebd89d1df2e9b9fde4b158bcea7
 
 COCOAPODS: 1.8.4

@@ -51,4 +51,3 @@ public struct CountryHistoryRequest: Request {
         return nil
     }
 }
-

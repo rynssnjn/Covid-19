@@ -30,8 +30,6 @@ public final class CountryStatisticsCoordinator: AbstractCoordinator {
     private let statistics: Statistics
     private let service: CountryHistoryService = CountryHistoryService()
 
-    // MARK: Computed Properties
-
     // MARK: Instance Methods
     public override func start() {
         super.start()
@@ -84,8 +82,13 @@ extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
 
 // MARK: HistoryCoordinatorDelegate Methods
 extension CountryStatisticsCoordinator: HistoryCoordinatorDelegate {
+
+    public var country: String {
+        return self.statistics.country
+    }
+
 }
-//
+
 // MARK: UINavigationControllerDelegate Methods
 extension CountryStatisticsCoordinator: UINavigationControllerDelegate {
     public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) { //swiftlint:disable:this line_length

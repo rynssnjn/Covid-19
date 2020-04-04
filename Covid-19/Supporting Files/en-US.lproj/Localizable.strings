@@ -11,3 +11,13 @@
 "recovered" = "Recovered";
 "total" = "Total";
 "back" = "Back";
+"new_cases" = "Total New Cases:";
+"new_deaths" = "Total New Deaths:";
+"monday" = "Monday";
+"tuesday" = "Tuesday";
+"wednesday" = "Wednesday";
+"thursday" = "Thursday";
+"friday" = "Friday";
+"saturday" = "Saturday";
+"sunday" = "Sunday";
+"day_update" = "Day to Day Update";

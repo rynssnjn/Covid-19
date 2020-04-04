@@ -6,6 +6,7 @@
 //  Copyright © 2020 Rael San Juan. All rights reserved.
 //
 
+import Astral
 import Foundation
 import Kio
 
@@ -19,13 +20,15 @@ public final class CountryStatisticsCoordinator: AbstractCoordinator {
         self.delegate = delegate
         self.statistics = statistics
         self.navigationController = navigationController
+
+        super.init()
+        self.navigationController.delegate = self
     }
 
     // MARK: Stored Properties
     private unowned let navigationController: UINavigationController
     private let statistics: Statistics
-
-    // MARK: Computed Properties
+    private let service: CountryHistoryService = CountryHistoryService()
 
     // MARK: Instance Methods
     public override func start() {
@@ -47,7 +50,66 @@ extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
     }
 
     public func goToHistory() {
-        print("TODO")
+        self.navigationController.kio.showActivityIndicator()
+        self.service.getHistory(country: self.statistics.country)
+            .onSuccess { [weak self] (country: CountryStatistics) -> Void in
+                guard let s = self else { return }
+                let coordinator: HistoryCoordinator = HistoryCoordinator(
+                    delegate: s,
+                    navigationController: s.navigationController,
+                    statistics: country.statistics
+                )
+
+                coordinator.start()
+                s.add(childCoordinator: coordinator)
+            }
+            .onFailure { [weak self] (_: NetworkingError) -> Void in
+                guard let s = self else { return }
+                let alert: UIAlertController = UIAlertController(
+                    title: nil,
+                    message: "general_error".localized,
+                    preferredStyle: UIAlertController.Style.alert
+                )
+
+                s.navigationController.present(alert, animated: true)
+            }
+            .onComplete { [weak self] (_) -> Void in
+                guard let s = self else { return }
+                s.navigationController.kio.hideActivityIndicator()
+            }
     }
 }
 
+// MARK: HistoryCoordinatorDelegate Methods
+extension CountryStatisticsCoordinator: HistoryCoordinatorDelegate {
+
+    public var country: String {
+        return self.statistics.country
+    }
+
+}
+
+// MARK: UINavigationControllerDelegate Methods
+extension CountryStatisticsCoordinator: UINavigationControllerDelegate {
+    public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) { //swiftlint:disable:this line_length
+
+        guard
+            let fromViewController = navigationController.transitionCoordinator?.viewController(
+                forKey: UITransitionContextViewControllerKey.from
+            ),
+            !navigationController.viewControllers.contains(fromViewController),
+            fromViewController is HistoryVC
+        else {
+            return
+        }
+
+        guard
+            let coordinator = self.childCoordinators.first(where: { $0 is HistoryCoordinator })
+        else {
+            return
+        }
+
+        self.remove(childCoordinator: coordinator)
+        self.navigationController.delegate = self.delegate
+    }
+}

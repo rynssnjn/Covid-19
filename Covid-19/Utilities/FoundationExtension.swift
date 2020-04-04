@@ -12,4 +12,8 @@ extension String {
     public var localized: String {
         return NSLocalizedString(self, comment: self)
     }
+
+    public var toInteger: Int {
+        return Int(self) ?? 0
+    }
 }

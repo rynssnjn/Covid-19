@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import STPopup
 
 @UIApplicationMain
 public class AppDelegate: UIResponder {
@@ -31,6 +32,15 @@ public class AppDelegate: UIResponder {
         ]
 
         UINavigationBar.appearance().titleTextAttributes = barTitleAttributes
+
+        let navigationTitleAttributes = [
+            NSAttributedString.Key.foregroundColor: AppUI.Color.darkNavyBlue
+        ]
+
+        UINavigationBar.appearance().titleTextAttributes = navigationTitleAttributes
+        STPopupNavigationBar.appearance().barTintColor = AppUI.Color.lightPurple
+        STPopupNavigationBar.appearance().tintColor = AppUI.Color.darkNavyBlue
+
     }
 }
 

@@ -6,6 +6,6 @@
 //  Copyright © 2020 Rael San Juan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-public protocol CountryStatisticsCoordinatorDelegate: class {}
+public protocol CountryStatisticsCoordinatorDelegate: class, UINavigationControllerDelegate {}

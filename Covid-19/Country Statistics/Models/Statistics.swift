@@ -14,6 +14,8 @@ public struct Statistics: Decodable {
         case country
         case cases
         case deaths
+        case day
+        case time
     }
 
     // MARK: Initializer
@@ -22,11 +24,15 @@ public struct Statistics: Decodable {
         self.country = try container.decode(String.self, forKey: Statistics.CodingKeys.country)
         self.cases = try container.decode(Cases.self, forKey: Statistics.CodingKeys.cases)
         self.deaths = try container.decode(Deaths.self, forKey: Statistics.CodingKeys.deaths)
+        self.day = try container.decode(String.self, forKey: Statistics.CodingKeys.day)
+        self.time = try container.decode(String.self, forKey: Statistics.CodingKeys.time)
     }
 
     // MARK: Stored Properties
     public let country: String
     public let cases: Cases
     public let deaths: Deaths
+    public let day: String
+    public let time: String
 
 }

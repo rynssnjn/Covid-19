@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let NetworkQueue: DispatchQueue = DispatchQueue(
     label: "NetworkQueue",
@@ -17,4 +18,7 @@ let NetworkQueue: DispatchQueue = DispatchQueue(
 public enum Constants {
 
     public static let apiKey = "e3c67bd577msh3d65758c607c0fap132613jsnceb804952c4e"
+
 }
+
+public let UIIdiom: UIUserInterfaceIdiom = UIDevice.current.userInterfaceIdiom

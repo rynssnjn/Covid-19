@@ -24,8 +24,6 @@ public final class CountryListCoordinator: AbstractCoordinator {
     private unowned let navigationController: UINavigationController
     private let service: CountryListService = CountryListService()
 
-    // MARK: Computed Properties
-
     // MARK: Instance Methods
     public override func start() {
         super.start()
@@ -109,7 +107,9 @@ extension CountryListCoordinator: UINavigationControllerDelegate {
         }
 
         guard
-            let coordinator = self.childCoordinators.first(where: { $0 is CountryStatisticsCoordinator})
+            let coordinator = self.childCoordinators.first(where: {
+                $0 is CountryStatisticsCoordinator
+            })
         else {
             return
         }

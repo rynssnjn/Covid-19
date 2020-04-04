@@ -17,4 +17,6 @@ public protocol HistoryVCDelegate: class {
 
     func showDayUpdatePopup(in view: UIView, statistics: [Statistics], date: Date)
 
+    func showPopupAdvanceDate()
+
 }

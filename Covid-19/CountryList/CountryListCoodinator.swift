@@ -23,6 +23,7 @@ public final class CountryListCoordinator: AbstractCoordinator {
     // MARK: Stored Properties
     private unowned let navigationController: UINavigationController
     private let service: CountryListService = CountryListService()
+    private weak var vc: CountryListVC?
 
     // MARK: Instance Methods
     public override func start() {
@@ -35,17 +36,15 @@ public final class CountryListCoordinator: AbstractCoordinator {
                     delegate: s,
                     countries: countries
                 ) //swiftlint:disable:this identifier_name
+                s.vc = vc
                 s.navigationController.viewControllers = [vc]
             }
             .onFailure { [weak self] (_: NetworkingError) -> Void in
                 guard let s = self else { return }
-                let alert: UIAlertController = UIAlertController(
-                    title: nil,
+                AlertHandler(
                     message: "general_error".localized,
-                    preferredStyle: UIAlertController.Style.alert
-                )
-
-                s.navigationController.present(alert, animated: true)
+                    viewController: s.navigationController
+                ).showErrorAlert()
             }
             .onComplete { [weak self] (_) -> Void in
                 guard let s = self else { return }
@@ -74,13 +73,10 @@ extension CountryListCoordinator: CountryListVCDelegate {
             }
             .onFailure { [weak self] (_: NetworkingError) -> Void in
                 guard let s = self else { return }
-                let alert: UIAlertController = UIAlertController(
-                    title: nil,
-                    message: "An error has occured",
-                    preferredStyle: UIAlertController.Style.alert
-                )
-
-                s.navigationController.present(alert, animated: true)
+                AlertHandler(
+                    message: "general_error".localized,
+                    viewController: s.navigationController
+                ).showErrorAlert()
             }
             .onComplete { [weak self] (_) -> Void in
                 guard let s = self else { return }

@@ -65,13 +65,10 @@ extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
             }
             .onFailure { [weak self] (_: NetworkingError) -> Void in
                 guard let s = self else { return }
-                let alert: UIAlertController = UIAlertController(
-                    title: nil,
+                AlertHandler(
                     message: "general_error".localized,
-                    preferredStyle: UIAlertController.Style.alert
-                )
-
-                s.navigationController.present(alert, animated: true)
+                    viewController: s.navigationController
+                ).showErrorAlert()
             }
             .onComplete { [weak self] (_) -> Void in
                 guard let s = self else { return }

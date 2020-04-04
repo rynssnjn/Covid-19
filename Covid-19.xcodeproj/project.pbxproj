@@ -25,6 +25,7 @@
 		8EDB9CA72438B6AD00FD5771 /* DayUpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9CA62438B6AD00FD5771 /* DayUpdateVC.swift */; };
 		8EDB9CAA2438B6E000FD5771 /* DayUpdateVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9CA92438B6E000FD5771 /* DayUpdateVCDelegate.swift */; };
 		8EDB9CAD2438C50C00FD5771 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9CAC2438C50C00FD5771 /* WeekDay.swift */; };
+		8EDB9CB02438D69E00FD5771 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9CAF2438D69E00FD5771 /* AlertHandler.swift */; };
 		8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */; };
 		8EDD76AC2430906800A60C9B /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AB2430906800A60C9B /* CountryListView.swift */; };
 		8EDD76AF243095CE00A60C9B /* CountryListVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */; };
@@ -84,6 +85,7 @@
 		8EDB9CA62438B6AD00FD5771 /* DayUpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayUpdateVC.swift; sourceTree = "<group>"; };
 		8EDB9CA92438B6E000FD5771 /* DayUpdateVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayUpdateVCDelegate.swift; sourceTree = "<group>"; };
 		8EDB9CAC2438C50C00FD5771 /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
+		8EDB9CAF2438D69E00FD5771 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 		8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAppCoordinator.swift; sourceTree = "<group>"; };
 		8EDD76AB2430906800A60C9B /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVCDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +246,14 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		8EDB9CAE2438D68D00FD5771 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				8EDB9CAF2438D69E00FD5771 /* AlertHandler.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
 		8EDD76A624307E9300A60C9B /* App Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +319,7 @@
 		8EFFD1562430A96A0026BC8B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8EDB9CAE2438D68D00FD5771 /* Structs */,
 				8EFFD1932430DCE60026BC8B /* Enums */,
 				8EFFD16C2430BB8B0026BC8B /* Protocols */,
 				8EFFD1572430A9790026BC8B /* Networking */,
@@ -574,6 +585,7 @@
 				8EDB9C9824388C2500FD5771 /* HistoryCoordinatorDelegate.swift in Sources */,
 				8EFFD1842430CE370026BC8B /* CategorySection.swift in Sources */,
 				8EFFD16B2430B9900026BC8B /* Deaths.swift in Sources */,
+				8EDB9CB02438D69E00FD5771 /* AlertHandler.swift in Sources */,
 				8EDB9CA22438988C00FD5771 /* CountryHistoryService.swift in Sources */,
 				8EFFD1502430A32C0026BC8B /* CountryCell.swift in Sources */,
 				8EDB9C9624388C0B00FD5771 /* HistoryVCDelegate.swift in Sources */,

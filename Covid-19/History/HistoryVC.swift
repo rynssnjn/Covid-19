@@ -77,7 +77,12 @@ extension HistoryVC: FSCalendarDelegate {
             $0.day == formatter.string(from: date)
         }
 
-        guard let cell = calendar.cell(for: date, at: monthPosition) else { return }
-        self.delegate.showDayUpdatePopup(in: cell, statistics: statistics, date: date)
+        switch Date() >= date {
+            case true:
+                guard let cell = calendar.cell(for: date, at: monthPosition) else { return }
+                self.delegate.showDayUpdatePopup(in: cell, statistics: statistics, date: date)
+            case false:
+                self.delegate.showPopupAdvanceDate()
+        }
     }
 }

@@ -93,4 +93,27 @@ public struct StatisticsViewModel {
 
         return color
     }
+
+    public var valueColor: UIColor {
+        switch self.row is CasesRow {
+            case true:
+                guard let row = self.row as? CasesRow else { return UIColor.white }
+                switch row {
+                    case .new, .active, .critical:
+                        return UIColor.white
+                    case .recovered:
+                        return AppUI.Color.neonBlue
+                    case .total:
+                        return UIColor.red
+                }
+            case false:
+                guard let row = self.row as? DeathsRow else { return UIColor.white }
+                switch row {
+                    case .new:
+                        return UIColor.white
+                    case .total:
+                        return UIColor.red
+                }
+        }
+    }
 }

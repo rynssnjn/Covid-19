@@ -8,4 +8,10 @@
 
 import Foundation
 
-public protocol CountryStatisticsVCDelegate: class {}
+public protocol CountryStatisticsVCDelegate: class {
+
+    func close()
+
+    func goToHistory()
+
+}

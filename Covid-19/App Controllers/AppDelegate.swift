@@ -35,7 +35,7 @@ public class AppDelegate: UIResponder {
 }
 
 extension AppDelegate: UIApplicationDelegate {
-    public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool { //swiftlint:disable:this colon line_length
         self.setAppearance()
         self.parentCoordinator.start()
         return true

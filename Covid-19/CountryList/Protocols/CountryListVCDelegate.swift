@@ -9,5 +9,5 @@
 import Foundation
 
 public protocol CountryListVCDelegate: class {
-    func getCountryStatistics(country: String, onComplete: @escaping () -> Void)
+    func getCountryStatistics(country: String)
 }

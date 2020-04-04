@@ -109,11 +109,14 @@ extension CountryListCoordinator: UINavigationControllerDelegate {
         }
 
         guard
-            let coordinator = self.childCoordinators.first(where: { $0 is CountryStatisticsCoordinator})
+            let coordinator = self.childCoordinators.first(where: {
+                $0 is CountryStatisticsCoordinator
+            })
         else {
             return
         }
 
         self.remove(childCoordinator: coordinator)
+        
     }
 }

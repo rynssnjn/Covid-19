@@ -8,4 +8,8 @@
 
 import Foundation
 
-public protocol HistoryVCDelegate: class {}
+public protocol HistoryVCDelegate: class {
+
+    func close()
+
+}

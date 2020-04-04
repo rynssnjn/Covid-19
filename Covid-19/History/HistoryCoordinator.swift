@@ -15,19 +15,21 @@ public final class HistoryCoordinator: AbstractCoordinator {
     private unowned let delegate: HistoryCoordinatorDelegate
 
     // MARK: Initializer
-    public init(delegate: HistoryCoordinatorDelegate, navigationController: UINavigationController) {
+    public init(delegate: HistoryCoordinatorDelegate, navigationController: UINavigationController, statistics: [Statistics]) {
         self.delegate = delegate
         self.navigationController = navigationController
+        self.statistics = statistics
 
         super.init()
     }
 
     // MARK: Stored Properties
     private unowned let navigationController: UINavigationController
+    private let statistics: [Statistics]
 
     // MARK: Stored Properties
     public override func start() {
-        let vc: HistoryVC = HistoryVC(delegate: self)
+        let vc: HistoryVC = HistoryVC(delegate: self, statistics: self.statistics)
 
         self.navigationController.pushViewController(vc, animated: true)
     }
@@ -35,5 +37,7 @@ public final class HistoryCoordinator: AbstractCoordinator {
 
 // MARK: HistoryVCDelegate Properties
 extension HistoryCoordinator: HistoryVCDelegate {
-    
+    public func close() {
+        self.navigationController.popViewController(animated: true)
+    }
 }

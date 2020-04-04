@@ -4,12 +4,14 @@ PODS:
     - Astral
     - BrightFutures
   - BrightFutures (8.0.0)
+  - FSCalendar (2.8.1)
   - Kio (2.2.2)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Astral
   - BFAstral
+  - FSCalendar
   - Kio
   - SnapKit
 
@@ -18,6 +20,7 @@ SPEC REPOS:
     - Astral
     - BFAstral
     - BrightFutures
+    - FSCalendar
     - Kio
     - SnapKit
 
@@ -25,9 +28,10 @@ SPEC CHECKSUMS:
   Astral: ed5d3072daf5cf630c8a4784c4274a252840f52b
   BFAstral: 42cbc19d96a6e3a7a86900fff42cb4b5aedf7dbe
   BrightFutures: f8427b46feabaf73c5e71ace7d86d65dfbb47696
+  FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   Kio: 320b6cb88a8c9175bb72880e8a85bea66027a0a8
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 1491e48de90473fb5c264b8b23c69adb4f5557a5
+PODFILE CHECKSUM: 6f81a43635d885814753a8721fd5bfce34661d98
 
 COCOAPODS: 1.8.4

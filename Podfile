@@ -10,4 +10,5 @@ target 'Covid-19' do
   pod 'SnapKit'
   pod 'Astral'
   pod 'BFAstral'
+  pod 'FSCalendar'
 end

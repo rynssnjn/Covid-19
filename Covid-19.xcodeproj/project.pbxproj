@@ -19,6 +19,8 @@
 		8EDB9C9824388C2500FD5771 /* HistoryCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9724388C2500FD5771 /* HistoryCoordinatorDelegate.swift */; };
 		8EDB9C9A24388C3D00FD5771 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9924388C3D00FD5771 /* HistoryVC.swift */; };
 		8EDB9C9C24388CE800FD5771 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9B24388CE800FD5771 /* HistoryCoordinator.swift */; };
+		8EDB9C9F2438979D00FD5771 /* CountryHistoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9E2438979D00FD5771 /* CountryHistoryRequest.swift */; };
+		8EDB9CA22438988C00FD5771 /* CountryHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9CA12438988C00FD5771 /* CountryHistoryService.swift */; };
 		8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */; };
 		8EDD76AC2430906800A60C9B /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AB2430906800A60C9B /* CountryListView.swift */; };
 		8EDD76AF243095CE00A60C9B /* CountryListVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */; };
@@ -72,6 +74,8 @@
 		8EDB9C9724388C2500FD5771 /* HistoryCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinatorDelegate.swift; sourceTree = "<group>"; };
 		8EDB9C9924388C3D00FD5771 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		8EDB9C9B24388CE800FD5771 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
+		8EDB9C9E2438979D00FD5771 /* CountryHistoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryHistoryRequest.swift; sourceTree = "<group>"; };
+		8EDB9CA12438988C00FD5771 /* CountryHistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryHistoryService.swift; sourceTree = "<group>"; };
 		8EDD76A724307EAD00A60C9B /* CovidAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidAppCoordinator.swift; sourceTree = "<group>"; };
 		8EDD76AB2430906800A60C9B /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		8EDD76AE243095CE00A60C9B /* CountryListVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListVCDelegate.swift; sourceTree = "<group>"; };
@@ -150,12 +154,12 @@
 		8E809D2224306ED000DDBCE6 /* Covid-19 */ = {
 			isa = PBXGroup;
 			children = (
-				8EDB9C9124388B1800FD5771 /* History */,
 				8EFFD1562430A96A0026BC8B /* Utilities */,
 				8EDD76A624307E9300A60C9B /* App Controllers */,
 				8EDD76A92430803500A60C9B /* Supporting Files */,
 				8EDD76AA2430904400A60C9B /* CountryList */,
 				8EFFD1732430C5740026BC8B /* Country Statistics */,
+				8EDB9C9124388B1800FD5771 /* History */,
 			);
 			path = "Covid-19";
 			sourceTree = "<group>";
@@ -186,6 +190,22 @@
 				8EDB9C9724388C2500FD5771 /* HistoryCoordinatorDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8EDB9C9D2438973E00FD5771 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8EDB9C9E2438979D00FD5771 /* CountryHistoryRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8EDB9CA02438987700FD5771 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8EDB9CA12438988C00FD5771 /* CountryHistoryService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		8EDD76A624307E9300A60C9B /* App Controllers */ = {
@@ -298,6 +318,8 @@
 		8EFFD1732430C5740026BC8B /* Country Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				8EDB9CA02438987700FD5771 /* Services */,
+				8EDB9C9D2438973E00FD5771 /* Networking */,
 				8EFFD1882430D07B0026BC8B /* View Model */,
 				8EFFD1852430CFEB0026BC8B /* Views */,
 				8EFFD1822430CE230026BC8B /* Enums */,
@@ -515,6 +537,7 @@
 				8EDB9C9824388C2500FD5771 /* HistoryCoordinatorDelegate.swift in Sources */,
 				8EFFD1842430CE370026BC8B /* CategorySection.swift in Sources */,
 				8EFFD16B2430B9900026BC8B /* Deaths.swift in Sources */,
+				8EDB9CA22438988C00FD5771 /* CountryHistoryService.swift in Sources */,
 				8EFFD1502430A32C0026BC8B /* CountryCell.swift in Sources */,
 				8EDB9C9624388C0B00FD5771 /* HistoryVCDelegate.swift in Sources */,
 				8EFFD1652430B64C0026BC8B /* CountryStatistics.swift in Sources */,
@@ -524,6 +547,7 @@
 				8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */,
 				8EFFD1772430C5BE0026BC8B /* CountryStatisticsVCDelegate.swift in Sources */,
 				8EFFD18E2430D2630026BC8B /* DeathsRow.swift in Sources */,
+				8EDB9C9F2438979D00FD5771 /* CountryHistoryRequest.swift in Sources */,
 				8EFFD1922430D8700026BC8B /* TableSectionView.swift in Sources */,
 				8EFFD1812430CB610026BC8B /* CountryStatisticsDataSource.swift in Sources */,
 				8EFFD14D24309E830026BC8B /* CountryListCoodinator.swift in Sources */,

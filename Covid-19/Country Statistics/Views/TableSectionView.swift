@@ -15,8 +15,8 @@ public final class TableSectionView: KioView {
     // MARK: Subviews
     public let sectionLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = UIColor.black
-        label.font = UIFont.boldSystemFont(ofSize: 45.0)
+        label.textColor = AppUI.Color.secondary
+        label.font = UIFont().chunkFive(size: 45.0)
         label.textAlignment = NSTextAlignment.center
 
         return label
@@ -25,7 +25,7 @@ public final class TableSectionView: KioView {
     // MARK: Initalizer
     public init(title: String) {
         super.init(frame: CGRect.zero)
-        self.backgroundColor = AppUI.Color.lightPurple
+        self.backgroundColor = AppUI.Color.darkPrimary
         self.sectionLabel.text = title
         self.kio.subview(forAutoLayout: self.sectionLabel)
 

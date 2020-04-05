@@ -41,5 +41,13 @@ public enum AppUI {
         static let darkPink: UIColor = UIColor(red: 247/255.0, green: 50.0/255.0, blue: 250.0/255.0, alpha: 1.0)
 
         static let darkNavyBlue: UIColor = UIColor(red: 3.0/255.0, green: 2.0/255.0, blue: 59.0/255.0, alpha: 1.0)
+
+        static let primary: UIColor = UIColor(red: 52.0/255.0, green: 73.0/255.0, blue: 85.0/255.0, alpha: 1.0)
+
+        static let darkPrimary: UIColor = UIColor(red: 35.0/255.0, green: 47.0/255.0, blue: 52.0/255.0, alpha: 1.0)
+
+        static let lightPrimary: UIColor = UIColor(red: 74.0/255.0, green: 101.0/255.0, blue: 114.0/255.0, alpha: 1.0)
+
+        static let secondary: UIColor = UIColor(red: 249.0/255.0, green: 170.0/255.0, blue: 51.0/255.0, alpha: 1.0)
     }
 }

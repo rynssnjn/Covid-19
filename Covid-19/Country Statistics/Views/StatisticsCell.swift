@@ -16,7 +16,7 @@ public final class StatisticsCell: UITableViewCell {
     public let statisticsLabel: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = UIColor.white
-        label.font = UIFont.systemFont(ofSize: 20.0)
+        label.font = UIFont().kinsaleDisplay(size: 20.0)
         label.textAlignment = NSTextAlignment.left
 
         return label
@@ -25,7 +25,7 @@ public final class StatisticsCell: UITableViewCell {
     public let statisticsValueLabel: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = UIColor.white
-        label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        label.font = UIFont().seasideResortNF(size: 20.0)
         label.textAlignment = NSTextAlignment.right
 
         return label
@@ -48,7 +48,8 @@ public final class StatisticsCell: UITableViewCell {
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        self.backgroundColor = AppUI.Color.darkNavyBlue
+        self.backgroundColor = AppUI.Color.lightPrimary
+
         self.isUserInteractionEnabled = false
         self.kio.subviews(forAutoLayout:
             self.sideDecoration, self.statisticsLabel,
@@ -94,9 +95,10 @@ extension StatisticsCell {
     public static var identifier: String = "StatisticsCell"
 
     public func configure(with viewModel: StatisticsViewModel) {
-        self.sideDecoration.backgroundColor = viewModel.sideDecorationColor
         self.statisticsLabel.text = viewModel.title
         self.statisticsValueLabel.text = viewModel.value.replacingOccurrences(of: "+", with: "")
-        self.statisticsValueLabel.textColor = viewModel.valueColor
+        self.sideDecoration.backgroundColor = viewModel.decoration.sideColor
+        self.statisticsValueLabel.textColor = viewModel.decoration.valueColor
+        self.statisticsValueLabel.font = viewModel.decoration.font
     }
 }

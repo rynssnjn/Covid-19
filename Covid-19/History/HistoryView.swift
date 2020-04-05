@@ -47,7 +47,7 @@ public final class HistoryView: KioView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.backgroundColor = AppUI.Color.darkNavyBlue
+        self.backgroundColor = AppUI.Color.darkPrimary
 
         self.kio.subview(forAutoLayout: self.calendar)
 

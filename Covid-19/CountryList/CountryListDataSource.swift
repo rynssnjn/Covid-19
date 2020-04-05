@@ -24,7 +24,7 @@ public final class CountryListDataSource: KioObject {
 
     // MARK: Stored Properties
     public let tableView: UITableView
-    private let countries: [String]
+    public var countries: [String]
 
 }
 

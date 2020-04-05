@@ -27,14 +27,9 @@ public class AppDelegate: UIResponder {
         UINavigationBar.appearance().barTintColor = AppUI.Color.lightPurple
         UINavigationBar.appearance().isTranslucent = false
 
-        let barTitleAttributes = [
-            NSAttributedString.Key.foregroundColor: AppUI.Color.darkNavyBlue
-        ]
-
-        UINavigationBar.appearance().titleTextAttributes = barTitleAttributes
-
         let navigationTitleAttributes = [
-            NSAttributedString.Key.foregroundColor: AppUI.Color.darkNavyBlue
+            NSAttributedString.Key.foregroundColor: AppUI.Color.darkNavyBlue,
+            NSAttributedString.Key.font: UIFont().seasideResortNF(size: 25.0)
         ]
 
         UINavigationBar.appearance().titleTextAttributes = navigationTitleAttributes

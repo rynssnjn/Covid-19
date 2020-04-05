@@ -11,8 +11,8 @@
 "recovered" = "Recovered";
 "total" = "Total";
 "back" = "Back";
-"new_cases" = "Total New Cases:";
-"new_deaths" = "Total New Deaths:";
+"total_cases" = "Total Cases:";
+"no_cases_found" = "No new cases.";
 "monday" = "Monday";
 "tuesday" = "Tuesday";
 "wednesday" = "Wednesday";

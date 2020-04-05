@@ -14,7 +14,7 @@ public final class DayUpdateVC: KioViewController {
     // MARK: Delegate Properties
     private unowned let delegate: DayUpdateVCDelegate
 
-    public init(delegate: DayUpdateVCDelegate, statistics: [Statistics], date: Date) {
+    public init(delegate: DayUpdateVCDelegate, statistics: Statistics? = nil, date: Date) {
         self.delegate = delegate
         self.statistics = statistics
         self.date = date
@@ -27,7 +27,7 @@ public final class DayUpdateVC: KioViewController {
     }
 
     // MARK: Stored Properties
-    private let statistics: [Statistics]
+    private let statistics: Statistics?
     private let date: Date
 
     // MARK: LifeCycle Methods
@@ -57,22 +57,13 @@ public final class DayUpdateVC: KioViewController {
 
     // MARK: Instance Methods
     private func setupView() {
-        var totalDeaths: Int = 0
-        var totalCases: Int = 0
-        self.statistics.forEach { (statistic: Statistics) -> Void in
-            if let newDeaths = statistic.deaths.new {
-                let newDeaths: Int = newDeaths.replacingOccurrences(of: "+", with: "").toInteger
-                totalDeaths += newDeaths
-            } else {
-                totalDeaths += 0
-            }
+        let totalCases: Int
 
-            if let newCases = statistic.cases.new {
-                let newCases: Int = newCases.replacingOccurrences(of: "+", with: "").toInteger
-                totalCases += newCases
-            } else {
-                totalCases += 0
-            }
+        if let statistics = self.statistics,
+            let cases = statistics.cases.new {
+            totalCases = cases.replacingOccurrences(of: "+", with: "").toInteger
+        } else {
+            totalCases = 0
         }
 
         let formatter = DateFormatter()
@@ -86,7 +77,7 @@ public final class DayUpdateVC: KioViewController {
         self.rootView.dayLabel.text = day.string
         self.rootView.dateLabel.text = formatter.string(from: self.date)
         self.rootView.casesValueLabel.text = totalCases.kio.stringValue
-        self.rootView.deathsValueLabel.text = totalDeaths.kio.stringValue
+
     }
 }
 

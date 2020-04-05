@@ -100,7 +100,13 @@ extension CountryListVC: UISearchBarDelegate {
             self.rootView.showSearchBar(false)
             self.reloadCountryList(countries: self.countries.countries)
         }
-        self.rootView.searchBar.searchTextField.text = nil
+
+        if #available(iOS 13.0, *) {
+            searchBar.searchTextField.text = nil
+        } else {
+            searchBar.text = nil
+        }
+
         self.view.endEditing(true)
     }
 
@@ -115,7 +121,7 @@ extension CountryListVC: UISearchBarDelegate {
             case false:
                 countries = self.countries.countries.filter { (country: String) -> Bool in
                     return country.lowercased().contains(searchText.lowercased())
-                    }.sorted(by: { $0.uppercased() < $1.uppercased() })
+                }.sorted(by: { $0.uppercased() < $1.uppercased() })
         }
 
         self.reloadCountryList(countries: countries)

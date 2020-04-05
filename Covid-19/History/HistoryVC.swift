@@ -71,16 +71,27 @@ extension HistoryVC: FSCalendarDataSource {}
 extension HistoryVC: FSCalendarDelegate {
     public func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
 
+        guard let cell = calendar.cell(for: date, at: monthPosition) else { return }
+
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
 
-        let statistics: [Statistics] = self.statistics.filter {
-            $0.day == formatter.string(from: date)
+        guard
+            let statistics = self.statistics.first(where: {
+                $0.day == formatter.string(from: date)
+            }
+        ) else {
+            switch Date() >= date {
+                case true:
+                    self.delegate.showNoCasesPopup(in: cell, date: date)
+                case false:
+                    self.delegate.showPopupAdvanceDate()
+            }
+            return
         }
 
         switch Date() >= date {
             case true:
-                guard let cell = calendar.cell(for: date, at: monthPosition) else { return }
                 self.delegate.showDayUpdatePopup(in: cell, statistics: statistics, date: date)
             case false:
                 self.delegate.showPopupAdvanceDate()

@@ -48,7 +48,36 @@ extension HistoryCoordinator: HistoryVCDelegate {
         self.navigationController.popViewController(animated: true)
     }
 
-    public func showDayUpdatePopup(in view: UIView, statistics: [Statistics], date: Date) {
+    public func showNoCasesPopup(in view: UIView, date: Date) {
+         let vc: DayUpdateVC = DayUpdateVC(delegate: self, date: date)
+
+               guard let presentingVC = self.vc else { return }
+               switch UIIdiom {
+                   case .pad:
+                       let nvc: UINavigationController = UINavigationController(rootViewController: vc)
+                       nvc.modalPresentationStyle = UIModalPresentationStyle.popover
+                       nvc.preferredContentSize = CGSize(width: 450.0, height: 280.0)
+                       let popoverVC: UIPopoverPresentationController = nvc.popoverPresentationController!
+                       popoverVC.sourceView = view
+                       popoverVC.sourceRect = view.bounds
+                       self.navigationController.present(nvc, animated: true, completion: nil)
+
+               default:
+                   vc.contentSizeInPopup = CGSize(
+                       width: presentingVC.view.bounds.width,
+                       height: 283.0
+                   )
+
+                   let popupVC: STPopupController = STPopupController(rootViewController: vc)
+                   self.popupVC = popupVC
+                   popupVC.style = STPopupStyle.bottomSheet
+                   popupVC.containerView.layer.cornerRadius = 5.0
+                   popupVC.hidesCloseButton = true
+                   popupVC.present(in: presentingVC)
+               }
+    }
+
+    public func showDayUpdatePopup(in view: UIView, statistics: Statistics, date: Date) {
         let vc: DayUpdateVC = DayUpdateVC(delegate: self, statistics: statistics, date: date)
 
         guard let presentingVC = self.vc else { return }
@@ -65,7 +94,7 @@ extension HistoryCoordinator: HistoryVCDelegate {
         default:
             vc.contentSizeInPopup = CGSize(
                 width: presentingVC.view.bounds.width,
-                height: presentingVC.view.bounds.height * 0.35
+                height: 283.0
             )
 
             let popupVC: STPopupController = STPopupController(rootViewController: vc)

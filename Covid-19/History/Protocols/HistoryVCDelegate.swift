@@ -15,7 +15,9 @@ public protocol HistoryVCDelegate: class {
 
     func close()
 
-    func showDayUpdatePopup(in view: UIView, statistics: [Statistics], date: Date)
+    func showDayUpdatePopup(in view: UIView, statistics: Statistics, date: Date)
+
+    func showNoCasesPopup(in view: UIView, date: Date)
 
     func showPopupAdvanceDate()
 

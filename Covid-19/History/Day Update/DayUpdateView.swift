@@ -43,7 +43,7 @@ public final class DayUpdateView: KioView {
         label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.left
         label.font = UIFont().kinsaleDisplay(size: 32.0)
-        label.text = "new_cases".localized
+        label.text = "total_cases".localized
 
         return label
     }()
@@ -57,32 +57,13 @@ public final class DayUpdateView: KioView {
         return label
     }()
 
-    public let deathsLabel: UILabel = {
-        let label: UILabel = UILabel()
-        label.textColor = UIColor.white
-        label.textAlignment = NSTextAlignment.left
-        label.font = UIFont().kinsaleDisplay(size: 32.0)
-        label.text = "new_deaths".localized
-
-        return label
-    }()
-
-    public let deathsValueLabel: UILabel = {
-        let label: UILabel = UILabel()
-        label.textColor = AppUI.Color.secondary
-        label.textAlignment = NSTextAlignment.left
-        label.font = UIFont().chunkFive(size: 35.0)
-
-        return label
-    }()
-
     public override init(frame: CGRect) {
         super.init(frame: frame)
 
         self.backgroundColor = AppUI.Color.lightPrimary
         self.kio.subviews(forAutoLayout:
-            self.dateLabel, self.dayLabel, self.deathsLabel, self.lineView,
-            self.deathsValueLabel, self.casesLabel, self.casesValueLabel
+            self.dateLabel, self.dayLabel, self.lineView,
+            self.casesLabel, self.casesValueLabel
         )
 
         self.dateLabel.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
@@ -114,18 +95,6 @@ public final class DayUpdateView: KioView {
         self.casesValueLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
             make.trailing.equalToSuperview().inset(16.0)
             make.top.equalTo(self.lineView.snp.bottom).offset(30.0)
-            make.height.equalTo(40.0)
-        }
-
-        self.deathsLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-            make.leading.equalToSuperview().offset(32.0)
-            make.top.equalTo(self.casesLabel.snp.bottom).offset(16.0)
-            make.height.equalTo(40.0)
-        }
-
-        self.deathsValueLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-            make.trailing.equalToSuperview().inset(16.0)
-            make.top.equalTo(self.casesValueLabel.snp.bottom).offset(16.0)
             make.height.equalTo(40.0)
         }
     }

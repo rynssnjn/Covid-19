@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>punch3d.ttf</string>
+		<string>punch.ttf</string>
+		<string>ChunkFive-Regular.otf</string>
+		<string>SEASRN__.ttf</string>
+		<string>LeagueSpartan-Bold.otf</string>
+		<string>alpha_echo.ttf</string>
+		<string>CORONA COVID19.ttf</string>
+		<string>Kinsale Display DEMO.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

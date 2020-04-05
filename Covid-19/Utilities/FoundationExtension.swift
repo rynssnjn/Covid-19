@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String {
     public var localized: String {
@@ -16,4 +17,39 @@ extension String {
     public var toInteger: Int {
         return Int(self) ?? 0
     }
+}
+
+extension UIFont {
+    public func punch3d(size: CGFloat) -> UIFont {
+        return UIFont(name: "Punch3D", size: size)!
+    }
+
+    public func punch(size: CGFloat) -> UIFont {
+        return UIFont(name: "Punch", size: size)!
+    }
+
+    public func chunkFive(size: CGFloat) -> UIFont {
+        return UIFont(name: "ChunkFive-Regular", size: size)!
+    }
+
+    public func seasideResortNF(size: CGFloat) -> UIFont {
+        return UIFont(name: "SeasideResortNF", size: size)!
+    }
+
+    public func leagueSpartan(size: CGFloat) -> UIFont {
+        return UIFont(name: "LeagueSpartan-Bold", size: size)!
+    }
+
+    public func alphaEcho(size: CGFloat) -> UIFont {
+        return UIFont(name: "AlphaEcho", size: size)!
+    }
+
+    public func coronaCovid(size: CGFloat) -> UIFont {
+        return UIFont(name: "CORONACOVID19", size: size)!
+    }
+
+    public func kinsaleDisplay(size: CGFloat) -> UIFont {
+        return UIFont(name: "KinsaleDisplay", size: size)!
+    }
+
 }

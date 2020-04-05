@@ -18,6 +18,7 @@ public final class CountryListVC: KioViewController {
     public init(delegate: CountryListVCDelegate, countries: Countries) {
         self.delegate = delegate
         self.countries = countries
+        self.filteredCountries = countries.countries
 
         super.init(nibName: nil, bundle: nil)
         self.dataSource = CountryListDataSource(
@@ -33,6 +34,7 @@ public final class CountryListVC: KioViewController {
     // MARK: Stored Properties
     private var dataSource: CountryListDataSource!
     private let countries: Countries
+    private var filteredCountries: [String]
 
     // MARK: LifeCycle Methods
     public override func loadView() {
@@ -57,7 +59,7 @@ extension CountryListVC {
     unowned var rootView: CountryListView { return self.view as! CountryListView } // swiftlint:disable:this force_cast line_length
 }
 
-// MARK: Helper Methods
+// MARK: Target Methods
 private extension CountryListVC {
 
     @objc func searchBarItemTapped() {
@@ -68,6 +70,17 @@ private extension CountryListVC {
     }
 }
 
+// MARK: Helper Methods
+extension CountryListVC {
+
+    private func reloadCountryList(countries: [String]) {
+        self.filteredCountries = countries
+        self.dataSource.countries = countries
+        self.rootView.tableView.reloadData()
+    }
+
+}
+
 // MARK: UITableViewDelegate Methods
 extension CountryListVC: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -76,7 +89,7 @@ extension CountryListVC: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.delegate.getCountryStatistics(country: self.countries.countries[indexPath.item])
+        self.delegate.getCountryStatistics(country: self.filteredCountries[indexPath.item])
     }
 }
 
@@ -84,9 +97,25 @@ extension CountryListVC: UISearchBarDelegate {
     public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         DispatchQueue.main.async {
             self.rootView.showSearchBar(false)
+            self.reloadCountryList(countries: self.countries.countries)
         }
         self.view.endEditing(true)
     }
 
-    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {}
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard let text = searchBar.text else { return }
+        let countries: [String]
+
+        switch text.isEmpty {
+            case true:
+                countries = self.countries.countries
+
+            case false:
+                countries = self.countries.countries.filter { (country: String) -> Bool in
+                    return country.lowercased().contains(searchText.lowercased())
+                    }.sorted(by: { $0.uppercased() < $1.uppercased() })
+        }
+
+        self.reloadCountryList(countries: countries)
+    }
 }

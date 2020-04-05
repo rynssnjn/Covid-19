@@ -64,56 +64,65 @@ public struct StatisticsViewModel {
         }
     }
 
-    public var sideDecorationColor: UIColor {
-        let color: UIColor
+    public var decoration: (sideColor: UIColor, valueColor: UIColor, font: UIFont) { // swiftlint:disable:this large_tuple line_length
+        let sideColor: UIColor
+        let valueColor: UIColor
+        let font: UIFont
         switch self.row is CasesRow {
             case true:
-                guard let row = self.row as? CasesRow else { return UIColor.white }
+                guard
+                    let row = self.row as? CasesRow
+                else {
+                    return (
+                        sideColor: AppUI.Color.secondary,
+                        valueColor: AppUI.Color.secondary,
+                        font: UIFont().seasideResortNF(size: 20.0)
+                    )
+                }
                 switch row {
                     case .new:
-                        color = AppUI.Color.violet
+                        sideColor = AppUI.Color.violet
+                        valueColor = UIColor.white
+                        font = UIFont().seasideResortNF(size: 20.0)
                     case .active:
-                        color = AppUI.Color.pinkishRed
+                        sideColor = AppUI.Color.pinkishRed
+                        valueColor = UIColor.white
+                        font = UIFont().seasideResortNF(size: 20.0)
                     case .critical:
-                        color = AppUI.Color.neonGreen
+                        sideColor = AppUI.Color.neonGreen
+                        valueColor = UIColor.white
+                        font = UIFont().seasideResortNF(size: 20.0)
                     case .recovered:
-                        color = AppUI.Color.neonBlue
+                        sideColor = AppUI.Color.neonBlue
+                        valueColor = AppUI.Color.neonBlue
+                        font = UIFont().chunkFive(size: 30.0)
                     case .total:
-                        color = AppUI.Color.yellowishOrange
+                        sideColor = AppUI.Color.yellowishOrange
+                        valueColor = AppUI.Color.secondary
+                        font = UIFont().chunkFive(size: 35.0)
                 }
             case false:
-                guard let row = self.row as? DeathsRow else { return UIColor.white }
+                guard
+                    let row = self.row as? DeathsRow
+                else {
+                    return (
+                        sideColor: AppUI.Color.secondary,
+                        valueColor: AppUI.Color.secondary,
+                        font: UIFont().seasideResortNF(size: 20.0)
+                    )
+                }
                 switch row {
                     case .new:
-                        color = AppUI.Color.darkishBlue
+                        sideColor = AppUI.Color.darkishBlue
+                        valueColor = UIColor.white
+                        font = UIFont().seasideResortNF(size: 20.0)
                     case .total:
-                        color = AppUI.Color.darkPink
+                        sideColor = AppUI.Color.darkPink
+                        valueColor = AppUI.Color.secondary
+                        font = UIFont().chunkFive(size: 35.0)
                 }
         }
 
-        return color
-    }
-
-    public var valueColor: UIColor {
-        switch self.row is CasesRow {
-            case true:
-                guard let row = self.row as? CasesRow else { return UIColor.white }
-                switch row {
-                    case .new, .active, .critical:
-                        return UIColor.white
-                    case .recovered:
-                        return AppUI.Color.neonBlue
-                    case .total:
-                        return UIColor.red
-                }
-            case false:
-                guard let row = self.row as? DeathsRow else { return UIColor.white }
-                switch row {
-                    case .new:
-                        return UIColor.white
-                    case .total:
-                        return UIColor.red
-                }
-        }
+        return (sideColor: sideColor, valueColor: valueColor, font: font)
     }
 }

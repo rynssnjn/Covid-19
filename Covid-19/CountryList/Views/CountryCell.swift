@@ -16,7 +16,7 @@ public final class CountryCell: UITableViewCell {
     public let countryLabel: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = UIColor.white
-        label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        label.font = UIFont().chunkFive(size: 20.0)
         label.textAlignment = NSTextAlignment.left
 
         return label
@@ -36,14 +36,23 @@ public final class CountryCell: UITableViewCell {
         return view
     }()
 
+    public let chevron: UIImageView = {
+        let image: UIImage = #imageLiteral(resourceName: "chevron_right").withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        let imageView: UIImageView = UIImageView()
+        imageView.tintColor = AppUI.Color.secondary
+        imageView.image = image
+
+        return imageView
+    }()
+
     // MARK: Initializer
     public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = AppUI.Color.darkNavyBlue
+        self.backgroundColor = AppUI.Color.lightPrimary
 
         self.kio.subviews(forAutoLayout:
             self.sideDecoration, self.countryLabel,
-            self.bottomDivider
+            self.bottomDivider, self.chevron
         )
 
         self.sideDecoration.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
@@ -65,6 +74,12 @@ public final class CountryCell: UITableViewCell {
             make.leading.equalToSuperview().offset(20.0)
             make.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
+        }
+
+        self.chevron.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
+            make.trailing.equalToSuperview().inset(16.0)
+            make.size.equalTo(20.0)
+            make.centerY.equalToSuperview()
         }
     }
 

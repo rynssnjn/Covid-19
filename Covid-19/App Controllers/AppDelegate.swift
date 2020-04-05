@@ -23,23 +23,18 @@ public class AppDelegate: UIResponder {
     // MARK: Instance Methods
     private func setAppearance() {
         UINavigationBar.appearance().barStyle = UIBarStyle.black
-        UINavigationBar.appearance().tintColor = AppUI.Color.darkNavyBlue
-        UINavigationBar.appearance().barTintColor = AppUI.Color.lightPurple
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().barTintColor = AppUI.Color.primary
         UINavigationBar.appearance().isTranslucent = false
 
-        let barTitleAttributes = [
-            NSAttributedString.Key.foregroundColor: AppUI.Color.darkNavyBlue
-        ]
-
-        UINavigationBar.appearance().titleTextAttributes = barTitleAttributes
-
         let navigationTitleAttributes = [
-            NSAttributedString.Key.foregroundColor: AppUI.Color.darkNavyBlue
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont().alphaEcho(size: 25.0)
         ]
 
         UINavigationBar.appearance().titleTextAttributes = navigationTitleAttributes
-        STPopupNavigationBar.appearance().barTintColor = AppUI.Color.lightPurple
-        STPopupNavigationBar.appearance().tintColor = AppUI.Color.darkNavyBlue
+        STPopupNavigationBar.appearance().barTintColor = AppUI.Color.darkPrimary
+        STPopupNavigationBar.appearance().tintColor = UIColor.white
 
     }
 }

@@ -89,6 +89,7 @@ extension CountryListVC: UITableViewDelegate {
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        self.view.endEditing(true)
         self.delegate.getCountryStatistics(country: self.filteredCountries[indexPath.item])
     }
 }
@@ -99,6 +100,7 @@ extension CountryListVC: UISearchBarDelegate {
             self.rootView.showSearchBar(false)
             self.reloadCountryList(countries: self.countries.countries)
         }
+        self.rootView.searchBar.searchTextField.text = nil
         self.view.endEditing(true)
     }
 

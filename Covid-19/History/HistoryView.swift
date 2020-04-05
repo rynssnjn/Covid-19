@@ -16,7 +16,29 @@ public final class HistoryView: KioView {
     // MARK: Subviews
     public let calendar: FSCalendar = {
         let calendar: FSCalendar = FSCalendar()
-        calendar.backgroundColor = UIColor.white
+        let appearance: FSCalendarAppearance = calendar.appearance
+
+        calendar.backgroundColor = AppUI.Color.lightPrimary
+
+        // Sets Header Appearance
+        appearance.headerTitleFont = UIFont().alphaEcho(size: 25.0)
+        appearance.headerTitleColor = AppUI.Color.secondary
+
+        // Sets Weekday Appearance
+        appearance.weekdayFont = UIFont().leagueSpartan(size: 17.0)
+        appearance.weekdayTextColor = AppUI.Color.secondary
+
+        // Sets Today Appearance
+        appearance.titleTodayColor = AppUI.Color.secondary
+        appearance.todayColor = AppUI.Color.darkPrimary
+
+        // Sets Calendar Date Appearance
+        appearance.titleFont = UIFont().seasideResortNF(size: 17.0)
+        appearance.titleDefaultColor = UIColor.white
+
+        // Sets Selection Appearance
+        appearance.selectionColor = AppUI.Color.secondary
+        appearance.titleSelectionColor = AppUI.Color.darkPrimary
 
         return calendar
     }()

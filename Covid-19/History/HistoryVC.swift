@@ -54,6 +54,7 @@ public final class HistoryVC: KioViewController {
 // MARK: Views
 private extension HistoryVC {
     unowned var rootView: HistoryView { return self.view as! HistoryView } // swiftlint:disable:this force_cast line_length
+    var calendar: FSCalendar { return rootView.calendar }
 }
 
 // MARK: Target Action Methods

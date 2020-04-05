@@ -20,13 +20,6 @@ extension String {
 }
 
 extension UIFont {
-    public func punch3d(size: CGFloat) -> UIFont {
-        return UIFont(name: "Punch3D", size: size)!
-    }
-
-    public func punch(size: CGFloat) -> UIFont {
-        return UIFont(name: "Punch", size: size)!
-    }
 
     public func chunkFive(size: CGFloat) -> UIFont {
         return UIFont(name: "ChunkFive-Regular", size: size)!
@@ -42,10 +35,6 @@ extension UIFont {
 
     public func alphaEcho(size: CGFloat) -> UIFont {
         return UIFont(name: "AlphaEcho", size: size)!
-    }
-
-    public func coronaCovid(size: CGFloat) -> UIFont {
-        return UIFont(name: "CORONACOVID19", size: size)!
     }
 
     public func kinsaleDisplay(size: CGFloat) -> UIFont {

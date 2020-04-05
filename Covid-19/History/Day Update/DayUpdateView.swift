@@ -17,34 +17,32 @@ public final class DayUpdateView: KioView {
         let label: UILabel = UILabel()
         label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.left
-        label.font = UIFont.boldSystemFont(ofSize: 45.0)
-        label.text = "123"
+        label.font = UIFont().leagueSpartan(size: 45.0)
 
         return label
     }()
 
     public let dayLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = AppUI.Color.yellowishOrange
+        label.textColor = AppUI.Color.secondary
         label.textAlignment = NSTextAlignment.left
-        label.font = UIFont.boldSystemFont(ofSize: 25.0)
-        label.text = "123"
+        label.font = UIFont().alphaEcho(size: 25.0)
 
         return label
     }()
 
     public let lineView: UIView = {
         let view: UIView = UIView()
-        view.backgroundColor = AppUI.Color.yellowishOrange
+        view.backgroundColor = AppUI.Color.secondary
 
         return view
     }()
 
     public let casesLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = AppUI.Color.lightPurple
+        label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.left
-        label.font = UIFont.boldSystemFont(ofSize: 32.0)
+        label.font = UIFont().kinsaleDisplay(size: 32.0)
         label.text = "new_cases".localized
 
         return label
@@ -52,19 +50,18 @@ public final class DayUpdateView: KioView {
 
     public let casesValueLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = UIColor.red
+        label.textColor = AppUI.Color.secondary
         label.textAlignment = NSTextAlignment.left
-        label.font = UIFont.boldSystemFont(ofSize: 32.0)
-        label.text = "123"
+        label.font = UIFont().chunkFive(size: 35.0)
 
         return label
     }()
 
     public let deathsLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = AppUI.Color.lightPurple
+        label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.left
-        label.font = UIFont.boldSystemFont(ofSize: 32.0)
+        label.font = UIFont().kinsaleDisplay(size: 32.0)
         label.text = "new_deaths".localized
 
         return label
@@ -72,10 +69,9 @@ public final class DayUpdateView: KioView {
 
     public let deathsValueLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.textColor = UIColor.red
+        label.textColor = AppUI.Color.secondary
         label.textAlignment = NSTextAlignment.left
-        label.font = UIFont.boldSystemFont(ofSize: 32.0)
-        label.text = "123"
+        label.font = UIFont().chunkFive(size: 35.0)
 
         return label
     }()
@@ -83,7 +79,7 @@ public final class DayUpdateView: KioView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.backgroundColor = AppUI.Color.darkNavyBlue
+        self.backgroundColor = AppUI.Color.lightPrimary
         self.kio.subviews(forAutoLayout:
             self.dateLabel, self.dayLabel, self.deathsLabel, self.lineView,
             self.deathsValueLabel, self.casesLabel, self.casesValueLabel

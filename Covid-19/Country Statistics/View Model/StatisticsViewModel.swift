@@ -64,9 +64,8 @@ public struct StatisticsViewModel {
         }
     }
 
-    public var decoration: (sideColor: UIColor, valueColor: UIColor, font: UIFont) { // swiftlint:disable:this large_tuple line_length
-        let sideColor: UIColor
-        let valueColor: UIColor
+    public var decoration: (color: UIColor, font: UIFont) {
+        let color: UIColor
         let font: UIFont
         switch self.row is CasesRow {
             case true:
@@ -74,31 +73,25 @@ public struct StatisticsViewModel {
                     let row = self.row as? CasesRow
                 else {
                     return (
-                        sideColor: AppUI.Color.secondary,
-                        valueColor: AppUI.Color.secondary,
+                        color: AppUI.Color.secondary,
                         font: UIFont().alegreyaMedium(size: 25.0)
                     )
                 }
                 switch row {
                     case .new:
-                        sideColor = AppUI.Color.violet
-                        valueColor = UIColor.white
+                        color = UIColor.white
                         font = UIFont().alegreyaMedium(size: 25.0)
                     case .active:
-                        sideColor = AppUI.Color.pinkishRed
-                        valueColor = UIColor.white
+                        color = UIColor.white
                         font = UIFont().alegreyaMedium(size: 25.0)
                     case .critical:
-                        sideColor = AppUI.Color.neonGreen
-                        valueColor = UIColor.white
+                        color = UIColor.white
                         font = UIFont().alegreyaMedium(size: 25.0)
                     case .recovered:
-                        sideColor = AppUI.Color.neonBlue
-                        valueColor = AppUI.Color.neonBlue
+                        color = AppUI.Color.neonBlue
                         font = UIFont().alegreyaExtraBold(size: 30.0)
                     case .total:
-                        sideColor = AppUI.Color.yellowishOrange
-                        valueColor = AppUI.Color.secondary
+                        color = AppUI.Color.secondary
                         font = UIFont().alegreyaBlack(size: 35.0)
                 }
             case false:
@@ -106,23 +99,20 @@ public struct StatisticsViewModel {
                     let row = self.row as? DeathsRow
                 else {
                     return (
-                        sideColor: AppUI.Color.secondary,
-                        valueColor: AppUI.Color.secondary,
+                        color: AppUI.Color.secondary,
                         font: UIFont().alegreyaMedium(size: 25.0)
                     )
                 }
                 switch row {
                     case .new:
-                        sideColor = AppUI.Color.darkishBlue
-                        valueColor = UIColor.white
+                        color = UIColor.white
                         font = UIFont().alegreyaMedium(size: 25.0)
                     case .total:
-                        sideColor = AppUI.Color.darkPink
-                        valueColor = AppUI.Color.secondary
+                        color = AppUI.Color.secondary
                         font = UIFont().alegreyaBlack(size: 35.0)
                 }
         }
 
-        return (sideColor: sideColor, valueColor: valueColor, font: font)
+        return (color: color, font: font)
     }
 }

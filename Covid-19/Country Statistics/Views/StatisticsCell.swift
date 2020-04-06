@@ -57,7 +57,7 @@ public final class StatisticsCell: UITableViewCell {
 
         self.sideDecoration.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.leading.equalToSuperview()
-            make.width.equalTo(8.0)
+            make.width.equalTo(5.0)
             make.top.equalToSuperview().offset(2.0)
             make.bottom.equalToSuperview().inset(2.0)
         }
@@ -96,8 +96,8 @@ extension StatisticsCell {
     public func configure(with viewModel: StatisticsViewModel) {
         self.statisticsLabel.text = viewModel.title
         self.statisticsValueLabel.text = viewModel.value.replacingOccurrences(of: "+", with: "")
-        self.sideDecoration.backgroundColor = viewModel.decoration.sideColor
-        self.statisticsValueLabel.textColor = viewModel.decoration.valueColor
+        self.sideDecoration.backgroundColor = viewModel.decoration.color
+        self.statisticsValueLabel.textColor = viewModel.decoration.color
         self.statisticsValueLabel.font = viewModel.decoration.font
     }
 }

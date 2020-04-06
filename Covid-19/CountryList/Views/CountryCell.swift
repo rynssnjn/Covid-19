@@ -24,7 +24,6 @@ public final class CountryCell: UITableViewCell {
 
     public let sideDecoration: UIView = {
         let view: UIView = UIView()
-        view.backgroundColor = AppUI.Color.violet
 
         return view
     }()
@@ -57,7 +56,7 @@ public final class CountryCell: UITableViewCell {
 
         self.sideDecoration.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.leading.equalToSuperview()
-            make.width.equalTo(8.0)
+            make.width.equalTo(5.0)
             make.top.equalToSuperview().offset(2.0)
             make.bottom.equalToSuperview().inset(2.0)
         }

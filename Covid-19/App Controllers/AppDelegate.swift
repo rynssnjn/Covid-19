@@ -29,7 +29,7 @@ public class AppDelegate: UIResponder {
 
         let navigationTitleAttributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
-            NSAttributedString.Key.font: UIFont().alphaEcho(size: 25.0)
+            NSAttributedString.Key.font: UIFont().alegreyaExtraBold(size: 25.0)
         ]
 
         UINavigationBar.appearance().titleTextAttributes = navigationTitleAttributes

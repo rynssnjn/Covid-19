@@ -16,7 +16,7 @@ public final class TableSectionView: KioView {
     public let sectionLabel: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = AppUI.Color.secondary
-        label.font = UIFont().chunkFive(size: 45.0)
+        label.font = UIFont().alegreyaBlack(size: 45.0)
         label.textAlignment = NSTextAlignment.center
 
         return label

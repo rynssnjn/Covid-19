@@ -17,7 +17,7 @@ public final class DayUpdateView: KioView {
         let label: UILabel = UILabel()
         label.textColor = UIColor.white
         label.textAlignment = NSTextAlignment.left
-        label.font = UIFont().leagueSpartan(size: 45.0)
+        label.font = UIFont().alegreyaBold(size: 45.0)
 
         return label
     }()
@@ -26,7 +26,7 @@ public final class DayUpdateView: KioView {
         let label: UILabel = UILabel()
         label.textColor = AppUI.Color.secondary
         label.textAlignment = NSTextAlignment.left
-        label.font = UIFont().alphaEcho(size: 25.0)
+        label.font = UIFont().alegreyaBold(size: 25.0)
 
         return label
     }()
@@ -41,8 +41,8 @@ public final class DayUpdateView: KioView {
     public let casesLabel: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = UIColor.white
-        label.textAlignment = NSTextAlignment.left
-        label.font = UIFont().kinsaleDisplay(size: 32.0)
+        label.textAlignment = NSTextAlignment.center
+        label.font = UIFont().alegreyaBold(size: 25.0)
         label.text = "total_cases".localized
 
         return label
@@ -51,8 +51,8 @@ public final class DayUpdateView: KioView {
     public let casesValueLabel: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = AppUI.Color.secondary
-        label.textAlignment = NSTextAlignment.left
-        label.font = UIFont().chunkFive(size: 35.0)
+        label.textAlignment = NSTextAlignment.center
+        label.font = UIFont().alegreyaBlack(size: 45.0)
 
         return label
     }()
@@ -87,15 +87,17 @@ public final class DayUpdateView: KioView {
         }
 
         self.casesLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-            make.leading.equalToSuperview().offset(32.0)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
             make.top.equalTo(self.lineView.snp.bottom).offset(30.0)
             make.height.equalTo(40.0)
         }
 
         self.casesValueLabel.snp.remakeConstraints { [unowned self] (make: ConstraintMaker) -> Void in
-            make.trailing.equalToSuperview().inset(16.0)
-            make.top.equalTo(self.lineView.snp.bottom).offset(30.0)
-            make.height.equalTo(40.0)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.top.equalTo(self.casesLabel.snp.bottom)
+            make.height.equalTo(50.0)
         }
     }
 

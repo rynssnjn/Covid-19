@@ -8,15 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		80F4482C534558E76245CA1A /* Pods_Covid_19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A73C0C1264A15C061FC84F /* Pods_Covid_19.framework */; };
-		8E788DBD2439C1AD00B6DD2A /* alpha_echo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E788DBC2439C1AD00B6DD2A /* alpha_echo.ttf */; };
-		8E788DBF2439C1CF00B6DD2A /* Kinsale Display DEMO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E788DBE2439C1CF00B6DD2A /* Kinsale Display DEMO.ttf */; };
-		8E788DC32439C1F600B6DD2A /* LeagueSpartan-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E788DC22439C1F600B6DD2A /* LeagueSpartan-Bold.otf */; };
-		8E788DC92439C24A00B6DD2A /* ChunkFive-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E788DC82439C24A00B6DD2A /* ChunkFive-Regular.otf */; };
-		8E788DCB2439C25B00B6DD2A /* SEASRN__.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E788DCA2439C25B00B6DD2A /* SEASRN__.ttf */; };
 		8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E809D2324306ED000DDBCE6 /* AppDelegate.swift */; };
 		8E809D2A24306ED100DDBCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2924306ED100DDBCE6 /* Assets.xcassets */; };
 		8E809D2D24306ED100DDBCE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */; };
 		8E809D3024306ED100DDBCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2E24306ED100DDBCE6 /* LaunchScreen.storyboard */; };
+		8E9FB10E243AA5ED00E03D43 /* AlegreyaSansSC-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB10D243AA5ED00E03D43 /* AlegreyaSansSC-Black.ttf */; };
+		8E9FB110243AA5F900E03D43 /* AlegreyaSansSC-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB10F243AA5F900E03D43 /* AlegreyaSansSC-BlackItalic.ttf */; };
+		8E9FB112243AA60300E03D43 /* AlegreyaSansSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB111243AA60200E03D43 /* AlegreyaSansSC-Bold.ttf */; };
+		8E9FB114243AA61200E03D43 /* AlegreyaSansSC-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB113243AA61200E03D43 /* AlegreyaSansSC-BoldItalic.ttf */; };
+		8E9FB11F243AA62000E03D43 /* AlegreyaSansSC-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB115243AA61F00E03D43 /* AlegreyaSansSC-Medium.ttf */; };
+		8E9FB120243AA62000E03D43 /* AlegreyaSansSC-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB116243AA61F00E03D43 /* AlegreyaSansSC-MediumItalic.ttf */; };
+		8E9FB121243AA62000E03D43 /* AlegreyaSansSC-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB117243AA61F00E03D43 /* AlegreyaSansSC-ExtraBold.ttf */; };
+		8E9FB122243AA62000E03D43 /* AlegreyaSansSC-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB118243AA61F00E03D43 /* AlegreyaSansSC-Italic.ttf */; };
+		8E9FB123243AA62000E03D43 /* AlegreyaSansSC-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB119243AA62000E03D43 /* AlegreyaSansSC-LightItalic.ttf */; };
+		8E9FB124243AA62000E03D43 /* AlegreyaSansSC-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB11A243AA62000E03D43 /* AlegreyaSansSC-Light.ttf */; };
+		8E9FB125243AA62000E03D43 /* AlegreyaSansSC-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB11B243AA62000E03D43 /* AlegreyaSansSC-ThinItalic.ttf */; };
+		8E9FB126243AA62000E03D43 /* AlegreyaSansSC-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB11C243AA62000E03D43 /* AlegreyaSansSC-Thin.ttf */; };
+		8E9FB127243AA62000E03D43 /* AlegreyaSansSC-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB11D243AA62000E03D43 /* AlegreyaSansSC-ExtraBoldItalic.ttf */; };
+		8E9FB128243AA62000E03D43 /* AlegreyaSansSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9FB11E243AA62000E03D43 /* AlegreyaSansSC-Regular.ttf */; };
 		8EAF82D62430F3EB00D34F3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EAF82D82430F3EB00D34F3A /* Localizable.strings */; };
 		8EAF82DB2430F6E200D34F3A /* FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF82DA2430F6E200D34F3A /* FoundationExtension.swift */; };
 		8EDB9C9324388B2700FD5771 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDB9C9224388B2700FD5771 /* HistoryView.swift */; };
@@ -69,17 +78,26 @@
 /* Begin PBXFileReference section */
 		010413E639F87922BEEC9FD1 /* Pods-Covid-19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid-19.debug.xcconfig"; path = "Target Support Files/Pods-Covid-19/Pods-Covid-19.debug.xcconfig"; sourceTree = "<group>"; };
 		20AD1261C562EBC701764488 /* Pods-Covid-19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid-19.release.xcconfig"; path = "Target Support Files/Pods-Covid-19/Pods-Covid-19.release.xcconfig"; sourceTree = "<group>"; };
-		8E788DBC2439C1AD00B6DD2A /* alpha_echo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alpha_echo.ttf; sourceTree = "<group>"; };
-		8E788DBE2439C1CF00B6DD2A /* Kinsale Display DEMO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kinsale Display DEMO.ttf"; sourceTree = "<group>"; };
-		8E788DC22439C1F600B6DD2A /* LeagueSpartan-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LeagueSpartan-Bold.otf"; sourceTree = "<group>"; };
-		8E788DC82439C24A00B6DD2A /* ChunkFive-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ChunkFive-Regular.otf"; sourceTree = "<group>"; };
-		8E788DCA2439C25B00B6DD2A /* SEASRN__.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SEASRN__.ttf; sourceTree = "<group>"; };
 		8E809D2024306ED000DDBCE6 /* Covid-19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E809D2324306ED000DDBCE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E809D2924306ED100DDBCE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E809D2F24306ED100DDBCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E809D3124306ED100DDBCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E9FB10D243AA5ED00E03D43 /* AlegreyaSansSC-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Black.ttf"; sourceTree = "<group>"; };
+		8E9FB10F243AA5F900E03D43 /* AlegreyaSansSC-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-BlackItalic.ttf"; sourceTree = "<group>"; };
+		8E9FB111243AA60200E03D43 /* AlegreyaSansSC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Bold.ttf"; sourceTree = "<group>"; };
+		8E9FB113243AA61200E03D43 /* AlegreyaSansSC-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8E9FB115243AA61F00E03D43 /* AlegreyaSansSC-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Medium.ttf"; sourceTree = "<group>"; };
+		8E9FB116243AA61F00E03D43 /* AlegreyaSansSC-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-MediumItalic.ttf"; sourceTree = "<group>"; };
+		8E9FB117243AA61F00E03D43 /* AlegreyaSansSC-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8E9FB118243AA61F00E03D43 /* AlegreyaSansSC-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Italic.ttf"; sourceTree = "<group>"; };
+		8E9FB119243AA62000E03D43 /* AlegreyaSansSC-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-LightItalic.ttf"; sourceTree = "<group>"; };
+		8E9FB11A243AA62000E03D43 /* AlegreyaSansSC-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Light.ttf"; sourceTree = "<group>"; };
+		8E9FB11B243AA62000E03D43 /* AlegreyaSansSC-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-ThinItalic.ttf"; sourceTree = "<group>"; };
+		8E9FB11C243AA62000E03D43 /* AlegreyaSansSC-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Thin.ttf"; sourceTree = "<group>"; };
+		8E9FB11D243AA62000E03D43 /* AlegreyaSansSC-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		8E9FB11E243AA62000E03D43 /* AlegreyaSansSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AlegreyaSansSC-Regular.ttf"; sourceTree = "<group>"; };
 		8EAF82D32430F35900D34F3A /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		8EAF82D72430F3EB00D34F3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8EAF82D92430F40800D34F3A /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -155,11 +173,20 @@
 		8E788DAB2439AAF800B6DD2A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				8E788DC22439C1F600B6DD2A /* LeagueSpartan-Bold.otf */,
-				8E788DCA2439C25B00B6DD2A /* SEASRN__.ttf */,
-				8E788DC82439C24A00B6DD2A /* ChunkFive-Regular.otf */,
-				8E788DBC2439C1AD00B6DD2A /* alpha_echo.ttf */,
-				8E788DBE2439C1CF00B6DD2A /* Kinsale Display DEMO.ttf */,
+				8E9FB117243AA61F00E03D43 /* AlegreyaSansSC-ExtraBold.ttf */,
+				8E9FB11D243AA62000E03D43 /* AlegreyaSansSC-ExtraBoldItalic.ttf */,
+				8E9FB118243AA61F00E03D43 /* AlegreyaSansSC-Italic.ttf */,
+				8E9FB11A243AA62000E03D43 /* AlegreyaSansSC-Light.ttf */,
+				8E9FB119243AA62000E03D43 /* AlegreyaSansSC-LightItalic.ttf */,
+				8E9FB115243AA61F00E03D43 /* AlegreyaSansSC-Medium.ttf */,
+				8E9FB116243AA61F00E03D43 /* AlegreyaSansSC-MediumItalic.ttf */,
+				8E9FB11E243AA62000E03D43 /* AlegreyaSansSC-Regular.ttf */,
+				8E9FB11C243AA62000E03D43 /* AlegreyaSansSC-Thin.ttf */,
+				8E9FB11B243AA62000E03D43 /* AlegreyaSansSC-ThinItalic.ttf */,
+				8E9FB113243AA61200E03D43 /* AlegreyaSansSC-BoldItalic.ttf */,
+				8E9FB111243AA60200E03D43 /* AlegreyaSansSC-Bold.ttf */,
+				8E9FB10F243AA5F900E03D43 /* AlegreyaSansSC-BlackItalic.ttf */,
+				8E9FB10D243AA5ED00E03D43 /* AlegreyaSansSC-Black.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -529,16 +556,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E788DC92439C24A00B6DD2A /* ChunkFive-Regular.otf in Resources */,
+				8E9FB114243AA61200E03D43 /* AlegreyaSansSC-BoldItalic.ttf in Resources */,
+				8E9FB125243AA62000E03D43 /* AlegreyaSansSC-ThinItalic.ttf in Resources */,
+				8E9FB112243AA60300E03D43 /* AlegreyaSansSC-Bold.ttf in Resources */,
 				8EAF82D62430F3EB00D34F3A /* Localizable.strings in Resources */,
+				8E9FB120243AA62000E03D43 /* AlegreyaSansSC-MediumItalic.ttf in Resources */,
 				8EDD76B624309D2100A60C9B /* .swiftlint.yml in Resources */,
+				8E9FB127243AA62000E03D43 /* AlegreyaSansSC-ExtraBoldItalic.ttf in Resources */,
 				8E809D3024306ED100DDBCE6 /* LaunchScreen.storyboard in Resources */,
-				8E788DCB2439C25B00B6DD2A /* SEASRN__.ttf in Resources */,
-				8E788DC32439C1F600B6DD2A /* LeagueSpartan-Bold.otf in Resources */,
+				8E9FB11F243AA62000E03D43 /* AlegreyaSansSC-Medium.ttf in Resources */,
 				8E809D2D24306ED100DDBCE6 /* Preview Assets.xcassets in Resources */,
-				8E788DBF2439C1CF00B6DD2A /* Kinsale Display DEMO.ttf in Resources */,
+				8E9FB110243AA5F900E03D43 /* AlegreyaSansSC-BlackItalic.ttf in Resources */,
+				8E9FB121243AA62000E03D43 /* AlegreyaSansSC-ExtraBold.ttf in Resources */,
+				8E9FB10E243AA5ED00E03D43 /* AlegreyaSansSC-Black.ttf in Resources */,
+				8E9FB124243AA62000E03D43 /* AlegreyaSansSC-Light.ttf in Resources */,
+				8E9FB126243AA62000E03D43 /* AlegreyaSansSC-Thin.ttf in Resources */,
+				8E9FB128243AA62000E03D43 /* AlegreyaSansSC-Regular.ttf in Resources */,
+				8E9FB123243AA62000E03D43 /* AlegreyaSansSC-LightItalic.ttf in Resources */,
+				8E9FB122243AA62000E03D43 /* AlegreyaSansSC-Italic.ttf in Resources */,
 				8E809D2A24306ED100DDBCE6 /* Assets.xcassets in Resources */,
-				8E788DBD2439C1AD00B6DD2A /* alpha_echo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

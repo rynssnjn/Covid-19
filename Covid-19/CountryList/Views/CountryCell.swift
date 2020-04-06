@@ -16,7 +16,7 @@ public final class CountryCell: UITableViewCell {
     public let countryLabel: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = UIColor.white
-        label.font = UIFont().chunkFive(size: 20.0)
+        label.font = UIFont().alegreya(size: 20.0)
         label.textAlignment = NSTextAlignment.left
 
         return label

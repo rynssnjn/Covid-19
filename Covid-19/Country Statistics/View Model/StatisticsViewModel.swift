@@ -76,30 +76,30 @@ public struct StatisticsViewModel {
                     return (
                         sideColor: AppUI.Color.secondary,
                         valueColor: AppUI.Color.secondary,
-                        font: UIFont().seasideResortNF(size: 20.0)
+                        font: UIFont().alegreyaMedium(size: 25.0)
                     )
                 }
                 switch row {
                     case .new:
                         sideColor = AppUI.Color.violet
                         valueColor = UIColor.white
-                        font = UIFont().seasideResortNF(size: 20.0)
+                        font = UIFont().alegreyaMedium(size: 25.0)
                     case .active:
                         sideColor = AppUI.Color.pinkishRed
                         valueColor = UIColor.white
-                        font = UIFont().seasideResortNF(size: 20.0)
+                        font = UIFont().alegreyaMedium(size: 25.0)
                     case .critical:
                         sideColor = AppUI.Color.neonGreen
                         valueColor = UIColor.white
-                        font = UIFont().seasideResortNF(size: 20.0)
+                        font = UIFont().alegreyaMedium(size: 25.0)
                     case .recovered:
                         sideColor = AppUI.Color.neonBlue
                         valueColor = AppUI.Color.neonBlue
-                        font = UIFont().chunkFive(size: 30.0)
+                        font = UIFont().alegreyaExtraBold(size: 30.0)
                     case .total:
                         sideColor = AppUI.Color.yellowishOrange
                         valueColor = AppUI.Color.secondary
-                        font = UIFont().chunkFive(size: 35.0)
+                        font = UIFont().alegreyaBlack(size: 35.0)
                 }
             case false:
                 guard
@@ -108,18 +108,18 @@ public struct StatisticsViewModel {
                     return (
                         sideColor: AppUI.Color.secondary,
                         valueColor: AppUI.Color.secondary,
-                        font: UIFont().seasideResortNF(size: 20.0)
+                        font: UIFont().alegreyaMedium(size: 25.0)
                     )
                 }
                 switch row {
                     case .new:
                         sideColor = AppUI.Color.darkishBlue
                         valueColor = UIColor.white
-                        font = UIFont().seasideResortNF(size: 20.0)
+                        font = UIFont().alegreyaMedium(size: 25.0)
                     case .total:
                         sideColor = AppUI.Color.darkPink
                         valueColor = AppUI.Color.secondary
-                        font = UIFont().chunkFive(size: 35.0)
+                        font = UIFont().alegreyaBlack(size: 35.0)
                 }
         }
 

@@ -16,7 +16,7 @@ public final class StatisticsCell: UITableViewCell {
     public let statisticsLabel: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = UIColor.white
-        label.font = UIFont().kinsaleDisplay(size: 20.0)
+        label.font = UIFont().alegreya(size: 20.0)
         label.textAlignment = NSTextAlignment.left
 
         return label
@@ -25,7 +25,6 @@ public final class StatisticsCell: UITableViewCell {
     public let statisticsValueLabel: UILabel = {
         let label: UILabel = UILabel()
         label.textColor = UIColor.white
-        label.font = UIFont().seasideResortNF(size: 20.0)
         label.textAlignment = NSTextAlignment.right
 
         return label

@@ -21,11 +21,11 @@ public final class HistoryView: KioView {
         calendar.backgroundColor = AppUI.Color.lightPrimary
 
         // Sets Header Appearance
-        appearance.headerTitleFont = UIFont().alphaEcho(size: 25.0)
+        appearance.headerTitleFont = UIFont().alegreyaBlack(size: 25.0)
         appearance.headerTitleColor = AppUI.Color.secondary
 
         // Sets Weekday Appearance
-        appearance.weekdayFont = UIFont().leagueSpartan(size: 17.0)
+        appearance.weekdayFont = UIFont().alegreyaBold(size: 20.0)
         appearance.weekdayTextColor = AppUI.Color.secondary
 
         // Sets Today Appearance
@@ -33,7 +33,7 @@ public final class HistoryView: KioView {
         appearance.todayColor = AppUI.Color.darkPrimary
 
         // Sets Calendar Date Appearance
-        appearance.titleFont = UIFont().seasideResortNF(size: 17.0)
+        appearance.titleFont = UIFont().alegreyaItalic(size: 20.0)
         appearance.titleDefaultColor = UIColor.white
 
         // Sets Selection Appearance

@@ -28,6 +28,7 @@ public final class CountryListView: KioView {
         searchBar.tintColor = UIColor.white
         if #available(iOS 13.0, *) {
             searchBar.searchTextField.textColor = UIColor.white
+            searchBar.searchTextField.font = UIFont().alegreya(size: 17.0)
         }
         searchBar.showsCancelButton = true
 

@@ -24,3 +24,5 @@
 "close" = "Close";
 "error" = "Error!";
 "future_date_error" = "No reports are available for future dates.";
+"libraries_used" = "Libraries Used";
+"libraries" = "Libraries";

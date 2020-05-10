@@ -9,7 +9,6 @@
 import Foundation
 import RSJ
 import Astral
-import SnapKit
 
 public final class CountryListCoordinator: AbstractCoordinator {
 
@@ -30,7 +29,7 @@ public final class CountryListCoordinator: AbstractCoordinator {
         super.start()
         self.navigationController.rsj.showActivityIndicator()
         self.service.getCountries()
-            .onSuccess { [weak self] (countries: Countries) -> Void in
+            .onSuccess(DispatchQueue.main.context) { [weak self] (countries: Countries) -> Void in
                 guard let s = self else { return }
                 let vc: CountryListVC = CountryListVC(
                     delegate: s,
@@ -38,14 +37,14 @@ public final class CountryListCoordinator: AbstractCoordinator {
                 ) // swiftlint:disable:this identifier_name
                 s.navigationController.viewControllers = [vc]
             }
-            .onFailure { [weak self] (_: NetworkingError) -> Void in
+            .onFailure(DispatchQueue.main.context) { [weak self] (_: NetworkingError) -> Void in
                 guard let s = self else { return }
                 AlertHandler(
                     message: "general_error".localized,
                     viewController: s.navigationController
                 ).showErrorAlert()
             }
-            .onComplete { [weak self] (_) -> Void in
+            .onComplete(DispatchQueue.main.context) { [weak self] (_) -> Void in
                 guard let s = self else { return }
                 s.navigationController.rsj.hideActivityIndicator()
             }
@@ -70,22 +69,36 @@ extension CountryListCoordinator: CountryListVCDelegate {
                     s.add(childCoordinator: coordinator)
                 }
             }
-            .onFailure { [weak self] (_: NetworkingError) -> Void in
+            .onFailure(DispatchQueue.main.context) { [weak self] (_: NetworkingError) -> Void in
                 guard let s = self else { return }
                 AlertHandler(
                     message: "general_error".localized,
                     viewController: s.navigationController
                 ).showErrorAlert()
             }
-            .onComplete { [weak self] (_) -> Void in
+            .onComplete(DispatchQueue.main.context) { [weak self] (_) -> Void in
                 guard let s = self else { return }
                 s.navigationController.rsj.hideActivityIndicator()
             }
     }
+
+    public func showLibraries() {
+        let coordinator: AcknowledgementCoordinator = AcknowledgementCoordinator(
+            delegate: self,
+            navigationController: self.navigationController
+        )
+
+        coordinator.start()
+        self.add(childCoordinator: coordinator)
+    }
+
 }
 
 // MARK: CountryStatisticsCoordinatorDelegate Methods
 extension CountryListCoordinator: CountryStatisticsCoordinatorDelegate {}
+
+// MARK: LibrariesCoordinatorDelegate Methods
+extension CountryListCoordinator: AcknowledgementCoordinatorDelegate {}
 
 // MARK: UINavigationControllerDelegate Methods
 extension CountryListCoordinator: UINavigationControllerDelegate {
@@ -96,19 +109,20 @@ extension CountryListCoordinator: UINavigationControllerDelegate {
                 forKey: UITransitionContextViewControllerKey.from
             ),
             !navigationController.viewControllers.contains(fromViewController),
-            fromViewController is CountryStatisticsVC
+            fromViewController is CountryStatisticsVC || fromViewController is AcknowledgementVC
         else {
             return
         }
 
         guard
             let coordinator = self.childCoordinators.first(where: {
-                $0 is CountryStatisticsCoordinator
+                $0 is CountryStatisticsCoordinator || $0 is AcknowledgementCoordinator
             })
         else {
             return
         }
 
         self.remove(childCoordinator: coordinator)
+        self.navigationController.delegate = self
     }
 }

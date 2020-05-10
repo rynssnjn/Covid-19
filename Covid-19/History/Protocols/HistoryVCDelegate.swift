@@ -9,11 +9,9 @@
 import Foundation
 import UIKit
 
-public protocol HistoryVCDelegate: class {
+public protocol HistoryVCDelegate: class, ViewControllerManager {
 
     var country: String { get }
-
-    func close()
 
     func showDayUpdatePopup(in view: UIView, statistics: Statistics, date: Date)
 

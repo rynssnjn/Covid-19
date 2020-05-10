@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   RSJ:
-    :commit: 6e1dcc9691dc29fd2e10c530d62e64750ba70bca
+    :commit: 125a8f1e26f6120bdbd62f864b150b7702185cb6
     :git: https://github.com/rynssnjn/RSJ.git
 
 SPEC CHECKSUMS:

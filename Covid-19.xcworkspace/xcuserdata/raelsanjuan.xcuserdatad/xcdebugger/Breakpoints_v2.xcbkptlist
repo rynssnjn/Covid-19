@@ -3,4 +3,70 @@
    uuid = "6CC9C116-1FC3-4894-9E44-9E069294B8BD"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "292A5405-F10F-4E08-929D-7B6E92575A20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Covid-19/CountryList/CountryListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "getLibraries()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "292A5405-F10F-4E08-929D-7B6E92575A20 - 1eeaedc250f40e97"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Covid_19.CountryListVC.(getLibraries in _86FBD9B75457DF1581C27965E7C78AE6)() -&gt; ()"
+                  moduleName = "Covid-19"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raelsanjuan/mobile%20development/swift/Covid-19/Covid-19/CountryList/CountryListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "1465">
+               </Location>
+               <Location
+                  uuid = "292A5405-F10F-4E08-929D-7B6E92575A20 - 1b1cdb646bfa61a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSDictionary) -&gt; () in Covid_19.CountryListVC.(getLibraries in _86FBD9B75457DF1581C27965E7C78AE6)() -&gt; ()"
+                  moduleName = "Covid-19"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raelsanjuan/mobile%20development/swift/Covid-19/Covid-19/CountryList/CountryListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06A39293-7D59-406E-88E1-518B87A3DDF7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Covid-19/CountryList/CountryListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "getLibraries()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

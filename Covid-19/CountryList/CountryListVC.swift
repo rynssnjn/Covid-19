@@ -51,6 +51,13 @@ public final class CountryListVC: RSJViewController {
             target: self,
             action: #selector(CountryListVC.searchBarItemTapped)
         )
+
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: "libraries".localized,
+            style: UIBarButtonItem.Style.plain,
+            target: self,
+            action: #selector(CountryListVC.getLibraries)
+        )
     }
 }
 
@@ -67,6 +74,24 @@ private extension CountryListVC {
             self.rootView.showSearchBar(true)
             self.rootView.searchBar.becomeFirstResponder()
         }
+    }
+
+    @objc func getLibraries() {
+        self.delegate.showLibraries()
+//        var dictRoot: NSDictionary?
+//        if let path = Bundle.main.path(forResource: "Acknowledgements", ofType: "plist") {
+//            dictRoot = NSDictionary(contentsOfFile: path)
+//        }
+//
+//        if let dict = dictRoot {
+//            // Your dictionary contains an array of dictionary
+//            // Now pull an Array out of it.
+//            let libraries:[NSDictionary] = dict["PreferenceSpecifiers"] as! Array
+//            // Now a loop through Array to fetch single Item from catList which is Dictionary
+//            libraries.forEach({ (library) in
+//                print("Category Name \(library["FooterText"]!)")
+//            })
+//        }
     }
 }
 

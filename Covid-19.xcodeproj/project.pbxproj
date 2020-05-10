@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		80F4482C534558E76245CA1A /* Pods_Covid_19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A73C0C1264A15C061FC84F /* Pods_Covid_19.framework */; };
 		8E4B52AC24680C0800ACF019 /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B52AB24680C0800ACF019 /* Acknowledgements.plist */; };
+		8E4B52C024681D8D00ACF019 /* AcknowledgementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52BF24681D8D00ACF019 /* AcknowledgementView.swift */; };
+		8E4B52C324681DA100ACF019 /* AcknowledgementVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52C224681DA100ACF019 /* AcknowledgementVCDelegate.swift */; };
+		8E4B52C524681DB600ACF019 /* AcknowledgementCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52C424681DB600ACF019 /* AcknowledgementCoordinatorDelegate.swift */; };
+		8E4B52C724681DED00ACF019 /* AcknowledgementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52C624681DED00ACF019 /* AcknowledgementVC.swift */; };
+		8E4B52C924681DFA00ACF019 /* AcknowledgementCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52C824681DFA00ACF019 /* AcknowledgementCoordinator.swift */; };
+		8E4B52CB2468237D00ACF019 /* AcknowledgementDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52CA2468237D00ACF019 /* AcknowledgementDataSource.swift */; };
+		8E4B52CE2468249E00ACF019 /* AcknowledgementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52CD2468249E00ACF019 /* AcknowledgementCell.swift */; };
+		8E4B52D12468297400ACF019 /* Acknowledgement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52D02468297400ACF019 /* Acknowledgement.swift */; };
+		8E4B52D42468314300ACF019 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52D32468314300ACF019 /* LibraryView.swift */; };
+		8E4B52D62468315500ACF019 /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52D52468315500ACF019 /* LibraryVC.swift */; };
+		8E4B52D82468316300ACF019 /* LibraryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52D72468316300ACF019 /* LibraryCoordinator.swift */; };
+		8E4B52DB2468317A00ACF019 /* LibraryCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52DA2468317A00ACF019 /* LibraryCoordinatorDelegate.swift */; };
+		8E4B52DD2468319700ACF019 /* LibraryVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52DC2468319700ACF019 /* LibraryVCDelegate.swift */; };
+		8E4B52DF2468346300ACF019 /* ViewControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4B52DE2468346300ACF019 /* ViewControllerManager.swift */; };
 		8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E809D2324306ED000DDBCE6 /* AppDelegate.swift */; };
 		8E809D2A24306ED100DDBCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2924306ED100DDBCE6 /* Assets.xcassets */; };
 		8E809D2D24306ED100DDBCE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */; };
@@ -80,6 +94,20 @@
 		010413E639F87922BEEC9FD1 /* Pods-Covid-19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid-19.debug.xcconfig"; path = "Target Support Files/Pods-Covid-19/Pods-Covid-19.debug.xcconfig"; sourceTree = "<group>"; };
 		20AD1261C562EBC701764488 /* Pods-Covid-19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid-19.release.xcconfig"; path = "Target Support Files/Pods-Covid-19/Pods-Covid-19.release.xcconfig"; sourceTree = "<group>"; };
 		8E4B52AB24680C0800ACF019 /* Acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Acknowledgements.plist; sourceTree = "<group>"; };
+		8E4B52BF24681D8D00ACF019 /* AcknowledgementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementView.swift; sourceTree = "<group>"; };
+		8E4B52C224681DA100ACF019 /* AcknowledgementVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementVCDelegate.swift; sourceTree = "<group>"; };
+		8E4B52C424681DB600ACF019 /* AcknowledgementCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		8E4B52C624681DED00ACF019 /* AcknowledgementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementVC.swift; sourceTree = "<group>"; };
+		8E4B52C824681DFA00ACF019 /* AcknowledgementCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementCoordinator.swift; sourceTree = "<group>"; };
+		8E4B52CA2468237D00ACF019 /* AcknowledgementDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementDataSource.swift; sourceTree = "<group>"; };
+		8E4B52CD2468249E00ACF019 /* AcknowledgementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgementCell.swift; sourceTree = "<group>"; };
+		8E4B52D02468297400ACF019 /* Acknowledgement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acknowledgement.swift; sourceTree = "<group>"; };
+		8E4B52D32468314300ACF019 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		8E4B52D52468315500ACF019 /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
+		8E4B52D72468316300ACF019 /* LibraryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCoordinator.swift; sourceTree = "<group>"; };
+		8E4B52DA2468317A00ACF019 /* LibraryCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		8E4B52DC2468319700ACF019 /* LibraryVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVCDelegate.swift; sourceTree = "<group>"; };
+		8E4B52DE2468346300ACF019 /* ViewControllerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerManager.swift; sourceTree = "<group>"; };
 		8E809D2024306ED000DDBCE6 /* Covid-19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E809D2324306ED000DDBCE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E809D2924306ED100DDBCE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +200,65 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E4B52BE24681D7500ACF019 /* Acknowledgement */ = {
+			isa = PBXGroup;
+			children = (
+				8E4B52CF2468295D00ACF019 /* Models */,
+				8E4B52CC2468248D00ACF019 /* Views */,
+				8E4B52C124681D9100ACF019 /* Protocols */,
+				8E4B52BF24681D8D00ACF019 /* AcknowledgementView.swift */,
+				8E4B52C624681DED00ACF019 /* AcknowledgementVC.swift */,
+				8E4B52C824681DFA00ACF019 /* AcknowledgementCoordinator.swift */,
+				8E4B52CA2468237D00ACF019 /* AcknowledgementDataSource.swift */,
+			);
+			path = Acknowledgement;
+			sourceTree = "<group>";
+		};
+		8E4B52C124681D9100ACF019 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8E4B52C224681DA100ACF019 /* AcknowledgementVCDelegate.swift */,
+				8E4B52C424681DB600ACF019 /* AcknowledgementCoordinatorDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8E4B52CC2468248D00ACF019 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E4B52CD2468249E00ACF019 /* AcknowledgementCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E4B52CF2468295D00ACF019 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E4B52D02468297400ACF019 /* Acknowledgement.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E4B52D22468312C00ACF019 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				8E4B52D92468316A00ACF019 /* Protocols */,
+				8E4B52D32468314300ACF019 /* LibraryView.swift */,
+				8E4B52D52468315500ACF019 /* LibraryVC.swift */,
+				8E4B52D72468316300ACF019 /* LibraryCoordinator.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		8E4B52D92468316A00ACF019 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8E4B52DA2468317A00ACF019 /* LibraryCoordinatorDelegate.swift */,
+				8E4B52DC2468319700ACF019 /* LibraryVCDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		8E788DAB2439AAF800B6DD2A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,9 +302,11 @@
 		8E809D2224306ED000DDBCE6 /* Covid-19 */ = {
 			isa = PBXGroup;
 			children = (
+				8E4B52D22468312C00ACF019 /* Library */,
 				8EFFD1562430A96A0026BC8B /* Utilities */,
 				8EDD76A624307E9300A60C9B /* App Controllers */,
 				8EDD76A92430803500A60C9B /* Supporting Files */,
+				8E4B52BE24681D7500ACF019 /* Acknowledgement */,
 				8EDD76AA2430904400A60C9B /* CountryList */,
 				8EFFD1732430C5740026BC8B /* Country Statistics */,
 				8EDB9C9124388B1800FD5771 /* History */,
@@ -411,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				8EFFD1712430BD040026BC8B /* AbstractAPIService.swift */,
+				8E4B52DE2468346300ACF019 /* ViewControllerManager.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -650,6 +740,7 @@
 			files = (
 				8EAF82DB2430F6E200D34F3A /* FoundationExtension.swift in Sources */,
 				8EDB9CA72438B6AD00FD5771 /* DayUpdateVC.swift in Sources */,
+				8E4B52C924681DFA00ACF019 /* AcknowledgementCoordinator.swift in Sources */,
 				8EDB9C9824388C2500FD5771 /* HistoryCoordinatorDelegate.swift in Sources */,
 				8EFFD1842430CE370026BC8B /* CategorySection.swift in Sources */,
 				8EFFD16B2430B9900026BC8B /* Deaths.swift in Sources */,
@@ -659,13 +750,20 @@
 				8EDB9C9624388C0B00FD5771 /* HistoryVCDelegate.swift in Sources */,
 				8EFFD1652430B64C0026BC8B /* CountryStatistics.swift in Sources */,
 				8EFFD18C2430D1BD0026BC8B /* CasesRow.swift in Sources */,
+				8E4B52C524681DB600ACF019 /* AcknowledgementCoordinatorDelegate.swift in Sources */,
+				8E4B52CE2468249E00ACF019 /* AcknowledgementCell.swift in Sources */,
 				8EFFD1792430C5DB0026BC8B /* CountryStatisticsCoordinatorDelegate.swift in Sources */,
 				8EDB9C9324388B2700FD5771 /* HistoryView.swift in Sources */,
 				8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */,
 				8EFFD1772430C5BE0026BC8B /* CountryStatisticsVCDelegate.swift in Sources */,
+				8E4B52D42468314300ACF019 /* LibraryView.swift in Sources */,
+				8E4B52C324681DA100ACF019 /* AcknowledgementVCDelegate.swift in Sources */,
+				8E4B52DB2468317A00ACF019 /* LibraryCoordinatorDelegate.swift in Sources */,
+				8E4B52CB2468237D00ACF019 /* AcknowledgementDataSource.swift in Sources */,
 				8EFFD18E2430D2630026BC8B /* DeathsRow.swift in Sources */,
 				8EDB9C9F2438979D00FD5771 /* CountryHistoryRequest.swift in Sources */,
 				8EFFD1922430D8700026BC8B /* TableSectionView.swift in Sources */,
+				8E4B52D62468315500ACF019 /* LibraryVC.swift in Sources */,
 				8EFFD1812430CB610026BC8B /* CountryStatisticsDataSource.swift in Sources */,
 				8EFFD14D24309E830026BC8B /* CountryListCoodinator.swift in Sources */,
 				8EDD76B32430961000A60C9B /* CountryListVC.swift in Sources */,
@@ -677,12 +775,18 @@
 				8EDB9CAA2438B6E000FD5771 /* DayUpdateVCDelegate.swift in Sources */,
 				8EFFD1952430DCF20026BC8B /* AppUI.swift in Sources */,
 				8EDB9CAD2438C50C00FD5771 /* WeekDay.swift in Sources */,
+				8E4B52D12468297400ACF019 /* Acknowledgement.swift in Sources */,
 				8EFFD1522430A4700026BC8B /* CountryListDataSource.swift in Sources */,
 				8EFFD1602430AE7C0026BC8B /* CountryListService.swift in Sources */,
+				8E4B52DF2468346300ACF019 /* ViewControllerManager.swift in Sources */,
 				8EDD76A824307EAD00A60C9B /* CovidAppCoordinator.swift in Sources */,
 				8EFFD17D2430C7D30026BC8B /* CountryStatisticsVC.swift in Sources */,
 				8EFFD15E2430AE290026BC8B /* Constants.swift in Sources */,
 				8EDD76B1243095EC00A60C9B /* CountryListCoordinatorDelegate.swift in Sources */,
+				8E4B52C024681D8D00ACF019 /* AcknowledgementView.swift in Sources */,
+				8E4B52C724681DED00ACF019 /* AcknowledgementVC.swift in Sources */,
+				8E4B52D82468316300ACF019 /* LibraryCoordinator.swift in Sources */,
+				8E4B52DD2468319700ACF019 /* LibraryVCDelegate.swift in Sources */,
 				8EFFD1622430B51A0026BC8B /* CountryStatisticsRequest.swift in Sources */,
 				8EFFD17B2430C64A0026BC8B /* CountryStatisticsView.swift in Sources */,
 				8EDD76AF243095CE00A60C9B /* CountryListVCDelegate.swift in Sources */,

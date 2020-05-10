@@ -8,9 +8,7 @@
 
 import Foundation
 
-public protocol CountryStatisticsVCDelegate: class {
-
-    func close()
+public protocol CountryStatisticsVCDelegate: class, ViewControllerManager {
 
     func goToHistory()
 

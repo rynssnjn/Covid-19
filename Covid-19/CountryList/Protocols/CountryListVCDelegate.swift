@@ -10,4 +10,6 @@ import Foundation
 
 public protocol CountryListVCDelegate: class {
     func getCountryStatistics(country: String)
+
+    func showLibraries()
 }

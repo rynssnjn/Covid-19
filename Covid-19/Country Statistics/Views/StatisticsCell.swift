@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 import SnapKit
 
 public final class StatisticsCell: UITableViewCell {
@@ -50,7 +50,7 @@ public final class StatisticsCell: UITableViewCell {
         self.backgroundColor = AppUI.Color.lightPrimary
 
         self.isUserInteractionEnabled = false
-        self.kio.subviews(forAutoLayout:
+        self.rsj.subviews(forAutoLayout:
             self.sideDecoration, self.statisticsLabel,
             self.statisticsValueLabel, self.bottomDivider
         )

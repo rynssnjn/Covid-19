@@ -8,9 +8,9 @@
 
 import Foundation
 import SnapKit
-import Kio
+import RSJ
 
-public final class CountryListView: KioView {
+public final class CountryListView: RSJView {
 
     // MARK: Subviews
     public let tableView: UITableView = {
@@ -40,7 +40,7 @@ public final class CountryListView: KioView {
         super.init(frame: frame)
         self.backgroundColor = AppUI.Color.primary
 
-        self.kio.subviews(forAutoLayout: self.searchBar, self.tableView)
+        self.rsj.subviews(forAutoLayout: self.searchBar, self.tableView)
 
         self.searchBar.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.top.equalToSuperview()

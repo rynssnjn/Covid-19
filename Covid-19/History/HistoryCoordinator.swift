@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 import STPopup
 
 public final class HistoryCoordinator: AbstractCoordinator {

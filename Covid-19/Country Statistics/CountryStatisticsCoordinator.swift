@@ -8,7 +8,7 @@
 
 import Astral
 import Foundation
-import Kio
+import RSJ
 
 public final class CountryStatisticsCoordinator: AbstractCoordinator {
 
@@ -50,7 +50,7 @@ extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
     }
 
     public func goToHistory() {
-        self.navigationController.kio.showActivityIndicator()
+        self.navigationController.rsj.showActivityIndicator()
         self.service.getHistory(country: self.statistics.country)
             .onSuccess { [weak self] (country: CountryStatistics) -> Void in
                 guard let s = self else { return }
@@ -72,7 +72,7 @@ extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
             }
             .onComplete { [weak self] (_) -> Void in
                 guard let s = self else { return }
-                s.navigationController.kio.hideActivityIndicator()
+                s.navigationController.rsj.hideActivityIndicator()
             }
     }
 }

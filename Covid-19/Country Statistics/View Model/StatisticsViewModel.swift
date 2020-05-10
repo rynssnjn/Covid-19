@@ -43,13 +43,13 @@ public struct StatisticsViewModel {
                         guard let new = cases.new else { return "0" }
                         return new
                     case .active:
-                        return cases.active.kio.stringValue
+                        return cases.active.rsj.stringValue
                     case .critical:
-                        return cases.critical.kio.stringValue
+                        return cases.critical.rsj.stringValue
                     case .recovered:
-                        return cases.recovered.kio.stringValue
+                        return cases.recovered.rsj.stringValue
                     case .total:
-                        return cases.total.kio.stringValue
+                        return cases.total.rsj.stringValue
                 }
             case false:
                 guard let row = self.row as? DeathsRow else { return "0" }
@@ -59,7 +59,7 @@ public struct StatisticsViewModel {
                         guard let new = deaths.new else { return "0" }
                         return new
                     case .total:
-                        return deaths.total.kio.stringValue
+                        return deaths.total.rsj.stringValue
                 }
         }
     }

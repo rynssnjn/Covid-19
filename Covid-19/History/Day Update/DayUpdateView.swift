@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 import SnapKit
 
-public final class DayUpdateView: KioView {
+public final class DayUpdateView: RSJView {
 
     // MARK: Subview
     public let dateLabel: UILabel = {
@@ -61,7 +61,7 @@ public final class DayUpdateView: KioView {
         super.init(frame: frame)
 
         self.backgroundColor = AppUI.Color.lightPrimary
-        self.kio.subviews(forAutoLayout:
+        self.rsj.subviews(forAutoLayout:
             self.dateLabel, self.dayLabel, self.lineView,
             self.casesLabel, self.casesValueLabel
         )

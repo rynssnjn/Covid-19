@@ -7,8 +7,9 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 import Astral
+import SnapKit
 
 public final class CountryListCoordinator: AbstractCoordinator {
 
@@ -27,7 +28,7 @@ public final class CountryListCoordinator: AbstractCoordinator {
     // MARK: Instance Methods
     public override func start() {
         super.start()
-        self.navigationController.kio.showActivityIndicator()
+        self.navigationController.rsj.showActivityIndicator()
         self.service.getCountries()
             .onSuccess { [weak self] (countries: Countries) -> Void in
                 guard let s = self else { return }
@@ -46,7 +47,7 @@ public final class CountryListCoordinator: AbstractCoordinator {
             }
             .onComplete { [weak self] (_) -> Void in
                 guard let s = self else { return }
-                s.navigationController.kio.hideActivityIndicator()
+                s.navigationController.rsj.hideActivityIndicator()
             }
     }
 }
@@ -54,7 +55,7 @@ public final class CountryListCoordinator: AbstractCoordinator {
 // MARK: CountryListVCDelegate Methods
 extension CountryListCoordinator: CountryListVCDelegate {
     public func getCountryStatistics(country: String) {
-        self.navigationController.kio.showActivityIndicator()
+        self.navigationController.rsj.showActivityIndicator()
         self.service.getStatistics(country: country)
             .onSuccess { [weak self] (countryStatistics: CountryStatistics) -> Void in
                 if let statistics: Statistics = countryStatistics.statistics.first {
@@ -78,7 +79,7 @@ extension CountryListCoordinator: CountryListVCDelegate {
             }
             .onComplete { [weak self] (_) -> Void in
                 guard let s = self else { return }
-                s.navigationController.kio.hideActivityIndicator()
+                s.navigationController.rsj.hideActivityIndicator()
             }
     }
 }

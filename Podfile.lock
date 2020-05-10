@@ -5,7 +5,7 @@ PODS:
     - BrightFutures
   - BrightFutures (8.0.0)
   - FSCalendar (2.8.1)
-  - Kio (2.2.2)
+  - RSJ (1.2.0)
   - SnapKit (5.0.1)
   - STPopup (1.8.7)
 
@@ -13,7 +13,7 @@ DEPENDENCIES:
   - Astral
   - BFAstral
   - FSCalendar
-  - Kio
+  - RSJ (from `https://github.com/rynssnjn/RSJ.git`)
   - SnapKit
   - STPopup
 
@@ -23,19 +23,27 @@ SPEC REPOS:
     - BFAstral
     - BrightFutures
     - FSCalendar
-    - Kio
     - SnapKit
     - STPopup
+
+EXTERNAL SOURCES:
+  RSJ:
+    :git: https://github.com/rynssnjn/RSJ.git
+
+CHECKOUT OPTIONS:
+  RSJ:
+    :commit: 6e1dcc9691dc29fd2e10c530d62e64750ba70bca
+    :git: https://github.com/rynssnjn/RSJ.git
 
 SPEC CHECKSUMS:
   Astral: ed5d3072daf5cf630c8a4784c4274a252840f52b
   BFAstral: 42cbc19d96a6e3a7a86900fff42cb4b5aedf7dbe
   BrightFutures: f8427b46feabaf73c5e71ace7d86d65dfbb47696
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
-  Kio: 320b6cb88a8c9175bb72880e8a85bea66027a0a8
+  RSJ: e1e4c106d891228795c47b075520e0a761dd8b18
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   STPopup: a9045557bc48a0df51fbb7bf0544447c5fe84d34
 
-PODFILE CHECKSUM: 5a3b47bf03d9eebd89d1df2e9b9fde4b158bcea7
+PODFILE CHECKSUM: ac27538fce8947417ca4371773015e8cc7afbf67
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

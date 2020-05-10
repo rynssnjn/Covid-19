@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 
-public final class CountryStatisticsDataSource: KioObject {
+public final class CountryStatisticsDataSource: RSJObject {
 
     // MARK: Initializer
     public init(tableView: UITableView, statistics: Statistics) {

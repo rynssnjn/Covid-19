@@ -6,10 +6,15 @@ target 'Covid-19' do
   use_frameworks!
 
   # Pods for Covid-19
-  pod 'Kio'
+  pod 'RSJ', :git => 'https://github.com/rynssnjn/RSJ.git'
   pod 'SnapKit'
   pod 'Astral'
   pod 'BFAstral'
   pod 'FSCalendar'
   pod 'STPopup'
+end
+
+post_install do |installer|
+  require 'fileutils'
+  FileUtils.cp_r('Pods/Target Support Files/Pods-Covid-19/Pods-Covid-19-acknowledgements.plist', 'Covid-19/Supporting Files/Acknowledgements.plist', :remove_destination => true)
 end

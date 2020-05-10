@@ -14,18 +14,14 @@ public enum AppUI {
 
         static let lightGray: UIColor = UIColor(white: 0.9529, alpha: 1.0)
 
-        static let neonBlue: UIColor = UIColor(red: 9.0/255.0, green: 203.0/255.0, blue: 237.0/255.0, alpha: 1.0)
+        static let neonBlue: UIColor = UIColor.rsj.color(red: 9.0, green: 203.0, blue: 237.0)
 
-        static let darkishBlue: UIColor = UIColor(red: 50.0/255.0, green: 150.0/255.0, blue: 250.0/255.0, alpha: 1.0)
+        static let primary: UIColor = UIColor.rsj.color(red: 52.0, green: 73.0, blue: 85.0)
 
-        static let darkPink: UIColor = UIColor(red: 247/255.0, green: 50.0/255.0, blue: 250.0/255.0, alpha: 1.0)
+        static let darkPrimary: UIColor = UIColor.rsj.color(red: 35.0, green: 47.0, blue: 52.0)
 
-        static let primary: UIColor = UIColor(red: 52.0/255.0, green: 73.0/255.0, blue: 85.0/255.0, alpha: 1.0)
+        static let lightPrimary: UIColor = UIColor.rsj.color(red: 74.0, green: 101.0, blue: 114.0)
 
-        static let darkPrimary: UIColor = UIColor(red: 35.0/255.0, green: 47.0/255.0, blue: 52.0/255.0, alpha: 1.0)
-
-        static let lightPrimary: UIColor = UIColor(red: 74.0/255.0, green: 101.0/255.0, blue: 114.0/255.0, alpha: 1.0)
-
-        static let secondary: UIColor = UIColor(red: 249.0/255.0, green: 170.0/255.0, blue: 51.0/255.0, alpha: 1.0)
+        static let secondary: UIColor = UIColor.rsj.color(red: 249.0, green: 170.0, blue: 51.0)
     }
 }

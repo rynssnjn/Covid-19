@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 import SnapKit
 import FSCalendar
 
-public final class HistoryView: KioView {
+public final class HistoryView: RSJView {
 
     // MARK: Subviews
     public let calendar: FSCalendar = {
@@ -49,7 +49,7 @@ public final class HistoryView: KioView {
 
         self.backgroundColor = AppUI.Color.darkPrimary
 
-        self.kio.subview(forAutoLayout: self.calendar)
+        self.rsj.subview(forAutoLayout: self.calendar)
 
         self.calendar.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.edges.equalToSuperview()

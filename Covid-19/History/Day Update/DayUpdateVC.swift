@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 
-public final class DayUpdateVC: KioViewController {
+public final class DayUpdateVC: RSJViewController {
 
     // MARK: Delegate Properties
     private unowned let delegate: DayUpdateVCDelegate
@@ -76,7 +76,7 @@ public final class DayUpdateVC: KioViewController {
 
         self.rootView.dayLabel.text = day.string
         self.rootView.dateLabel.text = formatter.string(from: self.date)
-        self.rootView.casesValueLabel.text = totalCases.kio.stringValue
+        self.rootView.casesValueLabel.text = totalCases.rsj.stringValue
 
     }
 }

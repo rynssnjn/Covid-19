@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 import FSCalendar
 
-public final class HistoryVC: KioViewController {
+public final class HistoryVC: RSJViewController {
 
     // MARK: Delegate Properties
     private unowned let delegate: HistoryVCDelegate

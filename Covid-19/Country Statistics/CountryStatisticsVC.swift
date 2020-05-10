@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 
-public final class CountryStatisticsVC: KioViewController {
+public final class CountryStatisticsVC: RSJViewController {
 
     // MARK: Delegate Properties
     private unowned let delegate: CountryStatisticsVCDelegate

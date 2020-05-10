@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 import SnapKit
 
-public final class CountryStatisticsView: KioView {
+public final class CountryStatisticsView: RSJView {
 
     // MARK: Subviews
     public let tableView: UITableView = {
@@ -27,7 +27,7 @@ public final class CountryStatisticsView: KioView {
         super.init(frame: frame)
         self.backgroundColor = AppUI.Color.darkPrimary
 
-        self.kio.subview(forAutoLayout: self.tableView)
+        self.rsj.subview(forAutoLayout: self.tableView)
 
         self.tableView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.edges.equalToSuperview()

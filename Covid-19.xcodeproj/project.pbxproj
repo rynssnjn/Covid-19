@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		80F4482C534558E76245CA1A /* Pods_Covid_19.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A73C0C1264A15C061FC84F /* Pods_Covid_19.framework */; };
+		8E4B52AC24680C0800ACF019 /* Acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E4B52AB24680C0800ACF019 /* Acknowledgements.plist */; };
 		8E809D2424306ED000DDBCE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E809D2324306ED000DDBCE6 /* AppDelegate.swift */; };
 		8E809D2A24306ED100DDBCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2924306ED100DDBCE6 /* Assets.xcassets */; };
 		8E809D2D24306ED100DDBCE6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E809D2C24306ED100DDBCE6 /* Preview Assets.xcassets */; };
@@ -78,6 +79,7 @@
 /* Begin PBXFileReference section */
 		010413E639F87922BEEC9FD1 /* Pods-Covid-19.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid-19.debug.xcconfig"; path = "Target Support Files/Pods-Covid-19/Pods-Covid-19.debug.xcconfig"; sourceTree = "<group>"; };
 		20AD1261C562EBC701764488 /* Pods-Covid-19.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Covid-19.release.xcconfig"; path = "Target Support Files/Pods-Covid-19/Pods-Covid-19.release.xcconfig"; sourceTree = "<group>"; };
+		8E4B52AB24680C0800ACF019 /* Acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Acknowledgements.plist; sourceTree = "<group>"; };
 		8E809D2024306ED000DDBCE6 /* Covid-19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E809D2324306ED000DDBCE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E809D2924306ED100DDBCE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 		8EDD76A92430803500A60C9B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8E4B52AB24680C0800ACF019 /* Acknowledgements.plist */,
 				8E788DAB2439AAF800B6DD2A /* Fonts */,
 				8E809D2B24306ED100DDBCE6 /* Preview Content */,
 				8E809D2924306ED100DDBCE6 /* Assets.xcassets */,
@@ -571,6 +574,7 @@
 				8E9FB10E243AA5ED00E03D43 /* AlegreyaSansSC-Black.ttf in Resources */,
 				8E9FB124243AA62000E03D43 /* AlegreyaSansSC-Light.ttf in Resources */,
 				8E9FB126243AA62000E03D43 /* AlegreyaSansSC-Thin.ttf in Resources */,
+				8E4B52AC24680C0800ACF019 /* Acknowledgements.plist in Resources */,
 				8E9FB128243AA62000E03D43 /* AlegreyaSansSC-Regular.ttf in Resources */,
 				8E9FB123243AA62000E03D43 /* AlegreyaSansSC-LightItalic.ttf in Resources */,
 				8E9FB122243AA62000E03D43 /* AlegreyaSansSC-Italic.ttf in Resources */,

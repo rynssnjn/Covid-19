@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 import SnapKit
 
 public final class CountryCell: UITableViewCell {
@@ -49,7 +49,7 @@ public final class CountryCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = AppUI.Color.lightPrimary
 
-        self.kio.subviews(forAutoLayout:
+        self.rsj.subviews(forAutoLayout:
             self.sideDecoration, self.countryLabel,
             self.bottomDivider, self.chevron
         )

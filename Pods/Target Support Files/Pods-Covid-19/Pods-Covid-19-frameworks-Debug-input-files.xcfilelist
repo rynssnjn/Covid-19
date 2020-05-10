@@ -3,6 +3,6 @@ ${BUILT_PRODUCTS_DIR}/Astral/Astral.framework
 ${BUILT_PRODUCTS_DIR}/BFAstral/BFAstral.framework
 ${BUILT_PRODUCTS_DIR}/BrightFutures/BrightFutures.framework
 ${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
-${BUILT_PRODUCTS_DIR}/Kio/Kio.framework
+${BUILT_PRODUCTS_DIR}/RSJ/RSJ.framework
 ${BUILT_PRODUCTS_DIR}/STPopup/STPopup.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework

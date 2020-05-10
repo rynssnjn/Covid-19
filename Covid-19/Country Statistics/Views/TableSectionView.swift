@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import Kio
+import RSJ
 import SnapKit
 
-public final class TableSectionView: KioView {
+public final class TableSectionView: RSJView {
 
     // MARK: Subviews
     public let sectionLabel: UILabel = {
@@ -27,7 +27,7 @@ public final class TableSectionView: KioView {
         super.init(frame: CGRect.zero)
         self.backgroundColor = AppUI.Color.darkPrimary
         self.sectionLabel.text = title
-        self.kio.subview(forAutoLayout: self.sectionLabel)
+        self.rsj.subview(forAutoLayout: self.sectionLabel)
 
         self.sectionLabel.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.leading.equalToSuperview()

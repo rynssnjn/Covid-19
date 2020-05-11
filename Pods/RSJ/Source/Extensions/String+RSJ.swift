@@ -11,68 +11,45 @@ import class Foundation.NSRegularExpression
 import struct Foundation.Data
 import struct Foundation.NSRange
 import class Foundation.NSTextCheckingResult
+import struct CoreGraphics.CGFloat
 
-/**
- A Domain Specific Language for String to access custom methods
-*/
 public struct RSJStringSpecific {
 
     // MARK: Stored Propeties
-    /**
-     Specific String instance
-    */
     public let string: String
 
 }
 
 public extension RSJStringSpecific {
-    /**
-     Checks if string contains a number
-    */
     var containsNumbers: Bool {
         let regex: String = "[0-9]+"
         let range: Range<String.Index>? = self.string.range(of: regex, options: String.CompareOptions.regularExpression)
         return range != nil
     }
 
-    /**
-     Checks if string contains an alphabetic character
-    */
     var isAlphabetic: Bool {
         let regex: String = "^[a-zA-Z]+$"
         let range: Range<String.Index>? = self.string.range(of: regex, options: String.CompareOptions.regularExpression)
         return range != nil
     }
 
-    /**
-     Checks if string is a valid email address
-    */
     var isValidEmail: Bool {
         let regex: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let range: Range<String.Index>? = self.string.range(of: regex, options: String.CompareOptions.regularExpression)
         return range != nil
     }
 
-    /**
-     Checks if string is a valid phone number
-    */
     var isValidPhoneNum: Bool {
         let regex: String = "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
         let range: Range<String.Index>? = self.string.range(of: regex, options: String.CompareOptions.regularExpression)
         return range != nil
     }
 
-    /**
-     Returns the string as a base64 encoded string
-    */
     var base64Encoded: String? {
         let encodedData: Data? = self.string.data(using: String.Encoding.utf8)
         return encodedData?.base64EncodedString()
     }
 
-    /**
-     Returns the string as a base64 decoded string if it was base64 encoded
-    */
     var base64Decoded: String? {
         let base64Regex: String = "^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)$"
         let range: Range<String.Index>? = self.string.range(of: base64Regex, options: NSString.CompareOptions.regularExpression)
@@ -88,10 +65,7 @@ public extension RSJStringSpecific {
         }
     }
 
-    /**
-     Returns the string's ASCII value
-    */
-    var asciiValue: String? {
+    var asAscii: String? {
         let regexPattern: String = "(0x)?([0-9a-f]{2})"
 
         do {
@@ -122,30 +96,41 @@ public extension RSJStringSpecific {
         }
     }
 
-    /**
-     Checks if the string is a hex value
-    */
     var isHexValue: Bool {
         let regexPattern: String = "[0-9A-F]+"
         let range = self.string.range(of: regexPattern, options: NSString.CompareOptions.regularExpression)
         return range != nil
     }
 
-    /**
-     Returns the string's hex value
-    */
-    var hexValue: String? {
+    var asHex: String? {
         guard let data = self.string.data(using: String.Encoding.utf8) else { return nil }
         return data.map { String(format: "%02hhx", $0) }.joined()
+    }
+
+    var asInt: Int? {
+        guard let intValue = Int(self.string) else { return nil }
+        return intValue
+    }
+
+    var asDouble: Double? {
+        guard let doubleValue = Double(self.string) else { return nil }
+        return doubleValue
+    }
+
+    var asFloat: Float? {
+        guard let floatValue = Float(self.string) else { return nil }
+        return floatValue
+    }
+
+    var asCGFloat: CGFloat? {
+        guard let doubleValue = self.asDouble else { return nil }
+        return CGFloat(doubleValue)
     }
 
 }
 
 public extension String {
 
-    /**
-     RSJStringSpecific instance to access custom methods
-    */
     var rsj: RSJStringSpecific {
         return RSJStringSpecific(string: self)
     }

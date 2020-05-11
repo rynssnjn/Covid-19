@@ -8,9 +8,6 @@
 
 import class UIKit.UIActivityIndicatorView
 
-/**
- A subclass of UIActivityIndicatorView that implements a print statement when deinitialized
-*/
 open class RSJActivityIndicatorView: UIActivityIndicatorView, RSJDebuggable {
     deinit {
         self.log()

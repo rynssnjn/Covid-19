@@ -76,7 +76,7 @@ public final class DayUpdateVC: RSJViewController {
 
         self.rootView.dayLabel.text = day.string
         self.rootView.dateLabel.text = formatter.string(from: self.date)
-        self.rootView.casesValueLabel.text = totalCases.rsj.stringValue
+        self.rootView.casesValueLabel.text = totalCases.rsj.asString
 
     }
 }

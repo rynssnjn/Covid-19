@@ -14,7 +14,7 @@ public protocol DecodingErrorHandler {
 
 public extension DecodingErrorHandler {
 
-    func handle(decodingError error: DecodingError) -> Never { // this warning is a compiler bug 1/23/18
+    func handle(decodingError error: DecodingError) -> Never {
         switch error {
             case .dataCorrupted(let context):
                 fatalError(context.debugDescription)

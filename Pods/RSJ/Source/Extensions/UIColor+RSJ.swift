@@ -11,32 +11,17 @@ import struct CoreGraphics.CGFloat
 import class Foundation.Scanner
 import struct Foundation.CharacterSet
 
-/**
- A A Domain Specific Language for UIColor to access custom methods
- */
 public struct RSJColorSpecific {
 
     // MARK: Instance Methods
-    /**
-     Convenience method for UIColor with an alpha of 1.0
-
-     - Parameters:
-        - red: red value of UIColor
-        - green: green value of UIColor
-        - blue: blue value of UIColor
-    */
-    public func color(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+    public func color(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat? = nil) -> UIColor {
         let red: CGFloat = red / 255.0
         let green: CGFloat = green / 255.0
         let blue: CGFloat = blue / 255.0
-        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        let alpha: CGFloat = alpha == nil ? 1.0 : alpha!
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 
-    /**
-     Convenience method for UIColor with an alpha of 1.0.
-     If the string contains less than 6 characters (excluding the '#'), this method will return UIColor.black
-     - Parameter hexValue: Hex string value such as #FFFFFF
-    */
     public func color(hexValue: String) -> UIColor {
         var hexValue: String = hexValue.uppercased().trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
 
@@ -72,9 +57,6 @@ public struct RSJColorSpecific {
 
 public extension UIColor {
 
-    /**
-     RSJColorSpecific instance to access custom methods
-    */
     static var rsj: RSJColorSpecific {
         return RSJColorSpecific()
     }

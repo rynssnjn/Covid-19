@@ -37,7 +37,7 @@ public final class LibraryView: RSJView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = AppUI.Color.primary
-        self.rsj.subviews(forAutoLayout: self.titleLabel, self.contentTextView)
+        self.rsj.addViews(forAutoLayout: self.titleLabel, self.contentTextView)
 
         self.titleLabel.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.top.equalToSuperview().offset(16.0)

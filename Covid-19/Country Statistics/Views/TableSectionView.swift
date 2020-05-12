@@ -27,7 +27,7 @@ public final class TableSectionView: RSJView {
         super.init(frame: CGRect.zero)
         self.backgroundColor = AppUI.Color.darkPrimary
         self.sectionLabel.text = title
-        self.rsj.subview(forAutoLayout: self.sectionLabel)
+        self.rsj.addView(forAutoLayout: self.sectionLabel)
 
         self.sectionLabel.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.leading.equalToSuperview()

@@ -27,7 +27,7 @@ public final class CountryStatisticsView: RSJView {
         super.init(frame: frame)
         self.backgroundColor = AppUI.Color.darkPrimary
 
-        self.rsj.subview(forAutoLayout: self.tableView)
+        self.rsj.addView(forAutoLayout: self.tableView)
 
         self.tableView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.edges.equalToSuperview()

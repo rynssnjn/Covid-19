@@ -50,7 +50,7 @@ public final class StatisticsCell: UITableViewCell {
         self.backgroundColor = AppUI.Color.lightPrimary
 
         self.isUserInteractionEnabled = false
-        self.rsj.subviews(forAutoLayout:
+        self.rsj.addViews(forAutoLayout:
             self.sideDecoration, self.statisticsLabel,
             self.statisticsValueLabel, self.bottomDivider
         )

@@ -49,7 +49,7 @@ public final class CountryCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = AppUI.Color.lightPrimary
 
-        self.rsj.subviews(forAutoLayout:
+        self.rsj.addViews(forAutoLayout:
             self.sideDecoration, self.countryLabel,
             self.bottomDivider, self.chevron
         )

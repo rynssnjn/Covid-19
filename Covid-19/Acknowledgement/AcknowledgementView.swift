@@ -27,7 +27,7 @@ public final class AcknowledgementView: RSJView {
 
         self.backgroundColor = AppUI.Color.primary
 
-        self.rsj.subview(forAutoLayout: self.tableView)
+        self.rsj.addView(forAutoLayout: self.tableView)
 
         self.tableView.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.edges.equalToSuperview()

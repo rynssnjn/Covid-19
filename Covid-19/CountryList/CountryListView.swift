@@ -40,7 +40,7 @@ public final class CountryListView: RSJView {
         super.init(frame: frame)
         self.backgroundColor = AppUI.Color.primary
 
-        self.rsj.subviews(forAutoLayout: self.searchBar, self.tableView)
+        self.rsj.addViews(forAutoLayout: self.searchBar, self.tableView)
 
         self.searchBar.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.top.equalToSuperview()

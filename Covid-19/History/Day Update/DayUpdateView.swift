@@ -61,7 +61,7 @@ public final class DayUpdateView: RSJView {
         super.init(frame: frame)
 
         self.backgroundColor = AppUI.Color.lightPrimary
-        self.rsj.subviews(forAutoLayout:
+        self.rsj.addViews(forAutoLayout:
             self.dateLabel, self.dayLabel, self.lineView,
             self.casesLabel, self.casesValueLabel
         )

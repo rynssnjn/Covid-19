@@ -17,14 +17,7 @@ open class AbstractCoordinator: RSJObject, Coordinator {
     }
 
     // MARK: Stored Properties
-    /**
-     Instance variable of an array of childCoordinators
-    */
     private var _childCoordinators: [Coordinator] = []
-
-    /**
-     Boolean to trigger a crash if start method is called multiple times in the lifetime of the instance.
-    */
     public private(set) var hasStarted: Bool = false
 
     // MARK: Computed Properties

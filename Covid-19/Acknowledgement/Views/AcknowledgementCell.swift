@@ -49,7 +49,7 @@ public final class AcknowledgementCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = AppUI.Color.lightPrimary
 
-        self.rsj.subviews(forAutoLayout:
+        self.rsj.addViews(forAutoLayout:
             self.sideDecoration, self.libraryTitle,
             self.bottomDivider, self.chevron
         )

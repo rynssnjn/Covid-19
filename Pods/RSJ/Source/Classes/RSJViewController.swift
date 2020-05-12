@@ -8,10 +8,6 @@
 
 import class UIKit.UIViewController
 
-/**
- A subclass of UIViewController that implements a print statement when deinitialized.
- Conforms to NavigationItemSetting and TargetActionSetting.
-*/
 open class RSJViewController: UIViewController, RSJDebuggable {
     deinit {
         self.log()

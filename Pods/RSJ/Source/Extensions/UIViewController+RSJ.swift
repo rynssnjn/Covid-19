@@ -20,60 +20,36 @@ import class UIKit.NSLayoutConstraint
 import struct CoreGraphics.CGSize
 import class Foundation.DispatchQueue
 
-/**
- A Domain Specific Language for UIViewController to access custom methods
-*/
 public struct RSJViewControllerSpecific {
 
     // MARK: Stored Propeties
-    /**
-     Specific UIViewController instance
-     */
     public let vc: UIViewController
 
 }
 
 public extension RSJViewControllerSpecific {
 
-    /**
-     Adds child view controller to parent
-
-     - Parameter childViewController: The view controller to be added.
-     */
-    func add(child childViewController: UIViewController) {
-        self.vc.addChild(childViewController)
-        childViewController.didMove(toParent: self.vc)
-        self.vc.view.addSubview(childViewController.view)
+    func add(child vc: UIViewController) {
+        self.vc.addChild(vc)
+        vc.didMove(toParent: self.vc)
+        self.vc.view.addSubview(vc.view)
     }
 
-    /**
-     Removes child view controller to super view
+    func remove(child vc: UIViewController) {
+        guard vc.parent === self.vc else { return }
 
-     - Parameter childViewController: The view controller to be removed.
-     */
-    func remove(child childViewController: UIViewController) {
-        guard childViewController.parent === self.vc else { return }
-
-        childViewController.willMove(toParent: nil)
-        childViewController.removeFromParent()
-        childViewController.view.removeFromSuperview()
+        vc.willMove(toParent: nil)
+        vc.removeFromParent()
+        vc.view.removeFromSuperview()
     }
 
-    /**
-     Accesses the UIViewController's UINavigationItem instance to manipulate inside a closure.
-     - Parameter callback: The closure that captures the UINavigationItem instance to be manipulated
-     */
-    func setUpNavigationItem(_ callback: (UINavigationItem) -> Void) {
-        callback(self.vc.navigationItem)
+    func setUpNavigationItem(_ item: (UINavigationItem) -> Void) {
+        item(self.vc.navigationItem)
     }
 
-    /**
-     Convenience method that assigns a selector method to a UIControl instance
-     - Parameter dict: The dictionary containing the UIControl and Selector pairing
-     */
-    func setUpTargetActions(with dict: [UIControl: Selector]) {
+    func setUpTargetActions(with dictionary: [UIControl: Selector]) {
 
-        for (control, action) in dict {
+        for (control, action) in dictionary {
 
             let controlEvent: UIControl.Event
 
@@ -108,7 +84,7 @@ public extension RSJViewControllerSpecific {
 
     private func findActivityIndicator() -> RSJActivityIndicatorView? {
         return self.vc.view.subviews.reversed()
-            .first(where: { (view: UIView) -> Bool in view is RSJActivityIndicatorView}) as? RSJActivityIndicatorView
+            .first(where: { (view: UIView) -> Bool in view is RSJActivityIndicatorView }) as? RSJActivityIndicatorView
     }
 
     func showActivityIndicator(with size: CGSize = CGSize(width: 60.0, height: 60.0)) {
@@ -133,9 +109,7 @@ public extension RSJViewControllerSpecific {
 }
 
 public extension UIViewController {
-    /**
-     RSJViewControllerSpecific instance to access custom methods
-    */
+
     var rsj: RSJViewControllerSpecific {
         return RSJViewControllerSpecific(vc: self)
     }

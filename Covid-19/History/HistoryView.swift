@@ -49,7 +49,7 @@ public final class HistoryView: RSJView {
 
         self.backgroundColor = AppUI.Color.darkPrimary
 
-        self.rsj.subview(forAutoLayout: self.calendar)
+        self.rsj.addView(forAutoLayout: self.calendar)
 
         self.calendar.snp.remakeConstraints { (make: ConstraintMaker) -> Void in
             make.edges.equalToSuperview()

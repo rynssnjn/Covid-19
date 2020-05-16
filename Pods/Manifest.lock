@@ -13,13 +13,11 @@ DEPENDENCIES:
   - Astral
   - BFAstral
   - FSCalendar
-  - RSJ
+  - RSJ (from `https://github.com/rynssnjn/RSJ.git`)
   - SnapKit
   - STPopup
 
 SPEC REPOS:
-  https://github.com/rynssnjn/RSJ.git:
-    - RSJ
   trunk:
     - Astral
     - BFAstral
@@ -28,15 +26,24 @@ SPEC REPOS:
     - SnapKit
     - STPopup
 
+EXTERNAL SOURCES:
+  RSJ:
+    :git: https://github.com/rynssnjn/RSJ.git
+
+CHECKOUT OPTIONS:
+  RSJ:
+    :commit: 797ab4fd5ec6ec831d44e33b159e80e36e2eed33
+    :git: https://github.com/rynssnjn/RSJ.git
+
 SPEC CHECKSUMS:
   Astral: ed5d3072daf5cf630c8a4784c4274a252840f52b
   BFAstral: 42cbc19d96a6e3a7a86900fff42cb4b5aedf7dbe
   BrightFutures: f8427b46feabaf73c5e71ace7d86d65dfbb47696
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
-  RSJ: 04e2de9d8f61b72f70e9c9e69dc933fa7973a731
+  RSJ: 95b41eb5410c1fa0c3b04614bcae93a2d7987c41
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   STPopup: a9045557bc48a0df51fbb7bf0544447c5fe84d34
 
-PODFILE CHECKSUM: cd7cb88a4426f2841595e66cae75790964ffc718
+PODFILE CHECKSUM: ac27538fce8947417ca4371773015e8cc7afbf67
 
 COCOAPODS: 1.9.1

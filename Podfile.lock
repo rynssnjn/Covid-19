@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   RSJ:
-    :commit: a1d2fa34c6ebdaf31597ea26525837eae80120e7
+    :commit: 797ab4fd5ec6ec831d44e33b159e80e36e2eed33
     :git: https://github.com/rynssnjn/RSJ.git
 
 SPEC CHECKSUMS:
@@ -40,7 +40,7 @@ SPEC CHECKSUMS:
   BFAstral: 42cbc19d96a6e3a7a86900fff42cb4b5aedf7dbe
   BrightFutures: f8427b46feabaf73c5e71ace7d86d65dfbb47696
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
-  RSJ: f5ba43e6976910a2cfc892f8679dbd7f00399c22
+  RSJ: 95b41eb5410c1fa0c3b04614bcae93a2d7987c41
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   STPopup: a9045557bc48a0df51fbb7bf0544447c5fe84d34
 

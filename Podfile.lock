@@ -13,7 +13,7 @@ DEPENDENCIES:
   - Astral
   - BFAstral
   - FSCalendar
-  - RSJ (from `https://github.com/rynssnjn/RSJ.git`, branch `1.4.0/alert`)
+  - RSJ (from `https://github.com/rynssnjn/RSJ.git`, branch `1.4.0/dev-staging`)
   - SnapKit
   - STPopup
 
@@ -28,12 +28,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   RSJ:
-    :branch: 1.4.0/alert
+    :branch: 1.4.0/dev-staging
     :git: https://github.com/rynssnjn/RSJ.git
 
 CHECKOUT OPTIONS:
   RSJ:
-    :commit: b45f70aceeafc31105187347aa9ae6d8887f2902
+    :commit: 5ba12f740bca5f44f61f71bdcd14bcaf13eea25f
     :git: https://github.com/rynssnjn/RSJ.git
 
 SPEC CHECKSUMS:
@@ -45,6 +45,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   STPopup: a9045557bc48a0df51fbb7bf0544447c5fe84d34
 
-PODFILE CHECKSUM: 21def8eb4a5afea97ef3a88ee514ab1fb4f60057
+PODFILE CHECKSUM: cbf5d247bd0e5f4f8a375fdce57d2700de799749
 
 COCOAPODS: 1.9.1

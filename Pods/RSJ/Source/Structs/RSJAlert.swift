@@ -25,11 +25,7 @@ public struct RSJAlert {
 }
 
 extension RSJAlert {
-    public func showAlert(
-        firstAction: (title: String, style: UIAlertAction.Style, action: () -> Void),
-        secondAction: (title: String?, action: (() -> Void)?)? = nil
-    ) {
-
+    public func showAlert(firstAction: RSJAlertAction, secondAction: RSJAlertAction? = nil) {
         let alert: UIAlertController = UIAlertController(
             title: self.title,
             message: self.message,
@@ -41,44 +37,28 @@ extension RSJAlert {
                 title: firstAction.title,
                 style: firstAction.style,
                 handler: { (_: UIAlertAction) -> Void in
-                    firstAction.action()
+                    firstAction.action?()
                 }
             )
         )
 
-        if let secondAction = secondAction {
-            alert.addAction(
-                UIAlertAction(
-                    title: secondAction.title,
-                    style: UIAlertAction.Style.default,
-                    handler: { (_: UIAlertAction) -> Void in
-                        secondAction.action?()
-                    }
-                )
-            )
-        }
-
         self.vc.present(alert, animated: true, completion: nil)
     }
 
-    public func showActionSheet(actions: [(
-        title: String?,
-        style: UIAlertAction.Style?,
-        action: (() -> Void)?)]
-    ) {
+    public func showActionSheet(actions: [RSJAlertAction]) {
         let alert: UIAlertController = UIAlertController(
             title: self.title,
             message: self.message,
             preferredStyle: UIAlertController.Style.actionSheet
         )
 
-        actions.forEach { (action: (title: String?, style: UIAlertAction.Style?, action: (() -> Void)?)) -> Void in
+        actions.forEach { (rsj: RSJAlertAction) -> Void in
             alert.addAction(
                 UIAlertAction(
-                    title: action.title,
-                    style: action.style ?? UIAlertAction.Style.default,
+                    title: rsj.title,
+                    style: rsj.style,
                     handler: { (_: UIAlertAction) -> Void in
-                        action.action?()
+                        rsj.action?()
                     }
                 )
             )

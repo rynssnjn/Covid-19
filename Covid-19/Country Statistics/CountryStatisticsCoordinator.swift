@@ -65,11 +65,11 @@ extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
             }
             .onFailure(DispatchQueue.main.context) { [weak self] (_: NetworkingError) -> Void in
                 guard let s = self else { return }
+
                 RSJAlert(message: "general_error".localized, viewController: s.navigationController)
-                    .showAlert(firstAction: (
+                    .showAlert(firstAction: RSJAlertAction(
                         title: "close".localized,
-                        style: UIAlertAction.Style.destructive,
-                        action: {}
+                        style: UIAlertAction.Style.destructive
                     ))
             }
             .onComplete(DispatchQueue.main.context) { [weak self] (_) -> Void in

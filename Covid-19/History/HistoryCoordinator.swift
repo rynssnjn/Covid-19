@@ -111,10 +111,9 @@ extension HistoryCoordinator: HistoryVCDelegate {
             title: "error".localized,
             message: "future_date_error".localized,
             viewController: self.navigationController
-        ).showAlert(firstAction: (
+        ).showAlert(firstAction: RSJAlertAction(
             title: "close".localized,
-            style: UIAlertAction.Style.destructive,
-            action: {}
+            style: UIAlertAction.Style.destructive
         ))
     }
 }

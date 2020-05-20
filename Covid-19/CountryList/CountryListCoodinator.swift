@@ -9,6 +9,7 @@
 import Foundation
 import RSJ
 import Astral
+import UIKit
 
 public final class CountryListCoordinator: AbstractCoordinator {
 
@@ -39,10 +40,11 @@ public final class CountryListCoordinator: AbstractCoordinator {
             }
             .onFailure(DispatchQueue.main.context) { [weak self] (_: NetworkingError) -> Void in
                 guard let s = self else { return }
-                AlertHandler(
-                    message: "general_error".localized,
-                    viewController: s.navigationController
-                ).showErrorAlert()
+                RSJAlert(message: "general_error".localized, viewController: s.navigationController)
+                    .showAlert(firstAction: RSJAlertAction(
+                        title: "close".localized,
+                        style: UIAlertAction.Style.destructive
+                    ))
             }
             .onComplete(DispatchQueue.main.context) { [weak self] (_) -> Void in
                 guard let s = self else { return }
@@ -56,7 +58,7 @@ extension CountryListCoordinator: CountryListVCDelegate {
     public func getCountryStatistics(country: String) {
         self.navigationController.rsj.showActivityIndicator()
         self.service.getStatistics(country: country)
-            .onSuccess { [weak self] (countryStatistics: CountryStatistics) -> Void in
+            .onSuccess(DispatchQueue.main.context) { [weak self] (countryStatistics: CountryStatistics) -> Void in
                 if let statistics: Statistics = countryStatistics.statistics.first {
                     guard let s = self else { return }
                     let coordinator: CountryStatisticsCoordinator = CountryStatisticsCoordinator(
@@ -71,10 +73,11 @@ extension CountryListCoordinator: CountryListVCDelegate {
             }
             .onFailure(DispatchQueue.main.context) { [weak self] (_: NetworkingError) -> Void in
                 guard let s = self else { return }
-                AlertHandler(
-                    message: "general_error".localized,
-                    viewController: s.navigationController
-                ).showErrorAlert()
+                RSJAlert(message: "general_error".localized, viewController: s.navigationController)
+                    .showAlert(firstAction: RSJAlertAction(
+                        title: "close".localized,
+                        style: UIAlertAction.Style.destructive
+                    ))
             }
             .onComplete(DispatchQueue.main.context) { [weak self] (_) -> Void in
                 guard let s = self else { return }

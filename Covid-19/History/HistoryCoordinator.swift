@@ -107,11 +107,14 @@ extension HistoryCoordinator: HistoryVCDelegate {
     }
 
     public func showPopupAdvanceDate() {
-        AlertHandler(
+        RSJAlert(
             title: "error".localized,
             message: "future_date_error".localized,
             viewController: self.navigationController
-        ).showErrorAlert()
+        ).showAlert(firstAction: RSJAlertAction(
+            title: "close".localized,
+            style: UIAlertAction.Style.destructive
+        ))
     }
 }
 

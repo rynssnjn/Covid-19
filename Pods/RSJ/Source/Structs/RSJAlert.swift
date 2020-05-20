@@ -1,15 +1,15 @@
 //
-//  AlertHandler.swift
-//  Covid-19
+//  RSJAlert.swift
+//  RSJ
 //
-//  Created by Rael San Juan on 4/4/20.
+//  Created by Rael San Juan on 5/20/20.
 //  Copyright © 2020 Rael San Juan. All rights reserved.
 //
 
-import Foundation
-import UIKit
+import UIKit.UIViewController
+import UIKit.UIAlertController
 
-public struct AlertHandler {
+public struct RSJAlert {
 
     // MARK: Initializer
     public init(title: String? = nil, message: String, viewController: UIViewController) {
@@ -22,12 +22,10 @@ public struct AlertHandler {
     public let title: String?
     public let message: String
     public let vc: UIViewController
-
 }
 
-// MARK: Instance Methods
-extension AlertHandler {
-    public func showErrorAlert(action: (() -> Void)? = nil, secondAction: (title: String, action: (() -> Void)?)? = nil) { // swiftlint:disable:this line_length
+extension RSJAlert {
+    public func showAlert(firstAction: RSJAlertAction, secondAction: RSJAlertAction? = nil) {
         let alert: UIAlertController = UIAlertController(
             title: self.title,
             message: self.message,
@@ -36,21 +34,31 @@ extension AlertHandler {
 
         alert.addAction(
             UIAlertAction(
-                title: "close".localized,
-                style: UIAlertAction.Style.destructive,
+                title: firstAction.title,
+                style: firstAction.style,
                 handler: { (_: UIAlertAction) -> Void in
-                    action?()
+                    firstAction.action?()
                 }
             )
         )
 
-        if let secondAction = secondAction {
+        self.vc.present(alert, animated: true, completion: nil)
+    }
+
+    public func showActionSheet(actions: [RSJAlertAction]) {
+        let alert: UIAlertController = UIAlertController(
+            title: self.title,
+            message: self.message,
+            preferredStyle: UIAlertController.Style.actionSheet
+        )
+
+        actions.forEach { (rsj: RSJAlertAction) -> Void in
             alert.addAction(
                 UIAlertAction(
-                    title: secondAction.title,
-                    style: UIAlertAction.Style.default,
+                    title: rsj.title,
+                    style: rsj.style,
                     handler: { (_: UIAlertAction) -> Void in
-                        secondAction.action?()
+                        rsj.action?()
                     }
                 )
             )

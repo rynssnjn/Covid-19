@@ -6,7 +6,7 @@ target 'Covid-19' do
   use_frameworks!
 
   # Pods for Covid-19
-  pod 'RSJ', :git => 'https://github.com/rynssnjn/RSJ.git'
+  pod 'RSJ', :git => 'https://github.com/rynssnjn/RSJ.git', :branch => '1.4.0/dev-staging'
   pod 'SnapKit'
   pod 'Astral'
   pod 'BFAstral'

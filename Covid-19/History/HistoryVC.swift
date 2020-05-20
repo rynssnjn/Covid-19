@@ -81,20 +81,24 @@ extension HistoryVC: FSCalendarDelegate {
                 $0.day == formatter.string(from: date)
             }
         ) else {
-            switch Date() >= date {
-                case true:
-                    self.delegate.showNoCasesPopup(in: cell, date: date)
-                case false:
-                    self.delegate.showPopupAdvanceDate()
+            DispatchQueue.main.async {
+                switch Date() >= date {
+                    case true:
+                        self.delegate.showNoCasesPopup(in: cell, date: date)
+                    case false:
+                        self.delegate.showPopupAdvanceDate()
+                }
             }
             return
         }
 
-        switch Date() >= date {
-            case true:
-                self.delegate.showDayUpdatePopup(in: cell, statistics: statistics, date: date)
-            case false:
-                self.delegate.showPopupAdvanceDate()
+        DispatchQueue.main.async {
+            switch Date() >= date {
+                case true:
+                    self.delegate.showDayUpdatePopup(in: cell, statistics: statistics, date: date)
+                case false:
+                    self.delegate.showPopupAdvanceDate()
+            }
         }
     }
 }

@@ -52,7 +52,7 @@ extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
     public func goToHistory() {
         self.navigationController.rsj.showActivityIndicator()
         self.service.getHistory(country: self.statistics.country)
-            .onSuccess { [weak self] (country: CountryStatistics) -> Void in
+            .onSuccess(DispatchQueue.main.context) { [weak self] (country: CountryStatistics) -> Void in
                 guard let s = self else { return }
                 let coordinator: HistoryCoordinator = HistoryCoordinator(
                     delegate: s,
@@ -63,14 +63,16 @@ extension CountryStatisticsCoordinator: CountryStatisticsVCDelegate {
                 coordinator.start()
                 s.add(childCoordinator: coordinator)
             }
-            .onFailure { [weak self] (_: NetworkingError) -> Void in
+            .onFailure(DispatchQueue.main.context) { [weak self] (_: NetworkingError) -> Void in
                 guard let s = self else { return }
-                AlertHandler(
-                    message: "general_error".localized,
-                    viewController: s.navigationController
-                ).showErrorAlert()
+
+                RSJAlert(message: "general_error".localized, viewController: s.navigationController)
+                    .showAlert(firstAction: RSJAlertAction(
+                        title: "close".localized,
+                        style: UIAlertAction.Style.destructive
+                    ))
             }
-            .onComplete { [weak self] (_) -> Void in
+            .onComplete(DispatchQueue.main.context) { [weak self] (_) -> Void in
                 guard let s = self else { return }
                 s.navigationController.rsj.hideActivityIndicator()
             }

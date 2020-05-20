@@ -29,6 +29,12 @@ public final class LibraryView: RSJView {
         view.textColor = UIColor.white
         view.font = UIFont().alegreya(size: 20.0)
         view.textAlignment = NSTextAlignment.left
+        view.dataDetectorTypes = UIDataDetectorTypes.link
+        view.linkTextAttributes = [
+            NSAttributedString.Key.foregroundColor: AppUI.Color.secondary,
+            NSAttributedString.Key.underlineColor: AppUI.Color.secondary,
+            NSAttributedString.Key.underlineStyle: 1
+        ]
 
         return view
     }()
